@@ -1,0 +1,54 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-zinc-200 bg-zinc-50/50 mt-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <!-- Brand & Bio -->
+      <div class="md:col-span-2 space-y-3">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 rounded bg-zinc-900 text-white flex items-center justify-center font-bold text-xs">
+            E
+          </div>
+          <span class="font-semibold text-zinc-900 text-sm">Ercan</span>
+        </div>
+        <p class="text-sm text-zinc-600 max-w-sm leading-relaxed">
+          GoHighLevel iş sistemleri, özel yazılım mimarileri ve yapay zekâ araştırmalarını tek çatı altında birleştiren bağımsız teknoloji & iş danışmanı.
+        </p>
+        <p class="text-xs text-zinc-400">
+          Domain & Hosting: Cloudflare Pages / Vercel (Sıfır Sunucu Maliyeti)
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-900 mb-3">Gezinti</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/services" class="text-zinc-600 hover:text-zinc-950 transition-colors">İş & GHL Çözümleri</a></li>
+          <li><a href="/projects" class="text-zinc-600 hover:text-zinc-950 transition-colors">Özel Projeler</a></li>
+          <li><a href="/writing" class="text-zinc-600 hover:text-zinc-950 transition-colors">Yazılar & Analizler</a></li>
+          <li><a href="/research" class="text-zinc-600 hover:text-zinc-950 transition-colors">Akademik Çalışmalar</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Channels -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-900 mb-3">İletişim</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/contact" class="text-zinc-600 hover:text-zinc-950 transition-colors">E-posta Gönder</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-zinc-600 hover:text-zinc-950 transition-colors">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-zinc-600 hover:text-zinc-950 transition-colors">LinkedIn</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener noreferrer" class="text-zinc-600 hover:text-zinc-950 transition-colors">X (Twitter)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-zinc-200/80 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+      <p>© {year} Ercan. Tüm hakları saklıdır.</p>
+      <p class="font-mono text-[11px] text-zinc-400">
+        Astro v5 • Tailwind CSS • Markdown-First
+      </p>
+    </div>
+  </div>
+</footer>

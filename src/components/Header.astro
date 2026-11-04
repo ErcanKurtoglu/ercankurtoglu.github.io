@@ -1,0 +1,109 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: '/', label: 'Giriş' },
+  { href: '/services', label: 'İş & GHL Çözümleri' },
+  { href: '/projects', label: 'Projeler' },
+  { href: '/writing', label: 'Yazılar' },
+  { href: '/research', label: 'Araştırma' },
+  { href: '/contact', label: 'İletişim' },
+];
+---
+
+<header class="border-b border-zinc-200/80 bg-white/90 backdrop-blur-md sticky top-0 z-50 transition-colors">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo / Name -->
+      <a href="/" class="group flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-zinc-900 text-white flex items-center justify-center font-bold text-sm tracking-wider shadow-sm group-hover:bg-amber-600 transition-colors">
+          E
+        </div>
+        <div class="flex flex-col">
+          <span class="font-semibold text-zinc-900 text-sm tracking-tight group-hover:text-amber-600 transition-colors">
+            Ercan
+          </span>
+          <span class="text-[11px] text-zinc-500 font-mono tracking-tighter">
+            Business & AI Systems
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+        {navItems.map((item) => {
+          const isActive = item.href === '/' 
+            ? currentPath === '/' 
+            : currentPath.startsWith(item.href);
+          return (
+            <a
+              href={item.href}
+              class={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                isActive
+                  ? 'text-zinc-950 font-semibold bg-zinc-100'
+                  : 'text-zinc-600 hover:text-zinc-950 hover:bg-zinc-50'
+              }`}
+            >
+              {item.label}
+            </a>
+          );
+        })}
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a
+          href="/contact"
+          class="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-lg bg-zinc-900 text-white hover:bg-zinc-800 transition-all shadow-sm hover:shadow"
+        >
+          <span>İş Birliği Başlat</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="flex md:hidden">
+        <button
+          type="button"
+          id="mobile-menu-button"
+          class="p-2 rounded-md text-zinc-600 hover:text-zinc-950 hover:bg-zinc-100"
+          aria-label="Menüyü aç"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-200 bg-white px-4 pt-2 pb-4 space-y-1">
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class="block px-3 py-2 rounded-md text-base font-medium text-zinc-700 hover:text-zinc-950 hover:bg-zinc-50"
+      >
+        {item.label}
+      </a>
+    ))}
+    <div class="pt-2">
+      <a
+        href="/contact"
+        class="w-full flex items-center justify-center py-2.5 px-4 rounded-lg bg-zinc-900 text-white font-medium text-sm"
+      >
+        İletişime Geç
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

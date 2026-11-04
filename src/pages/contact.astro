@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="İletişim & İş Birliği | Ercan"
+  description="GHL kurulumları, yapay zekâ danışmanlığı veya akademik iş birlikleri için doğrudan e-posta ile iletişime geçin."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+    <header class="border-b border-zinc-200 pb-10 mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-mono font-medium mb-4">
+        İLETİŞİM & İŞ BİRLİĞİ
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-950">
+        Birlikte Çalışalım
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-zinc-600 max-w-2xl font-editorial">
+        İşletmeniz için GoHighLevel kurulumu, özel AI otomasyonları veya akademik/teknik bir konu hakkında görüşmek için bana doğrudan e-posta gönderebilirsiniz.
+      </p>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+      <!-- Direct Email Card -->
+      <div class="md:col-span-7 space-y-6">
+        <div class="rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-base font-bold text-zinc-950">Birincil İletişim Kanalı</h2>
+              <p class="text-xs text-zinc-500">Google Workspace / Kurumsal E-posta</p>
+            </div>
+          </div>
+
+          <p class="text-sm text-zinc-600 leading-relaxed mb-6 font-editorial">
+            Gelen tüm mesajları şahsen okuyor ve genellikle iş günlerinde <strong>24 saat içinde</strong> dönüş yapıyorum.
+          </p>
+
+          <!-- Email Copy & Click Box -->
+          <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="font-mono text-sm font-semibold text-zinc-900 select-all" id="email-address">
+              iletisim@ercan.dev
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto">
+              <button
+                type="button"
+                id="copy-email-btn"
+                class="flex-1 sm:flex-initial px-3.5 py-2 rounded-lg bg-white border border-zinc-300 text-xs font-medium text-zinc-700 hover:bg-zinc-100 transition-colors"
+              >
+                Kopyala
+              </button>
+              <a
+                href="mailto:iletisim@ercan.dev?subject=Web%20Sitesi%20%C3%9Czerinden%20%C4%B0leti%C5%9Fim"
+                class="flex-1 sm:flex-initial px-4 py-2 rounded-lg bg-zinc-950 text-white text-xs font-semibold hover:bg-zinc-800 transition-colors text-center"
+              >
+                Mail Gönder →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working scope info -->
+        <div class="rounded-xl border border-zinc-200/80 bg-zinc-50/50 p-6 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-900 font-mono">
+            Hangi Konularda İletişime Geçebilirsiniz?
+          </h3>
+          <ul class="space-y-2 text-xs text-zinc-600">
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <span>GoHighLevel (GHL) anahtar teslim iş kurulumları ve otomasyonlar</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <span>Şirket içi AI ajanları, RAG ve LLM entegrasyon projeleri</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-600 font-bold">✓</span>
+              <span>Akademik yayın ortaklıkları ve teknik danışmanlık</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Social & Channels -->
+      <div class="md:col-span-5 space-y-4">
+        <div class="rounded-xl border border-zinc-200 bg-white p-6 space-y-4">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-900 font-mono">
+            Sosyal & Profesyonel Profiller
+          </h3>
+
+          <div class="space-y-2">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between p-3 rounded-lg border border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50 transition-all text-xs font-medium text-zinc-800"
+            >
+              <span class="flex items-center gap-2.5">
+                <span class="font-mono">GitHub</span>
+              </span>
+              <span class="text-zinc-400">@profil →</span>
+            </a>
+
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between p-3 rounded-lg border border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50 transition-all text-xs font-medium text-zinc-800"
+            >
+              <span class="flex items-center gap-2.5">
+                <span class="font-mono">LinkedIn</span>
+              </span>
+              <span class="text-zinc-400">Bağlantı Kur →</span>
+            </a>
+
+            <a
+              href="https://x.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between p-3 rounded-lg border border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50 transition-all text-xs font-medium text-zinc-800"
+            >
+              <span class="flex items-center gap-2.5">
+                <span class="font-mono">X (Twitter)</span>
+              </span>
+              <span class="text-zinc-400">Takip Et →</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-xl border border-amber-200/80 bg-amber-50/50">
+          <h4 class="text-xs font-bold text-amber-950 font-mono mb-2">Gizlilik & Güvenlik</h4>
+          <p class="text-xs text-amber-900/80 leading-relaxed">
+            Paylaştığınız şirket bilgileri ve proje detayları gizlilik çerçevesinde değerlendirilir; üçüncü şahıslarla paylaşılmaz.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const copyBtn = document.getElementById('copy-email-btn');
+  const emailText = document.getElementById('email-address')?.textContent?.trim() || '';
+
+  copyBtn?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(emailText);
+      const originalText = copyBtn.textContent;
+      copyBtn.textContent = 'Kopyalandı! ✓';
+      copyBtn.classList.add('text-emerald-700', 'font-semibold');
+      setTimeout(() => {
+        copyBtn.textContent = originalText;
+        copyBtn.classList.remove('text-emerald-700', 'font-semibold');
+      }, 2000);
+    } catch (err) {
+      console.error('Kopyalama hatası:', err);
+    }
+  });
+</script>
