@@ -17,7 +17,7 @@ const researchAreas = [
   },
   {
     title: 'Çok Adımlı Muhakeme (Multi-Step Reasoning & Verification)',
-    description: 'LLM çıktılarının halüsinasyon riskini en aza indiren otomatik doğrulama (self-correction, tree-of-thought) algoritmaları.',
+    description: 'LLM çıktılarındaki halüsinasyon riskini en aza indiren otomatik doğrulama (self-correction, tree-of-thought) algoritmaları.',
   },
   {
     title: 'Otonom Çoklu Ajan Sistemleri (Multi-Agent Swarms)',
@@ -31,34 +31,34 @@ const researchAreas = [
 ---
 
 <Layout
-  title="Akademik & AI Araştırmaları | Ercan"
+  title="Akademik & AI Araştırmaları | Ercan Kurtoğlu"
   description="Yapay zekâ muhakeme mekanizmaları, nöro-sembolik mimariler ve akademik araştırma alanları."
 >
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-    <header class="border-b border-zinc-200 pb-10 mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-amber-800 text-xs font-mono font-medium mb-4">
-        AKADEMİK & ARAŞTIRMA
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    <header class="border-b border-white/10 pb-12 mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-mono font-medium mb-4">
+        // AKADEMİK & TEKNİK ARAŞTIRMA
       </div>
-      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-950">
-        Araştırma Alanları & Yayınlar
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white font-heading">
+        Araştırma Alanları & Makaleler
       </h1>
-      <p class="mt-4 text-base sm:text-lg text-zinc-600 max-w-2xl font-editorial">
-        Yapay zekânın teorik sınırlarını inceleyen, mantıksal çıkarım ve otonom sistemler üzerine odaklanan çalışmalar.
+      <p class="mt-4 text-base sm:text-lg text-zinc-400 max-w-2xl leading-relaxed">
+        Yapay zekânın teorik sınırlarını inceleyen, mantıksal çıkarım ve otonom sistemler üzerine odaklanan akademik çalışmalar.
       </p>
     </header>
 
     <!-- Research Areas Grid -->
-    <section class="mb-16">
-      <h2 class="text-xl font-bold text-zinc-950 mb-6 font-mono text-xs uppercase tracking-wider text-amber-700">
+    <section class="mb-20">
+      <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400 mb-8">
         // Odaklanılan Araştırma Alanları
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {researchAreas.map((area) => (
-          <div class="p-6 rounded-xl border border-zinc-200 bg-white hover:border-zinc-300 transition-colors">
-            <h3 class="text-base font-bold text-zinc-950 mb-2">
+          <div class="p-8 rounded-3xl border border-white/10 bg-white/[0.02] hover:border-white/25 transition-colors">
+            <h3 class="text-lg font-bold text-white mb-3 font-heading">
               {area.title}
             </h3>
-            <p class="text-xs text-zinc-600 leading-relaxed font-editorial">
+            <p class="text-xs text-zinc-400 leading-relaxed font-editorial">
               {area.description}
             </p>
           </div>
@@ -68,49 +68,49 @@ const researchAreas = [
 
     <!-- Publications & Working Papers -->
     <section>
-      <h2 class="text-xl font-bold text-zinc-950 mb-6 font-mono text-xs uppercase tracking-wider text-amber-700">
+      <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400 mb-8">
         // Yayınlar ve Çalışma Notları (Working Papers)
       </h2>
 
       <div class="space-y-8">
         {renderedResearch.map(({ item, Content }) => (
-          <article class="rounded-xl border border-zinc-200 bg-white p-7 hover:border-zinc-300 transition-all">
-            <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-3">
-              <span class="px-2.5 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-medium">
+          <article class="rounded-3xl border border-white/10 bg-white/[0.02] p-8 sm:p-10 hover:border-white/20 transition-all">
+            <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-4">
+              <span class="px-2.5 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/30 font-medium">
                 {item.data.status}
               </span>
               <span>{item.data.year}</span>
             </div>
 
-            <h3 class="text-xl font-bold text-zinc-950 tracking-tight mb-3">
+            <h3 class="text-2xl font-bold text-white tracking-tight font-heading mb-4">
               {item.data.title}
             </h3>
 
-            <p class="text-sm text-zinc-600 leading-relaxed font-editorial mb-6">
+            <p class="text-sm text-zinc-300 leading-relaxed font-editorial mb-8">
               {item.data.abstract}
             </p>
 
-            <div class="prose prose-zinc max-w-none text-xs text-zinc-700 leading-relaxed mb-6 pt-4 border-t border-zinc-100">
+            <div class="prose prose-invert prose-zinc max-w-none text-xs text-zinc-400 leading-relaxed mb-8 pt-6 border-t border-white/10">
               <Content />
             </div>
 
             <!-- Tags & BibTeX -->
-            <div class="space-y-4 pt-4 border-t border-zinc-100">
-              <div class="flex flex-wrap gap-1.5">
+            <div class="space-y-4 pt-6 border-t border-white/10">
+              <div class="flex flex-wrap gap-2">
                 {item.data.tags.map((tag) => (
-                  <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 text-zinc-600">
-                    {tag}
+                  <span class="px-2.5 py-0.5 rounded text-[11px] font-mono bg-white/5 text-zinc-400 border border-white/5">
+                    #{tag}
                   </span>
                 ))}
               </div>
 
               {item.data.bibtex && (
                 <details class="text-xs group">
-                  <summary class="cursor-pointer font-mono text-zinc-600 hover:text-zinc-950 select-none flex items-center gap-1.5">
+                  <summary class="cursor-pointer font-mono text-zinc-400 hover:text-white select-none flex items-center gap-2">
                     <span>BibTeX Alıntısını Göster</span>
-                    <span class="group-open:rotate-90 transition-transform">▸</span>
+                    <span class="group-open:rotate-90 transition-transform text-amber-400">▸</span>
                   </summary>
-                  <pre class="mt-2 p-3 rounded-lg bg-zinc-900 text-zinc-200 font-mono text-[11px] overflow-x-auto">
+                  <pre class="mt-3 p-4 rounded-xl bg-black border border-white/10 text-zinc-300 font-mono text-[11px] overflow-x-auto">
                     <code>{item.data.bibtex}</code>
                   </pre>
                 </details>

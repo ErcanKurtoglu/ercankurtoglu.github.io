@@ -3,137 +3,142 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="İletişim & İş Birliği | Ercan"
-  description="GHL kurulumları, yapay zekâ danışmanlığı veya akademik iş birlikleri için doğrudan e-posta ile iletişime geçin."
+  title="İletişim & İş Birliği | Ercan Kurtoğlu"
+  description="GoHighLevel iş kurulumları, yapay zekâ danışmanlığı veya akademik iş birlikleri için doğrudan e-posta ile iletişime geçin."
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
-    <header class="border-b border-zinc-200 pb-10 mb-12">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-mono font-medium mb-4">
-        İLETİŞİM & İŞ BİRLİĞİ
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+    <header class="border-b border-white/10 pb-10 mb-12">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-mono font-medium mb-4">
+        // İLETİŞİM & GÖRÜŞME
       </div>
-      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-950">
-        Birlikte Çalışalım
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white font-heading">
+        Sisteminizi Konuşalım
       </h1>
-      <p class="mt-4 text-base sm:text-lg text-zinc-600 max-w-2xl font-editorial">
-        İşletmeniz için GoHighLevel kurulumu, özel AI otomasyonları veya akademik/teknik bir konu hakkında görüşmek için bana doğrudan e-posta gönderebilirsiniz.
+      <p class="mt-4 text-base sm:text-lg text-zinc-400 max-w-2xl leading-relaxed">
+        İşletmeniz için GoHighLevel kurulumu, özel AI otomasyonları veya akademik/teknik bir konu hakkında doğrudan bana yazabilirsiniz.
       </p>
     </header>
 
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
       <!-- Direct Email Card -->
       <div class="md:col-span-7 space-y-6">
-        <div class="rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center">
+        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8">
+          <div class="flex items-center gap-3.5 mb-6">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
             </div>
             <div>
-              <h2 class="text-base font-bold text-zinc-950">Birincil İletişim Kanalı</h2>
-              <p class="text-xs text-zinc-500">Google Workspace / Kurumsal E-posta</p>
+              <h2 class="text-base font-bold text-white font-heading">Doğrudan Kurumsal İletişim</h2>
+              <p class="text-xs text-zinc-400">Aracı yönetici yok, doğrudan sistem mimarı yanıtlar</p>
             </div>
           </div>
 
-          <p class="text-sm text-zinc-600 leading-relaxed mb-6 font-editorial">
-            Gelen tüm mesajları şahsen okuyor ve genellikle iş günlerinde <strong>24 saat içinde</strong> dönüş yapıyorum.
+          <p class="text-sm text-zinc-300 leading-relaxed mb-6">
+            Gelen tüm mesajları şahsen okuyor ve iş günlerinde <strong>24 saat içinde</strong> dönüş yapıyorum.
           </p>
 
           <!-- Email Copy & Click Box -->
-          <div class="p-4 rounded-xl bg-zinc-50 border border-zinc-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="font-mono text-sm font-semibold text-zinc-900 select-all" id="email-address">
+          <div class="p-4 rounded-xl bg-black/40 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="font-mono text-sm font-semibold text-white select-all" id="email-address">
               iletisim@ercankurtoglu.site
             </div>
             <div class="flex items-center gap-2 w-full sm:w-auto">
               <button
                 type="button"
                 id="copy-email-btn"
-                class="flex-1 sm:flex-initial px-3.5 py-2 rounded-lg bg-white border border-zinc-300 text-xs font-medium text-zinc-700 hover:bg-zinc-100 transition-colors"
+                class="flex-1 sm:flex-initial px-3.5 py-2 rounded-lg bg-white/5 border border-white/10 text-xs font-medium text-zinc-300 hover:text-white hover:bg-white/10 transition-colors"
               >
                 Kopyala
               </button>
               <a
-                href="mailto:iletisim@ercankurtoglu.site?subject=Web%20Sitesi%20%C3%9Czerinden%20%C4%B0leti%C5%9Fim"
-                class="flex-1 sm:flex-initial px-4 py-2 rounded-lg bg-zinc-950 text-white text-xs font-semibold hover:bg-zinc-800 transition-colors text-center"
+                id="mailto-link"
+                href="mailto:iletisim@ercankurtoglu.site?subject=GHL%20ve%20AI%20Sistem%20G%C3%B6r%C3%BC%C5%9Fmesi"
+                class="flex-1 sm:flex-initial px-4 py-2 rounded-lg bg-white text-black text-xs font-bold hover:bg-zinc-200 transition-colors text-center"
               >
-                Mail Gönder →
+                E-posta Gönder →
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Working scope info -->
-        <div class="rounded-xl border border-zinc-200/80 bg-zinc-50/50 p-6 space-y-3">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-900 font-mono">
+        <!-- Scope Checklist -->
+        <div class="rounded-2xl border border-white/10 bg-white/[0.01] p-6 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-white font-mono">
             Hangi Konularda İletişime Geçebilirsiniz?
           </h3>
-          <ul class="space-y-2 text-xs text-zinc-600">
+          <ul class="space-y-2.5 text-xs text-zinc-400">
             <li class="flex items-center gap-2">
-              <span class="text-emerald-600 font-bold">✓</span>
-              <span>GoHighLevel (GHL) anahtar teslim iş kurulumları ve otomasyonlar</span>
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>GoHighLevel (GHL) anahtar teslim iş kurulumları ve huniler</span>
             </li>
             <li class="flex items-center gap-2">
-              <span class="text-emerald-600 font-bold">✓</span>
-              <span>Şirket içi AI ajanları, RAG ve LLM entegrasyon projeleri</span>
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Şirket verinizle eğitilmiş 7/24 AI satış ve randevu ajanları</span>
             </li>
             <li class="flex items-center gap-2">
-              <span class="text-emerald-600 font-bold">✓</span>
-              <span>Akademik yayın ortaklıkları ve teknik danışmanlık</span>
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Mevcut CRM ve otomasyon kaçaklarının denetimi (Audit)</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span>Yapay zekâ ve mantıksal çıkarım üzerine akademik iş birlikleri</span>
             </li>
           </ul>
         </div>
       </div>
 
-      <!-- Social & Channels -->
-      <div class="md:col-span-5 space-y-4">
-        <div class="rounded-xl border border-zinc-200 bg-white p-6 space-y-4">
-          <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-900 font-mono">
-            Sosyal & Profesyonel Profiller
+      <!-- Right Column: Channels & Privacy -->
+      <div class="md:col-span-5 space-y-6">
+        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6 space-y-4">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-white font-mono">
+            Sosyal & Profesyonel Kanallar
           </h3>
 
           <div class="space-y-2">
             <a
-              href="https://github.com"
+              href="https://github.com/ErcanKurtoglu"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-between p-3 rounded-lg border border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50 transition-all text-xs font-medium text-zinc-800"
+              class="flex items-center justify-between p-3.5 rounded-xl border border-white/5 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.05] transition-all text-xs font-medium text-zinc-200"
             >
               <span class="flex items-center gap-2.5">
-                <span class="font-mono">GitHub</span>
+                <span class="font-mono text-zinc-400">GitHub</span>
               </span>
-              <span class="text-zinc-400">@profil →</span>
+              <span class="text-amber-400 font-mono text-[11px]">@ErcanKurtoglu →</span>
             </a>
 
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-between p-3 rounded-lg border border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50 transition-all text-xs font-medium text-zinc-800"
+              class="flex items-center justify-between p-3.5 rounded-xl border border-white/5 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.05] transition-all text-xs font-medium text-zinc-200"
             >
               <span class="flex items-center gap-2.5">
-                <span class="font-mono">LinkedIn</span>
+                <span class="font-mono text-zinc-400">LinkedIn</span>
               </span>
-              <span class="text-zinc-400">Bağlantı Kur →</span>
+              <span class="text-amber-400 font-mono text-[11px]">Bağlantı Kur →</span>
             </a>
 
             <a
               href="https://x.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-between p-3 rounded-lg border border-zinc-200 hover:border-zinc-400 hover:bg-zinc-50 transition-all text-xs font-medium text-zinc-800"
+              class="flex items-center justify-between p-3.5 rounded-xl border border-white/5 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.05] transition-all text-xs font-medium text-zinc-200"
             >
               <span class="flex items-center gap-2.5">
-                <span class="font-mono">X (Twitter)</span>
+                <span class="font-mono text-zinc-400">X (Twitter)</span>
               </span>
-              <span class="text-zinc-400">Takip Et →</span>
+              <span class="text-amber-400 font-mono text-[11px]">Takip Et →</span>
             </a>
           </div>
         </div>
 
-        <div class="p-6 rounded-xl border border-amber-200/80 bg-amber-50/50">
-          <h4 class="text-xs font-bold text-amber-950 font-mono mb-2">Gizlilik & Güvenlik</h4>
-          <p class="text-xs text-amber-900/80 leading-relaxed">
-            Paylaştığınız şirket bilgileri ve proje detayları gizlilik çerçevesinde değerlendirilir; üçüncü şahıslarla paylaşılmaz.
+        <div class="p-6 rounded-2xl border border-amber-500/20 bg-amber-500/5 space-y-2">
+          <h4 class="text-xs font-bold text-amber-400 font-mono">Gizlilik & Güvenlik</h4>
+          <p class="text-xs text-zinc-400 leading-relaxed">
+            Paylaştığınız şirket süreçleri, veritabanı şemaları ve iş modeli detayları kesin gizlilik prensibiyle korunur.
           </p>
         </div>
       </div>
@@ -142,6 +147,7 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <script>
+  // Copy email logic
   const copyBtn = document.getElementById('copy-email-btn');
   const emailText = document.getElementById('email-address')?.textContent?.trim() || '';
 
@@ -150,13 +156,23 @@ import Layout from '../layouts/Layout.astro';
       await navigator.clipboard.writeText(emailText);
       const originalText = copyBtn.textContent;
       copyBtn.textContent = 'Kopyalandı! ✓';
-      copyBtn.classList.add('text-emerald-700', 'font-semibold');
+      copyBtn.classList.add('text-emerald-400');
       setTimeout(() => {
         copyBtn.textContent = originalText;
-        copyBtn.classList.remove('text-emerald-700', 'font-semibold');
+        copyBtn.classList.remove('text-emerald-400');
       }, 2000);
     } catch (err) {
       console.error('Kopyalama hatası:', err);
     }
   });
+
+  // URL query parameter check for auto-filling subject
+  const urlParams = new URLSearchParams(window.location.search);
+  const plan = urlParams.get('plan');
+  if (plan) {
+    const mailto = document.getElementById('mailto-link') as HTMLAnchorElement;
+    if (mailto) {
+      mailto.href = `mailto:iletisim@ercankurtoglu.site?subject=${encodeURIComponent(`GHL Proje Talebi: ${plan.toUpperCase()}`)}`;
+    }
+  }
 </script>

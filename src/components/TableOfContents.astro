@@ -16,22 +16,22 @@ const filteredHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
 {filteredHeadings.length > 0 && (
   <nav class="toc-wrapper text-sm" aria-label="İçindekiler Tablosu">
-    <div class="flex items-center gap-2 pb-3 mb-3 border-b border-zinc-200">
-      <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="flex items-center gap-2 pb-3 mb-3 border-b border-white/10">
+      <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h10M4 18h7"/>
       </svg>
-      <span class="text-xs font-semibold uppercase tracking-wider text-zinc-900 font-mono">
+      <span class="text-xs font-semibold uppercase tracking-wider text-white font-mono">
         İçindekiler / Context
       </span>
     </div>
 
-    <ul class="space-y-2 border-l border-zinc-200/80">
+    <ul class="space-y-2 border-l border-white/10">
       {filteredHeadings.map((heading) => (
         <li class={`${heading.depth === 3 ? 'pl-6' : 'pl-3'} -ml-px border-l-2 border-transparent transition-colors duration-150`}>
           <a
             href={`#${heading.slug}`}
             data-slug={heading.slug}
-            class="toc-link block text-zinc-500 hover:text-zinc-950 text-[13px] leading-snug py-0.5 transition-colors"
+            class="toc-link block text-zinc-400 hover:text-white text-[13px] leading-snug py-0.5 transition-colors"
           >
             {heading.text}
           </a>
@@ -42,7 +42,7 @@ const filteredHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 )}
 
 <script>
-  // Scroll spy implementation
+  // Scroll spy implementation for dark theme
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -53,17 +53,17 @@ const filteredHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
         if (entry.isIntersecting) {
           // Reset all
           document.querySelectorAll('.toc-link').forEach((el) => {
-            el.classList.remove('text-zinc-950', 'font-semibold');
-            el.classList.add('text-zinc-500');
-            el.closest('li')?.classList.remove('border-amber-600', 'text-zinc-950');
+            el.classList.remove('text-amber-400', 'font-semibold');
+            el.classList.add('text-zinc-400');
+            el.closest('li')?.classList.remove('border-amber-400', 'text-amber-400');
             el.closest('li')?.classList.add('border-transparent');
           });
 
           // Highlight current
           if (link && parentLi) {
-            link.classList.add('text-zinc-950', 'font-semibold');
-            link.classList.remove('text-zinc-500');
-            parentLi.classList.add('border-amber-600');
+            link.classList.add('text-amber-400', 'font-semibold');
+            link.classList.remove('text-zinc-400');
+            parentLi.classList.add('border-amber-400');
             parentLi.classList.remove('border-transparent');
           }
         }
