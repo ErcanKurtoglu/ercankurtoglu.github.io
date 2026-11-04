@@ -8,298 +8,294 @@ const latestWritings = writings
   .slice(0, 3);
 
 const projects = await getCollection('projects');
-const featuredProjects = projects.slice(0, 2);
+const featuredProjects = projects.slice(0, 3);
 
 const research = await getCollection('research');
-const researchCount = research.length;
 ---
 
 <Layout
-  title="Ercan Kurtoğlu | GoHighLevel Otomasyonları, Özel Yazılım & AI Sistem Mimarı"
+  title="Ercan Kurtoğlu | GoHighLevel Otomasyonları & AI Sistem Mimarı"
   description="İşletmeler için anahtar teslim GoHighLevel (GHL) otomasyonları, satış hunileri ve yapay zekâ sistemleri. Hantal ajans süreçleri yok, sabit paketlerle doğrudan sistem mimarı ile çalışın."
 >
-  <!-- HERO SECTION: High-impact Designjoy aesthetic -->
-  <section class="relative pt-16 pb-20 sm:pt-28 sm:pb-32 overflow-hidden">
-    <!-- Ambient top glow -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-b from-amber-500/15 via-amber-500/5 to-transparent blur-[120px] pointer-events-none rounded-full"></div>
-
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-      <!-- Status Badge -->
-      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-zinc-300 mb-8 backdrop-blur-md hover:border-amber-500/40 transition-colors">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Kasım ayı için yeni kurulum kontenjanı: <strong class="text-white font-semibold">2 Müsait</strong></span>
+  <!-- HERO SECTION: Exact Designjoy layout & aesthetic -->
+  <section class="relative pt-20 pb-24 sm:pt-32 sm:pb-36 bg-[#ffffff] border-b border-neutral-200/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Designjoy pill badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-100 border border-neutral-200/80 text-xs font-semibold text-neutral-800 mb-8 shadow-sm">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>Kasım ayı için yeni kurulum kontenjanı: <strong>2 Müsait</strong></span>
       </div>
 
-      <!-- Main Heading -->
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08] font-heading">
+      <!-- Main Designjoy Heading (Figtree heavy) -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-neutral-900 leading-[1.08] max-w-4xl mx-auto">
         İşletmenizi ölçekleyen <br class="hidden sm:inline" />
-        <span class="bg-gradient-to-r from-amber-400 via-amber-200 to-amber-500 bg-clip-text text-transparent">GoHighLevel & AI</span> sistemleri.
+        <span class="underline decoration-neutral-300 decoration-wavy underline-offset-8">GoHighLevel & AI</span> sistemleri.
       </h1>
 
       <!-- Subtitle -->
-      <p class="mt-6 sm:mt-8 text-lg sm:text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed font-normal">
-        Hantal ajans toplantılarına ve belirsiz saatlik faturalara son. Satış hunilerinizi, CRM iş akışlarınızı ve kurumsal yapay zekâ entegrasyonlarınızı <strong class="text-zinc-200">sabit paketlerle</strong>, doğrudan kıdemli sistem mimarı ile hayata geçirin.
+      <p class="mt-8 text-lg sm:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+        Hantal ajans süreçlerine ve belirsiz saatlik faturalara son. Satış hunilerinizi, CRM iş akışlarınızı ve yapay zekâ entegrasyonlarınızı sabit paketlerle doğrudan kurucu sistem mimarı ile hayata geçirin.
       </p>
 
-      <!-- CTAs -->
+      <!-- Designjoy Dual Pill Buttons -->
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a
           href="#pricing"
-          class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-bold text-sm hover:bg-zinc-200 transition-all shadow-xl shadow-white/10 flex items-center justify-center gap-2 group"
+          class="w-full sm:w-auto px-9 py-4 rounded-full bg-black text-white font-bold text-sm hover:bg-neutral-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
         >
-          <span>Paketleri & Fiyatları İncele</span>
+          <span>Planları & Fiyatları Gör</span>
           <svg class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
           </svg>
         </a>
         <a
           href="/contact"
-          class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-semibold text-sm hover:bg-white/10 hover:border-white/20 transition-all backdrop-blur-md"
+          class="w-full sm:w-auto px-9 py-4 rounded-full bg-white border border-neutral-300 text-neutral-900 font-bold text-sm hover:bg-neutral-50 transition-all shadow-sm"
         >
-          Doğrudan İletişime Geç →
+          15 Dk Görüşme Planla →
         </a>
       </div>
 
-      <!-- Micro guarantees -->
-      <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-zinc-400 font-mono">
-        <span class="flex items-center gap-1.5">
-          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Sürpriz Maliyet Yok
-        </span>
-        <span class="flex items-center gap-1.5">
-          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Hızlı Teslimat
-        </span>
-        <span class="flex items-center gap-1.5">
-          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-          Birebir Kurucu İletişimi
-        </span>
+      <!-- Social Proof / Stars -->
+      <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 text-xs text-neutral-500 font-medium">
+        <div class="flex items-center text-amber-500 text-sm tracking-widest">
+          ★★★★★
+        </div>
+        <span>Kurumsal standartlarda anahtar teslim teslimat garantisi</span>
       </div>
     </div>
   </section>
 
-  <!-- INFINITE MARQUEE: Supported platforms & tech stack -->
-  <section class="border-y border-white/10 bg-black/40 py-6 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 mb-3 text-center">
-      <span class="text-[11px] font-mono uppercase tracking-widest text-zinc-400">
-        Entegre Edilen Sistemler & Teknolojiler
+  <!-- INFINITE TICKER (Designjoy Logo Marquee) -->
+  <section class="border-b border-neutral-200/80 bg-neutral-50/50 py-7 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 mb-4 text-center">
+      <span class="text-xs font-mono font-bold uppercase tracking-widest text-neutral-400">
+        // ENTEGRE EDİLEN RESMİ SİSTEMLER & TEKNOLOJİLER
       </span>
     </div>
     
-    <div class="flex overflow-x-hidden relative [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-      <div class="animate-marquee py-2 flex items-center gap-12 whitespace-nowrap text-zinc-400 font-mono text-sm">
-        <span class="flex items-center gap-2"><strong class="text-white">GoHighLevel</strong> (GHL)</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">OpenAI</strong> & Claude API</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Make.com</strong> & Zapier</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Stripe</strong> Payments</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Twilio</strong> SMS & Voice</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Python</strong> & FastAPI</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Supabase</strong> & PostgreSQL</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">WhatsApp</strong> Cloud API</span>
-        <span>•</span>
-        <!-- Duplicate for infinite effect -->
-        <span class="flex items-center gap-2"><strong class="text-white">GoHighLevel</strong> (GHL)</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">OpenAI</strong> & Claude API</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Make.com</strong> & Zapier</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Stripe</strong> Payments</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Twilio</strong> SMS & Voice</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Python</strong> & FastAPI</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">Supabase</strong> & PostgreSQL</span>
-        <span>•</span>
-        <span class="flex items-center gap-2"><strong class="text-white">WhatsApp</strong> Cloud API</span>
+    <div class="flex overflow-x-hidden relative [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+      <div class="animate-marquee py-2 flex items-center gap-14 whitespace-nowrap text-neutral-600 font-semibold text-sm">
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">GoHighLevel</strong> (GHL)</span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">OpenAI</strong> API</span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">Make.com</strong></span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">Stripe</strong> Payments</span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">Twilio</strong> SMS</span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">Claude</strong> 3.5</span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">Python</strong> & FastAPI</span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">Supabase</strong></span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">WhatsApp</strong> Business</span>
+        <span class="text-neutral-300">•</span>
+        <!-- Duplicate for loop -->
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">GoHighLevel</strong> (GHL)</span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">OpenAI</strong> API</span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">Make.com</strong></span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">Stripe</strong> Payments</span>
+        <span class="text-neutral-300">•</span>
+        <span class="flex items-center gap-2"><strong class="text-black font-extrabold">Twilio</strong> SMS</span>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS: 3 Simple Steps (Designjoy style) -->
-  <section id="how-it-works" class="py-24 sm:py-32 border-b border-white/10 relative">
+  <!-- HOW IT WORKS: 3 Steps (Designjoy style) -->
+  <section id="how-it-works" class="py-24 sm:py-32 border-b border-neutral-200/80 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
-          // ADIM ADIM İLERLEME
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
+          // NASIL ÇALIŞIR?
         </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 font-heading">
-          Geleneksel ajans karmaşası yok. 3 adımda hayata geçirin.
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 mt-3 tracking-tight">
+          Haftalar süren toplantılar yok. <br />
+          Sisteminizi 3 adımda kurun.
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Step 1 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 hover:border-white/20 transition-all relative group">
-          <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white font-mono font-bold text-lg flex items-center justify-center mb-6 group-hover:border-amber-500/50 group-hover:text-amber-400 transition-colors">
-            01
+        <div class="rounded-3xl border border-neutral-200 bg-[#fafafa] p-8 sm:p-10 hover:border-neutral-400 hover:shadow-md transition-all relative">
+          <div class="w-12 h-12 rounded-2xl bg-black text-white font-extrabold text-lg flex items-center justify-center mb-6">
+            1
           </div>
-          <h3 class="text-xl font-bold text-white mb-3 font-heading">Paketinizi Seçin</h3>
-          <p class="text-sm text-zinc-400 leading-relaxed">
-            İhtiyacınıza uygun kurulum veya danışmanlık paketini seçin. Sabit fiyat garantisiyle hemen başlayalım.
+          <h3 class="text-2xl font-extrabold text-neutral-900 mb-3">Paketinizi Seçin</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            İhtiyacınıza uygun GHL kurulum veya tam AI otomasyon planını seçin. Sabit fiyat garantisiyle aynı gün başlayalım.
           </p>
         </div>
 
         <!-- Step 2 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 hover:border-white/20 transition-all relative group">
-          <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white font-mono font-bold text-lg flex items-center justify-center mb-6 group-hover:border-amber-500/50 group-hover:text-amber-400 transition-colors">
-            02
+        <div class="rounded-3xl border border-neutral-200 bg-[#fafafa] p-8 sm:p-10 hover:border-neutral-400 hover:shadow-md transition-all relative">
+          <div class="w-12 h-12 rounded-2xl bg-black text-white font-extrabold text-lg flex items-center justify-center mb-6">
+            2
           </div>
-          <h3 class="text-xl font-bold text-white mb-3 font-heading">Sisteminizi Kuralım</h3>
-          <p class="text-sm text-zinc-400 leading-relaxed">
-            GHL satış hunileri, otomatik SMS/e-posta iş akışları ve AI ajanları canlı testlerle doğrudan hesabınıza kurulur.
+          <h3 class="text-2xl font-extrabold text-neutral-900 mb-3">Sisteminizi Teslim Alın</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Satış hunileri, SMS/e-posta iş akışları ve AI randevu asistanları doğrudan kendi GHL hesabınıza anahtar teslim kurulur.
           </p>
         </div>
 
         <!-- Step 3 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8 hover:border-white/20 transition-all relative group">
-          <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 text-white font-mono font-bold text-lg flex items-center justify-center mb-6 group-hover:border-amber-500/50 group-hover:text-amber-400 transition-colors">
-            03
+        <div class="rounded-3xl border border-neutral-200 bg-[#fafafa] p-8 sm:p-10 hover:border-neutral-400 hover:shadow-md transition-all relative">
+          <div class="w-12 h-12 rounded-2xl bg-black text-white font-extrabold text-lg flex items-center justify-center mb-6">
+            3
           </div>
-          <h3 class="text-xl font-bold text-white mb-3 font-heading">Otomatik Büyüyün</h3>
-          <p class="text-sm text-zinc-400 leading-relaxed">
-            Potansiyel müşterileriniz otomatik nitelenir, takviminiz dolar, satış süreçleriniz siz uyurken bile çalışır.
+          <h3 class="text-2xl font-extrabold text-neutral-900 mb-3">Otomatik Büyüyün</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Lead'leriniz otomatik karşılanır, takviminiz dolar, satış süreçleriniz siz müdahale etmeden kusursuz çalışır.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SCOPE OF SYSTEMS: What we build (Grid) -->
-  <section id="scope" class="py-24 sm:py-32 border-b border-white/10 bg-black/30">
+  <!-- MEMBERSHIP BENEFITS / PERKS GRID (Designjoy's signature 6 cards) -->
+  <section id="benefits" class="py-24 sm:py-32 border-b border-neutral-200/80 bg-[#fbfbfb]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-        <div>
-          <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
-            // ÇÖZÜM ALANLARI & ENTEGRASYONLAR
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 font-heading">
-            İşletmeniz için neler inşa ediyorum?
-          </h2>
-        </div>
-        <p class="text-sm text-zinc-400 max-w-md">
-          A'dan Z'ye tasarlanmış, test edilmiş ve anahtar teslim çalışan kurumsal otomasyon bileşenleri.
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
+          // AVANTAJLAR
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 mt-3 tracking-tight">
+          Neden geleneksel ajanslardan farklı?
+        </h2>
+        <p class="mt-4 text-base text-neutral-600">
+          Saatlik sayaç çalıştıran ajansların aksine, tamamen sonuç ve şeffaflık odaklı bir çalışma modeli.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Item 1 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 hover:border-white/20 hover:bg-white/[0.04] transition-all">
-          <div class="text-amber-400 font-mono text-xs mb-3 font-bold">GHL / SALES FUNNELS</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Yüksek Dönüşümlü Satış Hunileri</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Müşteriyi çeken açılış sayfaları (Landing Pages), A/B testleri, opt-in formları ve dinamik checkout akışları.
+        <!-- Perk 1 -->
+        <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 hover:border-neutral-400 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-100 flex items-center justify-center text-xl mb-6">
+            ⚡️
+          </div>
+          <h3 class="text-xl font-extrabold text-neutral-900 mb-2">Hızlı Teslimat</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Haftalar süren bürokratik onaylar yok. İş akışlarınız ve hunileriniz ortalama birkaç gün içinde canlı testleriyle hazır.
           </p>
         </div>
 
-        <!-- Item 2 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 hover:border-white/20 hover:bg-white/[0.04] transition-all">
-          <div class="text-amber-400 font-mono text-xs mb-3 font-bold">AUTOMATION / WORKFLOWS</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Çok Kanallı Lead Nurturing</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Form dolduran müşteriye ilk 90 saniyede otomatik SMS, WhatsApp ve kişiselleştirilmiş e-posta zincirleri.
+        <!-- Perk 2 -->
+        <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 hover:border-neutral-400 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-100 flex items-center justify-center text-xl mb-6">
+            💳
+          </div>
+          <h3 class="text-xl font-extrabold text-neutral-900 mb-2">Sabit Paket Fiyatı</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Sürpriz fatura veya sonradan çıkan gizli masraflar yok. Ne alacağınızı ve ne ödeyeceğinizi baştan bilirsiniz.
           </p>
         </div>
 
-        <!-- Item 3 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 hover:border-white/20 hover:bg-white/[0.04] transition-all">
-          <div class="text-amber-400 font-mono text-xs mb-3 font-bold">AI / AGENTIC SYSTEMS</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">7/24 AI Satış Temsilcisi</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            GHL ile konuşan, müşterinin sorularını şirket verinizle yanıtlayan ve doğrudan takvime randevu bağlayan LLM ajanları.
+        <!-- Perk 3 -->
+        <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 hover:border-neutral-400 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-100 flex items-center justify-center text-xl mb-6">
+            💎
+          </div>
+          <h3 class="text-xl font-extrabold text-neutral-900 mb-2">Üst Düzey Mimari Kalitesi</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Rastgele hazır şablonlar değil; akademik AI araştırmaları ve kurumsal yazılım disipliniyle inşa edilmiş ölçeklenebilir altyapı.
           </p>
         </div>
 
-        <!-- Item 4 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 hover:border-white/20 hover:bg-white/[0.04] transition-all">
-          <div class="text-amber-400 font-mono text-xs mb-3 font-bold">CALENDAR / CRM PIPELINE</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Randevu & Kayıp Önleme</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Çift yönlü Google/Outlook takvim senkronu, SMS hatırlatmaları ve gelmeyen müşteriler için otomatik yeniden planlama.
+        <!-- Perk 4 -->
+        <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 hover:border-neutral-400 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-100 flex items-center justify-center text-xl mb-6">
+            🤝
+          </div>
+          <h3 class="text-xl font-extrabold text-neutral-900 mb-2">Birebir Kurucu İletişimi</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Aracı hesap yöneticileri yok. Sorularınızı doğrudan kodu yazan ve sistemi kuran kişiye sorarsınız.
           </p>
         </div>
 
-        <!-- Item 5 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 hover:border-white/20 hover:bg-white/[0.04] transition-all">
-          <div class="text-amber-400 font-mono text-xs mb-3 font-bold">PAYMENTS & BILLING</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Stripe & İyzico Ödeme Altyapısı</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Tek seferlik ve yinelenen (abonelik) tahsilatları, otomatik e-fatura tetikleyicileri ve başarısız ödeme kurtarma serileri.
+        <!-- Perk 5 -->
+        <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 hover:border-neutral-400 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-100 flex items-center justify-center text-xl mb-6">
+            🔒
+          </div>
+          <h3 class="text-xl font-extrabold text-neutral-900 mb-2">%100 Sizin Mülkiyetinizde</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Tüm GoHighLevel hesabı, müşteri verileri, API anahtarları ve şablonlar doğrudan sizin şirketinize aittir.
           </p>
         </div>
 
-        <!-- Item 6 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 hover:border-white/20 hover:bg-white/[0.04] transition-all">
-          <div class="text-amber-400 font-mono text-xs mb-3 font-bold">CUSTOM INTEGRATIONS</div>
-          <h3 class="text-lg font-bold text-white mb-2 font-heading">Özel Webhook & REST API Köprüleri</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            GoHighLevel'ı mevcut veritabanınız, dahili yazılımlarınız veya özel yapay zekâ boru hatlarıyla pürüzsüz konuşturma.
+        <!-- Perk 6 -->
+        <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 hover:border-neutral-400 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-2xl bg-neutral-100 flex items-center justify-center text-xl mb-6">
+            🎓
+          </div>
+          <h3 class="text-xl font-extrabold text-neutral-900 mb-2">Eğitim & 30 Gün Destek</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Teslimat sonrası ekibinize özel Loom video dokümantasyonu ve 30 gün boyunca kesintisiz öncelikli teknik destek.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SHOWCASE: Recent Case Studies (Designjoy style cards) -->
-  <section id="work" class="py-24 sm:py-32 border-b border-white/10">
+  <!-- RECENT WORK SHOWCASE (Designjoy style cards) -->
+  <section id="work" class="py-24 sm:py-32 border-b border-neutral-200/80 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 gap-4">
         <div>
-          <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
+          <span class="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
             // SEÇİLMİŞ VAKA ANALİZLERİ
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 font-heading">
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 mt-2 tracking-tight">
             Uygulanan Sistemler & Çıktılar
           </h2>
         </div>
         <a
           href="/projects"
-          class="text-xs font-mono font-semibold text-zinc-300 hover:text-white flex items-center gap-1.5 transition-colors group"
+          class="text-sm font-bold text-neutral-900 hover:text-black flex items-center gap-1 transition-colors group"
         >
-          <span>Tüm Proje Arşivini Gör</span>
+          <span>Tüm Projeleri İncele</span>
           <span class="group-hover:translate-x-1 transition-transform">→</span>
         </a>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {featuredProjects.map((project) => (
-          <div class="rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-8 sm:p-10 hover:border-white/20 transition-all flex flex-col justify-between group">
+          <div class="rounded-3xl border border-neutral-200 bg-[#fafafa] p-8 sm:p-10 hover:border-neutral-400 hover:shadow-lg transition-all flex flex-col justify-between group">
             <div>
-              <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-4">
-                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-amber-300 font-medium">
+              <div class="flex items-center justify-between text-xs font-mono text-neutral-500 mb-4">
+                <span class="px-3 py-1 rounded-full bg-white border border-neutral-200 text-neutral-800 font-bold">
                   {project.data.category}
                 </span>
                 <span>{project.data.year}</span>
               </div>
-              <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-amber-400 transition-colors font-heading">
+              <h3 class="text-2xl font-extrabold text-neutral-900 mb-3 group-hover:text-black transition-colors leading-snug">
                 {project.data.title}
               </h3>
-              <p class="text-sm text-zinc-400 leading-relaxed mb-8">
+              <p class="text-sm text-neutral-600 leading-relaxed mb-8">
                 {project.data.description}
               </p>
             </div>
 
-            <div class="pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
-              <div class="flex flex-wrap gap-2">
-                {project.data.tech.map((t) => (
-                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white/5 text-zinc-300 border border-white/5">
+            <div class="pt-6 border-t border-neutral-200 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex flex-wrap gap-1.5">
+                {project.data.tech.slice(0, 3).map((t) => (
+                  <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-white text-neutral-700 border border-neutral-200">
                     {t}
                   </span>
                 ))}
               </div>
               <a
-                href={`/projects`}
-                class="text-xs font-semibold text-white group-hover:text-amber-400 flex items-center gap-1 transition-colors"
+                href="/projects"
+                class="text-xs font-extrabold text-neutral-900 group-hover:underline flex items-center gap-1"
               >
-                Vaka Detayları →
+                İncele →
               </a>
             </div>
           </div>
@@ -308,94 +304,91 @@ const researchCount = research.length;
     </div>
   </section>
 
-  <!-- ================================================================= -->
-  <!-- THE ARCHITECT / BIO SECTION: STRATEGICALLY PLACED BEFORE PRICING  -->
-  <!-- ================================================================= -->
-  <section id="about" class="py-24 sm:py-32 border-b border-white/10 relative overflow-hidden bg-gradient-to-b from-black via-[#0a0a0c] to-black">
-    <!-- Ambient subtle glow behind bio -->
-    <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/10 blur-[140px] pointer-events-none rounded-full"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="rounded-3xl border border-white/15 bg-white/[0.02] p-8 sm:p-14 backdrop-blur-xl">
+  <!-- ========================================================================= -->
+  <!-- "IT'S REALLY JUST ME" / THE FOUNDER BIO (Exact Designjoy Brett section)    -->
+  <!-- ========================================================================= -->
+  <section id="about" class="py-24 sm:py-32 border-b border-neutral-200/80 bg-[#f9fafb]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-14 shadow-sm">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          <!-- Left: Identity / Portrait Card -->
+          <!-- Left: Identity / Portrait Card (Designjoy style) -->
           <div class="lg:col-span-5 space-y-6">
-            <div class="relative rounded-2xl overflow-hidden border border-white/15 bg-gradient-to-br from-zinc-800 to-zinc-950 p-8 text-center flex flex-col items-center">
-              <!-- Avatar placeholder with initials -->
-              <div class="w-28 h-28 rounded-2xl bg-gradient-to-br from-amber-500 via-amber-600 to-amber-700 text-black flex items-center justify-center font-bold text-4xl shadow-2xl shadow-amber-500/30 mb-6 font-heading">
+            <div class="rounded-2xl border border-neutral-200 bg-[#fafafa] p-8 text-center flex flex-col items-center shadow-inner">
+              <!-- Big Initial Avatar -->
+              <div class="w-28 h-28 rounded-2xl bg-black text-white flex items-center justify-center font-extrabold text-4xl shadow-xl mb-6">
                 EK
               </div>
-              <h3 class="text-2xl font-extrabold text-white font-heading">Ercan Kurtoğlu</h3>
-              <p class="text-xs font-mono text-amber-400 mt-1">GHL Specialist & AI Researcher</p>
+              <h3 class="text-2xl font-extrabold text-neutral-900">Ercan Kurtoğlu</h3>
+              <p class="text-xs font-mono font-bold text-neutral-500 mt-1">Founder, System & AI Architect</p>
               
-              <!-- Badges grid -->
-              <div class="mt-6 pt-6 border-t border-white/10 w-full grid grid-cols-2 gap-2 text-left">
-                <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                  <div class="text-[10px] text-zinc-400 font-mono">MODEL</div>
-                  <div class="text-xs font-bold text-white mt-0.5">1-on-1 Direkt</div>
+              <!-- 4 Badges Grid -->
+              <div class="mt-6 pt-6 border-t border-neutral-200 w-full grid grid-cols-2 gap-2 text-left">
+                <div class="p-3 rounded-xl bg-white border border-neutral-200">
+                  <div class="text-[10px] text-neutral-400 font-mono font-bold">MODEL</div>
+                  <div class="text-xs font-extrabold text-neutral-900 mt-0.5">1-on-1 Doğrudan</div>
                 </div>
-                <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                  <div class="text-[10px] text-zinc-400 font-mono">UZMANLIK</div>
-                  <div class="text-xs font-bold text-white mt-0.5">Uçtan Uca GHL</div>
+                <div class="p-3 rounded-xl bg-white border border-neutral-200">
+                  <div class="text-[10px] text-neutral-400 font-mono font-bold">UZMANLIK</div>
+                  <div class="text-xs font-extrabold text-neutral-900 mt-0.5">Uçtan Uca GHL</div>
                 </div>
-                <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                  <div class="text-[10px] text-zinc-400 font-mono">AI DERİNLİĞİ</div>
-                  <div class="text-xs font-bold text-white mt-0.5">Akademik & Kod</div>
+                <div class="p-3 rounded-xl bg-white border border-neutral-200">
+                  <div class="text-[10px] text-neutral-400 font-mono font-bold">AI DERİNLİĞİ</div>
+                  <div class="text-xs font-extrabold text-neutral-900 mt-0.5">Akademik & Kod</div>
                 </div>
-                <div class="p-2.5 rounded-lg bg-white/5 border border-white/5">
-                  <div class="text-[10px] text-zinc-400 font-mono">SÖZLEŞME</div>
-                  <div class="text-xs font-bold text-white mt-0.5">Sabit Fiyat</div>
+                <div class="p-3 rounded-xl bg-white border border-neutral-200">
+                  <div class="text-[10px] text-neutral-400 font-mono font-bold">FİYAT</div>
+                  <div class="text-xs font-extrabold text-neutral-900 mt-0.5">Sabit Paket</div>
                 </div>
               </div>
             </div>
 
-            <!-- Fast channel -->
-            <div class="p-4 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-xs">
-              <span class="text-zinc-400">Doğrudan İletişim:</span>
-              <a href="mailto:iletisim@ercankurtoglu.site" class="font-mono text-amber-400 hover:text-amber-300 font-semibold">
+            <!-- Email box -->
+            <div class="p-4 rounded-2xl bg-neutral-100 border border-neutral-200 flex items-center justify-between text-xs font-mono">
+              <span class="text-neutral-500">Doğrudan İletişim:</span>
+              <a href="mailto:iletisim@ercankurtoglu.site" class="text-neutral-900 font-bold hover:underline">
                 iletisim@ercankurtoglu.site
               </a>
             </div>
           </div>
 
-          <!-- Right: The Story & Philosophy -->
+          <!-- Right: The Story & Designjoy philosophy -->
           <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-mono">
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
               // KİMİNLE ÇALIŞIYORSUNUZ?
-            </div>
+            </span>
 
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight font-heading">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-tight">
               Aracı ajanslar veya stajyerler yok. <br />
-              <span class="text-zinc-400">Doğrudan sistem mimarı ile birebir çalışın.</span>
+              <span class="text-neutral-500">Doğrudan sistem mimarı ile çalışın.</span>
             </h2>
 
-            <p class="text-base text-zinc-300 leading-relaxed font-normal">
-              Geleneksel ajanslarda satış görüşmesini bir yöneticiyle yapar, ardından projenizin arka planda stajyerlere ya da junior çalışanlara delege edildiğini görürsünüz. İletişim kopar, teslimatlar aksar.
+            <p class="text-base text-neutral-700 leading-relaxed font-normal">
+              Geleneksel ajanslarda satış görüşmesini üst düzey bir yöneticiyle yaparsınız, ancak proje başladıktan sonra işlerinizin arka planda stajyerlere ya da junior çalışanlara devredildiğini görürsünüz. İletişim kopar, teslimatlar gecikir.
             </p>
 
-            <p class="text-sm text-zinc-400 leading-relaxed">
-              Ben bu süreci tersine çeviriyorum: <strong>Bir yanda GoHighLevel</strong> ve satış hunilerini işletmelerin gelirini artırmak için kurgulayan bir iş mimarı; <strong>diğer yanda büyük dil modellerinde muhakeme sistemleri</strong> üzerine akademik araştırmalar yürüten bir yapay zekâ geliştiricisiyim.
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              <strong>Ben bu süreci tamamen ortadan kaldırıyorum:</strong> Bir yanda GoHighLevel ve satış hunilerini işletmelerin gelirini artırmak için kurgulayan bir iş mimarı; diğer yanda büyük dil modellerinde mantıksal muhakeme üzerine akademik araştırmalar yürüten bir yapay zekâ mühendisiyim.
             </p>
 
-            <p class="text-sm text-zinc-400 leading-relaxed">
-              Bu hibrit bakış açısı sayesinde işletmenize sadece rastgele bir "hazır şablon" değil; ölçeklenebilir, hatasız ve kurumsal yazılım standartlarında bir altyapı kazandırıyorum.
+            <p class="text-sm text-neutral-600 leading-relaxed">
+              Bu hibrit yapı sayesinde işletmeniz yalnızca rastgele hazır şablonlar değil; ölçeklenebilir, hatasız ve kurumsal yazılım standartlarında bir büyüme motoru kazanır.
             </p>
 
             <!-- Links to academic & writing -->
-            <div class="pt-6 border-t border-white/10 flex flex-wrap items-center gap-4">
+            <div class="pt-6 border-t border-neutral-200 flex flex-wrap items-center gap-4">
               <a
                 href="/research"
-                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/10 text-white hover:bg-white/20 text-xs font-semibold transition-colors"
+                class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-black text-white hover:bg-neutral-800 text-xs font-bold transition-all"
               >
-                <span>Akademik Araştırmalarımı İncele ({researchCount})</span>
-                <span class="text-amber-400">→</span>
+                <span>Akademik Araştırmalarımı Gör ({research.length})</span>
+                <span>→</span>
               </a>
               <a
                 href="/writing"
-                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-white/10 text-zinc-300 hover:text-white text-xs font-semibold transition-colors"
+                class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-neutral-300 text-neutral-900 hover:bg-neutral-50 text-xs font-bold transition-all"
               >
-                <span>Teknik Yazılar & Dergi</span>
+                <span>Teknik Yazılar & Blog</span>
                 <span>→</span>
               </a>
             </div>
@@ -406,174 +399,235 @@ const researchCount = research.length;
     </div>
   </section>
 
-  <!-- PRICING & MEMBERSHIP: The Heart of Designjoy Model -->
-  <section id="pricing" class="py-24 sm:py-32 border-b border-white/10">
+  <!-- SCOPE OF WORK (Designjoy's apps list) -->
+  <section id="scope" class="py-24 sm:py-32 border-b border-neutral-200/80 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
-          // ŞEFFAF & SABİT PAKETLER
-        </span>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 font-heading">
-          Sürpriz fatura yok. İhtiyacınıza uygun planı seçin.
-        </h2>
-        <p class="mt-4 text-sm text-zinc-400">
-          Saatlik belirsiz danışmanlık ücretleri yerine, kapsamı baştan belli anahtar teslim paketler.
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+        <div>
+          <span class="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
+            // HİZMET KAPSAMI
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 mt-2 tracking-tight">
+            Neler kuruyoruz?
+          </h2>
+        </div>
+        <p class="text-sm text-neutral-600 max-w-md">
+          İşletmenizin satış, pazarlama ve operasyon süreçlerini uçtan uca otomatize eden kurumsal bileşenler.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="p-6 rounded-2xl border border-neutral-200 bg-[#fafafa]">
+          <div class="text-black font-extrabold text-sm mb-1">Satış Hunileri (Funnels)</div>
+          <div class="text-xs text-neutral-500 leading-relaxed">Açılış sayfaları, opt-in formları, A/B testleri</div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-neutral-200 bg-[#fafafa]">
+          <div class="text-black font-extrabold text-sm mb-1">Lead Nurturing (SMS & Mail)</div>
+          <div class="text-xs text-neutral-500 leading-relaxed">İlk 90 saniyede otomatik karşılama serileri</div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-neutral-200 bg-[#fafafa]">
+          <div class="text-black font-extrabold text-sm mb-1">7/24 AI Randevu Asistanı</div>
+          <div class="text-xs text-neutral-500 leading-relaxed">Müşteriyle konuşup takvim dolduran LLM ajanları</div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-neutral-200 bg-[#fafafa]">
+          <div class="text-black font-extrabold text-sm mb-1">Kayıp Önleme (No-Show)</div>
+          <div class="text-xs text-neutral-500 leading-relaxed">Otomatik hatırlatma ve yeniden randevu akışları</div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-neutral-200 bg-[#fafafa]">
+          <div class="text-black font-extrabold text-sm mb-1">Stripe & İyzico Ödemeleri</div>
+          <div class="text-xs text-neutral-500 leading-relaxed">Tek seferlik ve abonelik tahsilat sistemleri</div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-neutral-200 bg-[#fafafa]">
+          <div class="text-black font-extrabold text-sm mb-1">Özel Webhook & REST API</div>
+          <div class="text-xs text-neutral-500 leading-relaxed">GHL'i mevcut veritabanınıza bağlama</div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-neutral-200 bg-[#fafafa]">
+          <div class="text-black font-extrabold text-sm mb-1">WhatsApp Cloud API</div>
+          <div class="text-xs text-neutral-500 leading-relaxed">Çift yönlü kurumsal WhatsApp mesajlaşma</div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-neutral-200 bg-[#fafafa]">
+          <div class="text-black font-extrabold text-sm mb-1">CRM Boru Hattı & Pipeline</div>
+          <div class="text-xs text-neutral-500 leading-relaxed">Satış ekibiniz için şeffaf aşamalı paneller</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING & MEMBERSHIP (Designjoy's 3 plans layout) -->
+  <section id="pricing" class="py-24 sm:py-36 border-b border-neutral-200/80 bg-[#fbfbfb]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
+          // ŞEFFAF & SABİT PLANLAR
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 mt-3 tracking-tight">
+          İhtiyacınıza uygun paketi seçin.
+        </h2>
+        <p class="mt-4 text-base text-neutral-600">
+          Sürpriz faturalar yok. Kapsamı baştan belli anahtar teslim paketler.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-7xl mx-auto">
         
         <!-- Plan 1: Standard GHL Setup -->
-        <div class="rounded-3xl border border-white/10 bg-white/[0.02] p-8 sm:p-10 flex flex-col justify-between hover:border-white/25 transition-all">
+        <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 flex flex-col justify-between hover:border-neutral-400 hover:shadow-lg transition-all">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-white/5 border border-white/10 text-zinc-300">
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-neutral-100 text-neutral-800">
                 TEMEL PAKET
               </span>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-2 font-heading">GHL Standart Kurulum</h3>
-            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+            <h3 class="text-2xl font-extrabold text-neutral-900 mb-2">GHL Standart Kurulum</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed mb-6">
               İşletmesini GoHighLevel'a taşımak ve satış süreçlerini tek merkezden otomatize etmek isteyenler için.
             </p>
 
-            <div class="mb-8 pb-8 border-b border-white/10">
-              <span class="text-xs text-zinc-400 font-mono block mb-1">PROJE BAZLI SABİT ÜCRET</span>
+            <div class="mb-8 pb-8 border-b border-neutral-200">
+              <span class="text-xs text-neutral-500 font-mono block mb-1">SABİT PAKET ÜCRETİ</span>
               <div class="flex items-baseline gap-2">
-                <span class="text-4xl font-extrabold text-white font-heading">Özel Teklif</span>
-                <span class="text-xs text-zinc-400">/ anahtar teslim</span>
+                <span class="text-4xl font-extrabold text-neutral-900">Özel Teklif</span>
+                <span class="text-xs text-neutral-500 font-medium">/ anahtar teslim</span>
               </div>
             </div>
 
-            <ul class="space-y-3.5 text-xs text-zinc-300 mb-8">
+            <ul class="space-y-3.5 text-xs text-neutral-700 mb-8 font-medium">
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-black flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>Sub-Account, DNS & E-posta/SMS Konfigürasyonu</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-black flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>1 Adet Yüksek Dönüşümlü Satış Hunisi (Sales Funnel)</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-black flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>Otomatik SMS & E-posta Lead Nurturing İş Akışları</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-black flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>Takvim & Randevu Hatırlatma Entegrasyonu</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                <span>Stripe Ödeme Ağ Geçidi Bağlantısı</span>
+                <svg class="w-4 h-4 text-black flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Stripe Ödeme Altyapısı Kurulumu</span>
               </li>
             </ul>
           </div>
 
           <a
             href="/contact?plan=ghl-standart"
-            class="w-full py-3.5 px-4 rounded-xl border border-white/20 text-white font-semibold text-xs text-center hover:bg-white hover:text-black transition-all"
+            class="w-full py-4 px-6 rounded-full border-2 border-black text-black font-extrabold text-xs text-center hover:bg-black hover:text-white transition-all"
           >
             Bu Paket İçin Görüşün →
           </a>
         </div>
 
-        <!-- Plan 2: GHL + AI Enterprise (FEATURED / MOST POPULAR) -->
-        <div class="rounded-3xl border-2 border-amber-500/80 bg-gradient-to-b from-amber-500/10 via-white/[0.03] to-transparent p-8 sm:p-10 flex flex-col justify-between relative shadow-2xl shadow-amber-500/10">
+        <!-- Plan 2: GHL + AI Enterprise (FEATURED / DESIGNJOY BLACK CARD) -->
+        <div class="rounded-3xl border-2 border-black bg-black text-white p-8 sm:p-10 flex flex-col justify-between relative shadow-2xl">
           <!-- Featured badge -->
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 text-black font-extrabold text-[11px] font-mono tracking-wider uppercase shadow-lg">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-white text-black font-extrabold text-[11px] font-mono tracking-wider uppercase shadow-md">
             EN ÇOK TERCİH EDİLEN
           </div>
 
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30">
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-neutral-800 text-white">
                 TAM OTOMASYON + AI
               </span>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-2 font-heading">Büyüme & AI Entegrasyonu</h3>
-            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
-              Maksimum dönüşüm isteyen, yapay zekâ temsilcisiyle 7/24 randevu kapatmak isteyen şirketler için.
+            <h3 class="text-2xl font-extrabold text-white mb-2">Büyüme & AI Entegrasyonu</h3>
+            <p class="text-xs text-neutral-400 leading-relaxed mb-6">
+              Maksimum dönüşüm isteyen, yapay zekâ asistanıyla 7/24 randevu kapatmak isteyen şirketler için.
             </p>
 
-            <div class="mb-8 pb-8 border-b border-white/10">
-              <span class="text-xs text-amber-400 font-mono block mb-1">TAM ENTEGRASYON SİSTEMİ</span>
+            <div class="mb-8 pb-8 border-b border-neutral-800">
+              <span class="text-xs text-neutral-400 font-mono block mb-1">TAM ENTEGRASYON SİSTEMİ</span>
               <div class="flex items-baseline gap-2">
-                <span class="text-4xl font-extrabold text-white font-heading">Özel Kapsam</span>
-                <span class="text-xs text-zinc-400">/ anahtar teslim</span>
+                <span class="text-4xl font-extrabold text-white">Özel Kapsam</span>
+                <span class="text-xs text-neutral-400">/ anahtar teslim</span>
               </div>
             </div>
 
-            <ul class="space-y-3.5 text-xs text-zinc-200 mb-8">
+            <ul class="space-y-3.5 text-xs text-neutral-200 mb-8 font-medium">
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span><strong>GHL Standart Kurulumunun Tüm Özellikleri</strong></span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>7/24 Randevu Ayarlayan Özel <strong>LLM/AI Asistanı</strong></span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>Çoklu Satış Hunisi & Gelişmiş A/B Test Altyapısı</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>Özel Make / Zapier / Webhook Köprüleri</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>Ekip Eğitimi & Video Kullanım Dokümantasyonu</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                <span>Canlıya Alım Sonrası 30 Gün Öncelikli Destek</span>
+                <svg class="w-4 h-4 text-white flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>30 Gün Öncelikli Teknik Destek</span>
               </li>
             </ul>
           </div>
 
           <a
             href="/contact?plan=ghl-ai-growth"
-            class="w-full py-4 px-4 rounded-xl bg-white text-black font-extrabold text-xs text-center hover:bg-zinc-200 transition-all shadow-lg shadow-amber-500/20"
+            class="w-full py-4 px-6 rounded-full bg-white text-black font-extrabold text-xs text-center hover:bg-neutral-100 transition-all shadow-md"
           >
             Hemen Başlayalım →
           </a>
         </div>
 
         <!-- Plan 3: Strategy & Audit Sprint -->
-        <div class="rounded-3xl border border-white/10 bg-white/[0.02] p-8 sm:p-10 flex flex-col justify-between hover:border-white/25 transition-all">
+        <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 flex flex-col justify-between hover:border-neutral-400 hover:shadow-lg transition-all">
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full text-xs font-mono font-medium bg-white/5 border border-white/10 text-zinc-300">
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-neutral-100 text-neutral-800">
                 DENETİM & DANIŞMANLIK
               </span>
             </div>
-            <h3 class="text-2xl font-bold text-white mb-2 font-heading">Sistem Denetimi (Audit)</h3>
-            <p class="text-xs text-zinc-400 leading-relaxed mb-6">
-              Mevcut GHL veya satış sisteminizdeki kaçakları, hatalı otomasyonları ve dönüşüm darboğazlarını çözmek için.
+            <h3 class="text-2xl font-extrabold text-neutral-900 mb-2">Sistem Denetimi (Audit)</h3>
+            <p class="text-xs text-neutral-600 leading-relaxed mb-6">
+              Mevcut GHL veya satış sisteminizdeki kaçakları, hatalı otomasyonları ve darboğazları çözmek için.
             </p>
 
-            <div class="mb-8 pb-8 border-b border-white/10">
-              <span class="text-xs text-zinc-400 font-mono block mb-1">KAPSAMLI RAPOR & GÖRÜŞME</span>
+            <div class="mb-8 pb-8 border-b border-neutral-200">
+              <span class="text-xs text-neutral-500 font-mono block mb-1">KAPSAMLI RAPOR & SEANS</span>
               <div class="flex items-baseline gap-2">
-                <span class="text-4xl font-extrabold text-white font-heading">1-on-1 Sprint</span>
-                <span class="text-xs text-zinc-400">/ 60 dakika</span>
+                <span class="text-4xl font-extrabold text-neutral-900">1-on-1 Sprint</span>
+                <span class="text-xs text-neutral-500 font-medium">/ 60 dakika</span>
               </div>
             </div>
 
-            <ul class="space-y-3.5 text-xs text-zinc-300 mb-8">
+            <ul class="space-y-3.5 text-xs text-neutral-700 mb-8 font-medium">
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-black flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>Mevcut CRM & İş Akışlarının Uçtan Uca İncelenmesi</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-black flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>Tespit Edilen Kaçaklar & Dönüşüm Kayıpları Raporu</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-black flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>AI Entegrasyon & Otomasyon Yol Haritası</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <svg class="w-4 h-4 text-black flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 <span>60 Dakika Canlı Ekran Paylaşımlı Strateji Seansı</span>
               </li>
             </ul>
@@ -581,7 +635,7 @@ const researchCount = research.length;
 
           <a
             href="/contact?plan=audit-sprint"
-            class="w-full py-3.5 px-4 rounded-xl border border-white/20 text-white font-semibold text-xs text-center hover:bg-white hover:text-black transition-all"
+            class="w-full py-4 px-6 rounded-full border-2 border-black text-black font-extrabold text-xs text-center hover:bg-black hover:text-white transition-all"
           >
             Seans Ayarlayın →
           </a>
@@ -591,100 +645,52 @@ const researchCount = research.length;
     </div>
   </section>
 
-  <!-- PERKS / WHY NOT A TRADITIONAL AGENCY? (Designjoy style comparison) -->
-  <section class="py-24 sm:py-32 border-b border-white/10 bg-black/40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
-          // NEDEN FARKLI?
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 font-heading">
-          Neden geleneksel bir ajans veya freelancer değil?
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="p-6 rounded-2xl border border-white/10 bg-white/[0.02]">
-          <div class="text-amber-400 font-mono text-sm font-bold mb-2">01. SABİT FİYAT</div>
-          <h3 class="text-base font-bold text-white mb-2 font-heading">Sürpriz Masraf Yok</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Ne ödeyeceğinizi ve ne alacağınızı baştan bilirsiniz. Sayacı çalışan saatlik faturalarla karşılaşmazsınız.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl border border-white/10 bg-white/[0.02]">
-          <div class="text-amber-400 font-mono text-sm font-bold mb-2">02. BİREBİR İLETİŞİM</div>
-          <h3 class="text-base font-bold text-white mb-2 font-heading">Aracı Yönetici Yok</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Mesajlarınız hesap yöneticileri arasında kaybolmaz; doğrudan kodu ve sistemi kuran kişiyle konuşursunuz.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl border border-white/10 bg-white/[0.02]">
-          <div class="text-amber-400 font-mono text-sm font-bold mb-2">03. ÜST DÜZEY MİMARİ</div>
-          <h3 class="text-base font-bold text-white mb-2 font-heading">Akademik & Kod Kalitesi</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Sadece hazır şablon kurmuyoruz; karmaşık veri hatlarını ve AI modellerini kurumsal mühendislik disipliniyle bağlıyoruz.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl border border-white/10 bg-white/[0.02]">
-          <div class="text-amber-400 font-mono text-sm font-bold mb-2">04. HIZLI TESLİMAT</div>
-          <h3 class="text-base font-bold text-white mb-2 font-heading">Aylarca Beklemek Yok</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Haftalar süren bürokratik onay süreçleri yerine, doğrudan çalışan prototip ve canlı kurulum odaklıyız.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LATEST WRITING & RESEARCH PREVIEW (Sebastian Raschka depth) -->
-  <section class="py-24 sm:py-32 border-b border-white/10">
+  <!-- LATEST WRITING & RESEARCH (Sebastian Raschka depth) -->
+  <section class="py-24 sm:py-32 border-b border-neutral-200/80 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 gap-4">
         <div>
-          <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
+          <span class="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
             // TEKNİK BÜLTEN & YAYINLAR
           </span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 font-heading">
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 mt-2 tracking-tight">
             Yazılar & Yapay Zekâ Analizleri
           </h2>
         </div>
         <a
           href="/writing"
-          class="text-xs font-mono font-semibold text-zinc-300 hover:text-white flex items-center gap-1.5 transition-colors group"
+          class="text-sm font-bold text-neutral-900 hover:text-black flex items-center gap-1.5 transition-colors group"
         >
           <span>Tüm Makaleleri Oku</span>
           <span class="group-hover:translate-x-1 transition-transform">→</span>
         </a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {latestWritings.map((post) => (
-          <article class="rounded-2xl border border-white/10 bg-white/[0.02] p-7 hover:border-white/25 hover:bg-white/[0.04] transition-all flex flex-col justify-between group">
+          <article class="rounded-3xl border border-neutral-200 bg-[#fafafa] p-8 hover:border-neutral-400 hover:shadow-lg transition-all flex flex-col justify-between group">
             <div>
-              <div class="flex items-center gap-2 text-xs font-mono text-zinc-400 mb-3">
-                <span class="text-amber-400 font-medium">{post.data.category}</span>
+              <div class="flex items-center gap-2 text-xs font-mono text-neutral-500 mb-4">
+                <span class="font-bold text-neutral-900">{post.data.category}</span>
                 <span>•</span>
                 <span>{post.data.readingTime}</span>
               </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors font-heading mb-3">
+              <h3 class="text-xl font-extrabold text-neutral-900 group-hover:text-black transition-colors mb-3 leading-snug">
                 <a href={`/writing/${post.id}`}>
                   {post.data.title}
                 </a>
               </h3>
-              <p class="text-xs text-zinc-400 leading-relaxed line-clamp-3">
+              <p class="text-xs text-neutral-600 leading-relaxed line-clamp-3">
                 {post.data.description}
               </p>
             </div>
 
-            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs">
-              <span class="text-zinc-400 font-mono">
+            <div class="pt-6 mt-6 border-t border-neutral-200 flex items-center justify-between text-xs">
+              <span class="text-neutral-500 font-mono">
                 {post.data.pubDate.toLocaleDateString('tr-TR', { year: 'numeric', month: 'short' })}
               </span>
-              <a href={`/writing/${post.id}`} class="text-white group-hover:text-amber-400 font-semibold flex items-center gap-1">
-                Oku →
+              <a href={`/writing/${post.id}`} class="text-neutral-900 group-hover:underline font-extrabold flex items-center gap-1">
+                Yazıyı Oku →
               </a>
             </div>
           </article>
@@ -693,73 +699,85 @@ const researchCount = research.length;
     </div>
   </section>
 
-  <!-- FAQ SECTION: Interactive Accordion (Designjoy style) -->
-  <section id="faq" class="py-24 sm:py-32 border-b border-white/10 bg-black/30">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <span class="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
-          // SIKÇA SORULAN SORULAR
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 font-heading">
-          Aklınıza takılabilecek her şey
-        </h2>
-      </div>
-
-      <div class="space-y-4" id="faq-accordion">
+  <!-- FAQ SECTION: Exact Designjoy 2-column Accordion -->
+  <section id="faq" class="py-24 sm:py-36 border-b border-neutral-200/80 bg-[#fbfbfb]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         
-        <!-- FAQ 1 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden transition-colors">
-          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-semibold text-white text-base hover:text-amber-400 transition-colors">
-            <span>GoHighLevel (GHL) lisansını kim satın alıyor?</span>
-            <span class="faq-icon text-zinc-400 text-xl font-mono transition-transform duration-200">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed border-t border-white/5 pt-4">
-            GoHighLevel lisansı doğrudan sizin şirketinize aittir. Kendi GHL hesabınızı açarsınız; biz sistem mimarı olarak alt hesap (sub-account) davetiyle sisteme dahil olur, tüm kurulumu tamamlar ve teslim ederiz. Verilerinizin ve sisteminizin tam mülkiyeti sizde kalır.
-          </div>
+        <!-- Left: Static Header -->
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
+            // SIKÇA SORULAN SORULAR
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-tight">
+            Aklınıza takılan tüm soruların yanıtları.
+          </h2>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Başka bir sorunuz mu var? Doğrudan bana e-posta atabilirsiniz: <br />
+            <a href="mailto:iletisim@ercankurtoglu.site" class="font-bold text-neutral-900 underline mt-1 inline-block">
+              iletisim@ercankurtoglu.site
+            </a>
+          </p>
         </div>
 
-        <!-- FAQ 2 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden transition-colors">
-          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-semibold text-white text-base hover:text-amber-400 transition-colors">
-            <span>Kurulum ne kadar sürede tamamlanır?</span>
-            <span class="faq-icon text-zinc-400 text-xl font-mono transition-transform duration-200">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed border-t border-white/5 pt-4">
-            Standart GHL kurulumları kapsamına göre genellikle <strong>7 ila 14 iş günü</strong> içinde anahtar teslim canlıya alınır. Özel AI asistanı ve çoklu API entegrasyonu içeren Büyüme paketleri ise 2-3 hafta içinde tüm testleri yapılarak teslim edilir.
+        <!-- Right: Accordion Items -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <!-- Item 1 -->
+          <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden transition-all shadow-sm">
+            <button type="button" class="faq-btn w-full px-7 py-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base hover:text-black">
+              <span>GoHighLevel (GHL) lisansını kim satın alıyor?</span>
+              <span class="faq-icon text-neutral-400 text-2xl font-mono leading-none transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content hidden px-7 pb-6 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+              GoHighLevel lisansı doğrudan sizin şirketinize aittir. Kendi GHL hesabınızı açarsınız; biz sistem mimarı olarak alt hesap (sub-account) davetiyle sisteme dahil olur, tüm kurulumu tamamlar ve teslim ederiz. Verilerinizin ve sisteminizin tam mülkiyeti sizde kalır.
+            </div>
           </div>
-        </div>
 
-        <!-- FAQ 3 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden transition-colors">
-          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-semibold text-white text-base hover:text-amber-400 transition-colors">
-            <span>GHL içine AI Ajanı nasıl entegre ediliyor?</span>
-            <span class="faq-icon text-zinc-400 text-xl font-mono transition-transform duration-200">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed border-t border-white/5 pt-4">
-            Doğrudan OpenAI/Gemini API ve webhook köprüleri kullanarak, şirketinizin sık sorulan soruları, hizmet şartları ve fiyatlandırmasıyla eğitilmiş özel bir dil modeli ajanını GHL'e bağlıyoruz. Gelen mesajı anlayıp randevu takviminizi kontrol ederek müşteriyle doğal diyalog kurar.
+          <!-- Item 2 -->
+          <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden transition-all shadow-sm">
+            <button type="button" class="faq-btn w-full px-7 py-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base hover:text-black">
+              <span>Kurulum ne kadar sürede tamamlanır?</span>
+              <span class="faq-icon text-neutral-400 text-2xl font-mono leading-none transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content hidden px-7 pb-6 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+              Standart GHL kurulumları kapsamına göre genellikle <strong>7 ila 14 iş günü</strong> içinde anahtar teslim canlıya alınır. Özel AI asistanı ve çoklu API entegrasyonu içeren Büyüme paketleri ise 2-3 hafta içinde tüm testleri yapılarak teslim edilir.
+            </div>
           </div>
-        </div>
 
-        <!-- FAQ 4 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden transition-colors">
-          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-semibold text-white text-base hover:text-amber-400 transition-colors">
-            <span>Teslimat sonrasında ekibime eğitim veriyor musunuz?</span>
-            <span class="faq-icon text-zinc-400 text-xl font-mono transition-transform duration-200">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed border-t border-white/5 pt-4">
-            Evet! Kurulum tamamlandığında ekibinizin sistemi nasıl kullanacağını anlatan adım adım Loom video dokümantasyonu hazırlarız. Ayrıca 30 gün boyunca sistemle ilgili her türlü sorunuzda öncelikli destek sağlıyoruz.
+          <!-- Item 3 -->
+          <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden transition-all shadow-sm">
+            <button type="button" class="faq-btn w-full px-7 py-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base hover:text-black">
+              <span>GHL içine AI Ajanı nasıl entegre ediliyor?</span>
+              <span class="faq-icon text-neutral-400 text-2xl font-mono leading-none transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content hidden px-7 pb-6 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+              Doğrudan OpenAI/Gemini API ve webhook köprüleri kullanarak, şirketinizin sık sorulan soruları, hizmet şartları ve fiyatlandırmasıyla eğitilmiş özel bir dil modeli ajanını GHL'e bağlıyoruz. Gelen mesajı anlayıp randevu takviminizi kontrol ederek müşteriyle doğal diyalog kurar.
+            </div>
           </div>
-        </div>
 
-        <!-- FAQ 5 -->
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden transition-colors">
-          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-semibold text-white text-base hover:text-amber-400 transition-colors">
-            <span>İletişimi nasıl yürütüyoruz?</span>
-            <span class="faq-icon text-zinc-400 text-xl font-mono transition-transform duration-200">+</span>
-          </button>
-          <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-400 leading-relaxed border-t border-white/5 pt-4">
-            Gereksiz toplantı trafiğinden kaçınıyoruz. Proje başlangıcında 30 dakikalık net bir mimari seansı yapar, ardından ilerlemeyi Slack/WhatsApp veya Trello panosu üzerinden günlük/haftalık şeffaf güncellemelerle sürdürürüz.
+          <!-- Item 4 -->
+          <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden transition-all shadow-sm">
+            <button type="button" class="faq-btn w-full px-7 py-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base hover:text-black">
+              <span>Teslimat sonrasında ekibime eğitim veriyor musunuz?</span>
+              <span class="faq-icon text-neutral-400 text-2xl font-mono leading-none transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content hidden px-7 pb-6 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+              Evet! Kurulum tamamlandığında ekibinizin sistemi nasıl kullanacağını anlatan adım adım Loom video dokümantasyonu hazırlarız. Ayrıca 30 gün boyunca sistemle ilgili her türlü sorunuzda öncelikli destek sağlıyoruz.
+            </div>
           </div>
+
+          <!-- Item 5 -->
+          <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden transition-all shadow-sm">
+            <button type="button" class="faq-btn w-full px-7 py-6 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-base hover:text-black">
+              <span>İletişimi nasıl yürütüyoruz?</span>
+              <span class="faq-icon text-neutral-400 text-2xl font-mono leading-none transition-transform duration-200">+</span>
+            </button>
+            <div class="faq-content hidden px-7 pb-6 text-sm text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+              Gereksiz toplantı trafiğinden kaçınıyoruz. Proje başlangıcında 30 dakikalık net bir mimari seansı yapar, ardından ilerlemeyi Slack/WhatsApp veya Trello panosu üzerinden günlük/haftalık şeffaf güncellemelerle sürdürürüz.
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -767,28 +785,25 @@ const researchCount = research.length;
   </section>
 
   <!-- FINAL CTA: Big Designjoy statement -->
-  <section class="py-24 sm:py-36 relative overflow-hidden text-center">
-    <!-- Ambient bottom burst -->
-    <div class="absolute inset-0 bg-radial-gradient pointer-events-none"></div>
-
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
-      <h2 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-heading leading-tight">
+  <section class="py-24 sm:py-36 bg-white text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <h2 class="text-4xl sm:text-6xl font-extrabold text-neutral-900 tracking-tight leading-tight">
         Satış operasyonlarınızı otomatize etmeye hazır mısınız?
       </h2>
-      <p class="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+      <p class="text-base sm:text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
         Hemen bir plan seçin veya aklınızdaki mimariyi konuşmak için doğrudan bir görüşme başlatın.
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
         <a
           href="#pricing"
-          class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-black font-extrabold text-sm hover:bg-zinc-200 transition-all shadow-xl shadow-white/10"
+          class="w-full sm:w-auto px-9 py-4 rounded-full bg-black text-white font-extrabold text-sm hover:bg-neutral-800 transition-all shadow-lg"
         >
           Paketleri İnceleyin
         </a>
         <a
           href="/contact"
-          class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/15 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
+          class="w-full sm:w-auto px-9 py-4 rounded-full bg-white border border-neutral-300 text-neutral-900 font-bold text-sm hover:bg-neutral-50 transition-all shadow-sm"
         >
           Görüşme Planlayın →
         </a>
@@ -810,7 +825,6 @@ const researchCount = research.length;
       document.querySelectorAll('.faq-content').forEach((el) => el.classList.add('hidden'));
       document.querySelectorAll('.faq-icon').forEach((el) => {
         el.textContent = '+';
-        el.classList.remove('rotate-45');
       });
 
       // Toggle current
