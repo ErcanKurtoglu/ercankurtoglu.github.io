@@ -1,8 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// Cal.com settings (Change this to your exact username/slug once created)
-const CAL_USER = 'ercankurtoglu';
+// Cal.com settings
+const CAL_USER = 'ercan-kurtoglu-qztefd';
 const CAL_EVENT = '15min';
 const CAL_LINK = `${CAL_USER}/${CAL_EVENT}`;
 ---
@@ -207,7 +207,7 @@ const CAL_LINK = `${CAL_USER}/${CAL_EVENT}`;
     const calEl = document.getElementById("my-cal-inline");
     if (!calEl) return;
 
-    const calLink = calEl.getAttribute("data-cal-link") || "ercankurtoglu/15min";
+    const calLink = calEl.getAttribute("data-cal-link") || "ercan-kurtoglu-qztefd/15min";
     const isDark = document.documentElement.classList.contains("dark");
 
     Cal("init", { origin: "https://cal.com" });
