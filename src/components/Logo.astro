@@ -1,43 +1,45 @@
 ---
 interface Props {
   className?: string;
-  variant?: 'badge' | 'monogram' | 'geometric' | 'slide2' | 'slide2-pure';
+  variant?: 'slide2-boxed' | 'slide2-pure' | 'slide2-inverted' | 'badge' | 'monogram';
   size?: number;
   id?: string;
 }
 
 const {
   className = 'w-8 h-8',
-  variant = 'slide2',
+  variant = 'slide2-boxed',
   size = 32,
   id = '',
 } = Astro.props;
 ---
 
-<!-- Slide 2: Inverted Squircle Badge (Light: Black Box + White Glyph / Dark: White Box + Black Glyph) -->
-{variant === 'slide2' && (
+<!-- Slide 2: Boxed (Light: White Card + Black Glyph / Dark: Dark Card + White Glyph) -->
+{variant === 'slide2-boxed' && (
   <div
     id={id}
-    class={`logo-container relative flex items-center justify-center rounded-xl bg-black dark:bg-white text-white dark:text-black shadow-sm transition-all duration-200 overflow-hidden shrink-0 p-1.5 ${className}`}
+    class={`logo-container relative flex items-center justify-center rounded-xl bg-white dark:bg-[#181818] border border-neutral-200 dark:border-neutral-800 shadow-xs transition-all duration-200 overflow-hidden shrink-0 p-1.5 ${className}`}
   >
     <img
-      src="/images/logo/slide2-transparent-white.png"
+      src="/images/logo/slide2-transparent-black.png"
       alt="Ercan Kurtoğlu Logo"
       class="w-full h-full object-contain block dark:hidden transition-transform duration-200 group-hover:scale-105"
       width={size}
       height={size}
+      loading="eager"
     />
     <img
-      src="/images/logo/slide2-transparent-black.png"
+      src="/images/logo/slide2-transparent-white.png"
       alt="Ercan Kurtoğlu Logo"
       class="w-full h-full object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
       width={size}
       height={size}
+      loading="eager"
     />
   </div>
 )}
 
-<!-- Slide 2: Pure Standalone Vector Glyph (No background box) -->
+<!-- Slide 2: Pure Standalone Glyph (No background box) -->
 {variant === 'slide2-pure' && (
   <div
     id={id}
@@ -49,6 +51,7 @@ const {
       class="w-full h-full object-contain block dark:hidden transition-transform duration-200 group-hover:scale-105"
       width={size}
       height={size}
+      loading="eager"
     />
     <img
       src="/images/logo/slide2-transparent-white.png"
@@ -56,11 +59,37 @@ const {
       class="w-full h-full object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
       width={size}
       height={size}
+      loading="eager"
     />
   </div>
 )}
 
-<!-- Option C: Precision Geometric SVG Monogram Badge -->
+<!-- Slide 2: High Contrast Inverted Badge (Light: Black Box + White Glyph / Dark: White Box + Black Glyph) -->
+{variant === 'slide2-inverted' && (
+  <div
+    id={id}
+    class={`logo-container relative flex items-center justify-center rounded-xl bg-black dark:bg-white text-white dark:text-black shadow-sm transition-all duration-200 overflow-hidden shrink-0 p-1.5 ${className}`}
+  >
+    <img
+      src="/images/logo/slide2-transparent-white.png"
+      alt="Ercan Kurtoğlu Logo"
+      class="w-full h-full object-contain block dark:hidden transition-transform duration-200 group-hover:scale-105"
+      width={size}
+      height={size}
+      loading="eager"
+    />
+    <img
+      src="/images/logo/slide2-transparent-black.png"
+      alt="Ercan Kurtoğlu Logo"
+      class="w-full h-full object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
+      width={size}
+      height={size}
+      loading="eager"
+    />
+  </div>
+)}
+
+<!-- Original SVG Monogram Badge -->
 {variant === 'badge' && (
   <div
     id={id}
@@ -87,7 +116,7 @@ const {
   </div>
 )}
 
-<!-- Standalone SVG Monogram -->
+<!-- Original SVG Monogram Pure -->
 {variant === 'monogram' && (
   <svg
     id={id}
@@ -106,29 +135,4 @@ const {
     <path d="M12 12l8-8" />
     <path d="M12 12l8 8" />
   </svg>
-)}
-
-<!-- Hexagonal Systems Architecture Mark -->
-{variant === 'geometric' && (
-  <div
-    id={id}
-    class={`logo-container relative flex items-center justify-center rounded-xl bg-neutral-900 dark:bg-neutral-100 text-white dark:text-black shadow-sm transition-all shrink-0 ${className}`}
-  >
-    <svg
-      width={size * 0.7}
-      height={size * 0.7}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <polygon points="12 2 21 7 21 17 12 22 3 17 3 7" stroke-width="2" />
-      <line x1="12" y1="12" x2="12" y2="22" />
-      <line x1="12" y1="12" x2="21" y2="7" />
-      <line x1="12" y1="12" x2="3" y2="7" />
-      <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
-    </svg>
-  </div>
 )}

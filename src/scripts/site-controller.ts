@@ -177,7 +177,10 @@ export function initSiteControls() {
   }
 
   // 5. Logo Switcher Initialization
-  const savedLogo = localStorage.getItem('user_logo_pref') || 'slide2';
+  let savedLogo = localStorage.getItem('user_logo_pref');
+  if (!savedLogo || savedLogo === 'slide2') {
+    savedLogo = 'slide2-boxed';
+  }
   setLogoVariant(savedLogo);
 
   document.querySelectorAll<HTMLElement>('[data-logo-target]').forEach((btn) => {
