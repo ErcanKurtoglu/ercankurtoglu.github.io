@@ -1,21 +1,20 @@
 ---
 interface Props {
   className?: string;
-  variant?: 'slide2-boxed' | 'slide2-pure' | 'slide2-inverted' | 'badge' | 'monogram';
+  variant?: 'boxed' | 'pure';
   size?: number;
   id?: string;
 }
 
 const {
   className = 'w-8 h-8',
-  variant = 'slide2-boxed',
+  variant = 'boxed',
   size = 32,
   id = '',
 } = Astro.props;
 ---
 
-<!-- Slide 2: Boxed (Light: White Card + Black Glyph / Dark: Dark Card + White Glyph) -->
-{variant === 'slide2-boxed' && (
+{variant === 'boxed' && (
   <div
     id={id}
     class={`logo-container relative flex items-center justify-center rounded-xl bg-white dark:bg-[#181818] border border-neutral-200 dark:border-neutral-800 shadow-xs transition-all duration-200 overflow-hidden shrink-0 p-1.5 ${className}`}
@@ -39,8 +38,7 @@ const {
   </div>
 )}
 
-<!-- Slide 2: Pure Standalone Glyph (No background box) -->
-{variant === 'slide2-pure' && (
+{variant === 'pure' && (
   <div
     id={id}
     class={`logo-container relative flex items-center justify-center shrink-0 p-0.5 ${className}`}
@@ -62,77 +60,4 @@ const {
       loading="eager"
     />
   </div>
-)}
-
-<!-- Slide 2: High Contrast Inverted Badge (Light: Black Box + White Glyph / Dark: White Box + Black Glyph) -->
-{variant === 'slide2-inverted' && (
-  <div
-    id={id}
-    class={`logo-container relative flex items-center justify-center rounded-xl bg-black dark:bg-white text-white dark:text-black shadow-sm transition-all duration-200 overflow-hidden shrink-0 p-1.5 ${className}`}
-  >
-    <img
-      src="/images/logo/slide2-transparent-white.png"
-      alt="Ercan Kurtoğlu Logo"
-      class="w-full h-full object-contain block dark:hidden transition-transform duration-200 group-hover:scale-105"
-      width={size}
-      height={size}
-      loading="eager"
-    />
-    <img
-      src="/images/logo/slide2-transparent-black.png"
-      alt="Ercan Kurtoğlu Logo"
-      class="w-full h-full object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
-      width={size}
-      height={size}
-      loading="eager"
-    />
-  </div>
-)}
-
-<!-- Original SVG Monogram Badge -->
-{variant === 'badge' && (
-  <div
-    id={id}
-    class={`logo-container relative flex items-center justify-center rounded-xl bg-black dark:bg-white text-white dark:text-black shadow-sm transition-all duration-200 overflow-hidden shrink-0 ${className}`}
-  >
-    <svg
-      width={size * 0.65}
-      height={size * 0.65}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="transition-colors"
-    >
-      <path d="M4 4v16" />
-      <path d="M4 4h9" />
-      <path d="M4 12h7" />
-      <path d="M4 20h9" />
-      <path d="M12 12l8-8" />
-      <path d="M12 12l8 8" />
-    </svg>
-  </div>
-)}
-
-<!-- Original SVG Monogram Pure -->
-{variant === 'monogram' && (
-  <svg
-    id={id}
-    class={`logo-container text-black dark:text-white transition-colors shrink-0 ${className}`}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <path d="M4 4v16" />
-    <path d="M4 4h9" />
-    <path d="M4 12h7" />
-    <path d="M4 20h9" />
-    <path d="M12 12l8-8" />
-    <path d="M12 12l8 8" />
-  </svg>
 )}

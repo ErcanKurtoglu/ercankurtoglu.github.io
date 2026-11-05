@@ -103,43 +103,6 @@ function verifyGeoLocation() {
     });
 }
 
-export function setLogoVariant(variant: string) {
-  if (typeof document === 'undefined') return;
-  localStorage.setItem('user_logo_pref', variant);
-
-  // Update header logo slots
-  document.querySelectorAll<HTMLElement>('.header-logo-slot').forEach((slot) => {
-    if (slot.getAttribute('data-logo-variant') === variant) {
-      slot.classList.remove('hidden');
-      slot.classList.add('block');
-    } else {
-      slot.classList.add('hidden');
-      slot.classList.remove('block');
-    }
-  });
-
-  // Update founder logo slots
-  document.querySelectorAll<HTMLElement>('.founder-logo-slot').forEach((slot) => {
-    if (slot.getAttribute('data-founder-logo-variant') === variant) {
-      slot.classList.remove('hidden');
-      slot.classList.add('block');
-    } else {
-      slot.classList.add('hidden');
-      slot.classList.remove('block');
-    }
-  });
-
-  // Update switcher buttons UI
-  document.querySelectorAll<HTMLElement>('[data-logo-target]').forEach((btn) => {
-    const target = btn.getAttribute('data-logo-target');
-    if (target === variant) {
-      btn.className = 'logo-pick-btn px-2.5 py-1 rounded-lg bg-white dark:bg-neutral-800 text-black dark:text-white shadow-xs cursor-pointer transition-all';
-    } else {
-      btn.className = 'logo-pick-btn px-2.5 py-1 rounded-lg text-neutral-500 hover:text-black dark:hover:text-white cursor-pointer transition-all';
-    }
-  });
-}
-
 export function initSiteControls() {
   if (typeof window === 'undefined' || typeof document === 'undefined') return;
   
@@ -175,20 +138,6 @@ export function initSiteControls() {
       }
     });
   }
-
-  // 5. Logo Switcher Initialization
-  let savedLogo = localStorage.getItem('user_logo_pref');
-  if (!savedLogo || savedLogo === 'slide2') {
-    savedLogo = 'slide2-boxed';
-  }
-  setLogoVariant(savedLogo);
-
-  document.querySelectorAll<HTMLElement>('[data-logo-target]').forEach((btn) => {
-    btn.onclick = () => {
-      const target = btn.getAttribute('data-logo-target');
-      if (target) setLogoVariant(target);
-    };
-  });
 }
 
 if (typeof window !== 'undefined') {
