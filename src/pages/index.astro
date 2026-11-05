@@ -306,9 +306,47 @@ const research = await getCollection('research');
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-6 sm:p-8 lg:p-12 transition-colors">
         
-        <!-- Left: Founder Card -->
+        <!-- Left: Founder Card with Live Interactive Logo Switcher -->
         <div class="lg:col-span-5 text-center flex flex-col items-center space-y-4 max-w-sm mx-auto lg:max-w-none w-full">
-          <Logo variant="badge" className="w-24 h-24 sm:w-32 sm:h-32 !rounded-2xl sm:!rounded-3xl shadow-xl" size={110} />
+          <div class="w-full flex flex-col items-center">
+            <div id="founder-logo-display" class="relative">
+              <div data-founder-logo-variant="slide2" class="founder-logo-slot block">
+                <Logo variant="slide2" className="w-24 h-24 sm:w-32 sm:h-32 !rounded-2xl sm:!rounded-3xl shadow-xl p-3" size={110} />
+              </div>
+              <div data-founder-logo-variant="slide2-pure" class="founder-logo-slot hidden">
+                <Logo variant="slide2-pure" className="w-24 h-24 sm:w-32 sm:h-32 !rounded-2xl sm:!rounded-3xl shadow-xl p-3 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800" size={110} />
+              </div>
+              <div data-founder-logo-variant="badge" class="founder-logo-slot hidden">
+                <Logo variant="badge" className="w-24 h-24 sm:w-32 sm:h-32 !rounded-2xl sm:!rounded-3xl shadow-xl" size={110} />
+              </div>
+            </div>
+
+            <!-- Live Logo Comparison Switcher Buttons -->
+            <div class="mt-3.5 flex flex-wrap items-center justify-center gap-1 p-1 bg-neutral-200/80 dark:bg-neutral-900 rounded-xl border border-neutral-300 dark:border-neutral-800 text-[10px] sm:text-[11px] font-bold">
+              <button
+                type="button"
+                class="logo-pick-btn px-2.5 py-1 rounded-lg bg-white dark:bg-neutral-800 text-black dark:text-white shadow-xs cursor-pointer transition-all"
+                data-logo-target="slide2"
+              >
+                Slide 2 (Rozet)
+              </button>
+              <button
+                type="button"
+                class="logo-pick-btn px-2.5 py-1 rounded-lg text-neutral-500 hover:text-black dark:hover:text-white cursor-pointer transition-all"
+                data-logo-target="slide2-pure"
+              >
+                Slide 2 (Saf Glif)
+              </button>
+              <button
+                type="button"
+                class="logo-pick-btn px-2.5 py-1 rounded-lg text-neutral-500 hover:text-black dark:hover:text-white cursor-pointer transition-all"
+                data-logo-target="badge"
+              >
+                Geometrik E-K
+              </button>
+            </div>
+            <p class="text-[10px] text-neutral-400 dark:text-neutral-500 font-mono mt-1">Canlı test: Tıklayarak sitede anında değiştirin</p>
+          </div>
           <div>
             <h3 class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white">Ercan Kurtoğlu</h3>
             <p data-i18n="about.role" class="text-xs text-neutral-500 dark:text-neutral-400 font-mono font-bold mt-0.5">Founder, System & AI Architect</p>

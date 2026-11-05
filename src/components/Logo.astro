@@ -1,19 +1,71 @@
 ---
 interface Props {
   className?: string;
-  variant?: 'monogram' | 'geometric' | 'badge';
+  variant?: 'badge' | 'monogram' | 'geometric' | 'slide2' | 'slide2-pure';
   size?: number;
+  id?: string;
 }
 
 const {
   className = 'w-8 h-8',
-  variant = 'badge',
+  variant = 'slide2',
   size = 32,
+  id = '',
 } = Astro.props;
 ---
 
+<!-- Slide 2: Inverted Squircle Badge (Light: Black Box + White Glyph / Dark: White Box + Black Glyph) -->
+{variant === 'slide2' && (
+  <div
+    id={id}
+    class={`logo-container relative flex items-center justify-center rounded-xl bg-black dark:bg-white text-white dark:text-black shadow-sm transition-all duration-200 overflow-hidden shrink-0 p-1.5 ${className}`}
+  >
+    <img
+      src="/images/logo/slide2-transparent-white.png"
+      alt="Ercan Kurtoğlu Logo"
+      class="w-full h-full object-contain block dark:hidden transition-transform duration-200 group-hover:scale-105"
+      width={size}
+      height={size}
+    />
+    <img
+      src="/images/logo/slide2-transparent-black.png"
+      alt="Ercan Kurtoğlu Logo"
+      class="w-full h-full object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
+      width={size}
+      height={size}
+    />
+  </div>
+)}
+
+<!-- Slide 2: Pure Standalone Vector Glyph (No background box) -->
+{variant === 'slide2-pure' && (
+  <div
+    id={id}
+    class={`logo-container relative flex items-center justify-center shrink-0 p-0.5 ${className}`}
+  >
+    <img
+      src="/images/logo/slide2-transparent-black.png"
+      alt="Ercan Kurtoğlu Logo"
+      class="w-full h-full object-contain block dark:hidden transition-transform duration-200 group-hover:scale-105"
+      width={size}
+      height={size}
+    />
+    <img
+      src="/images/logo/slide2-transparent-white.png"
+      alt="Ercan Kurtoğlu Logo"
+      class="w-full h-full object-contain hidden dark:block transition-transform duration-200 group-hover:scale-105"
+      width={size}
+      height={size}
+    />
+  </div>
+)}
+
+<!-- Option C: Precision Geometric SVG Monogram Badge -->
 {variant === 'badge' && (
-  <div class={`relative flex items-center justify-center rounded-xl bg-black dark:bg-white text-white dark:text-black shadow-sm transition-all duration-200 overflow-hidden shrink-0 ${className}`}>
+  <div
+    id={id}
+    class={`logo-container relative flex items-center justify-center rounded-xl bg-black dark:bg-white text-white dark:text-black shadow-sm transition-all duration-200 overflow-hidden shrink-0 ${className}`}
+  >
     <svg
       width={size * 0.65}
       height={size * 0.65}
@@ -35,9 +87,11 @@ const {
   </div>
 )}
 
+<!-- Standalone SVG Monogram -->
 {variant === 'monogram' && (
   <svg
-    class={`text-black dark:text-white transition-colors shrink-0 ${className}`}
+    id={id}
+    class={`logo-container text-black dark:text-white transition-colors shrink-0 ${className}`}
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -54,8 +108,12 @@ const {
   </svg>
 )}
 
+<!-- Hexagonal Systems Architecture Mark -->
 {variant === 'geometric' && (
-  <div class={`relative flex items-center justify-center rounded-xl bg-neutral-900 dark:bg-neutral-100 text-white dark:text-black shadow-sm transition-all shrink-0 ${className}`}>
+  <div
+    id={id}
+    class={`logo-container relative flex items-center justify-center rounded-xl bg-neutral-900 dark:bg-neutral-100 text-white dark:text-black shadow-sm transition-all shrink-0 ${className}`}
+  >
     <svg
       width={size * 0.7}
       height={size * 0.7}
