@@ -9,6 +9,8 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     background-color: #f7f7f7;
     color: #000000;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   html.dark {
@@ -21,6 +23,9 @@
     color: #000000;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
     transition: background-color 0.2s ease, color 0.2s ease;
   }
 
@@ -38,6 +43,15 @@
     background-color: #ffffff;
     color: #000000;
   }
+
+  /* Responsive Typography fixes */
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
 }
 
 /* Designjoy Marquee */
@@ -50,23 +64,38 @@
   display: flex;
   width: max-content;
   animation: marquee 30s linear infinite;
+  will-change: transform;
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
 }
 
-/* Subtle border lines */
+/* Cross-browser marquee gradient mask */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* Subtle border lines: Only apply outer vertical border on desktop (>=1240px) to prevent mobile border cutoff */
 .grid-frame {
-  border-left: 1px solid #e7e7e7;
-  border-right: 1px solid #e7e7e7;
   background-color: #ffffff;
   transition: background-color 0.2s ease, border-color 0.2s ease;
+  width: 100%;
+}
+
+@media (min-width: 1240px) {
+  .grid-frame {
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+  }
+  html.dark .grid-frame {
+    border-left: 1px solid #222222;
+    border-right: 1px solid #222222;
+  }
 }
 
 html.dark .grid-frame {
-  border-left: 1px solid #222222;
-  border-right: 1px solid #222222;
   background-color: #121212;
 }
 
