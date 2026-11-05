@@ -18,75 +18,75 @@ const research = await getCollection('research');
   <!-- ========================================================================= -->
   <!-- 1. HERO SECTION: Exact Designjoy 2-Column Split                           -->
   <!-- ========================================================================= -->
-  <section class="border-b border-neutral-200 bg-white px-6 sm:px-12 py-16 sm:py-24">
+  <section class="border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#121212] px-6 sm:px-12 py-16 sm:py-24 transition-colors duration-200">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
       
       <!-- Hero Left -->
       <div class="lg:col-span-7 space-y-6">
         <!-- Available status badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-xs font-bold text-neutral-800">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-xs font-bold text-neutral-800 dark:text-neutral-200 transition-colors">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Kasım ayı için yeni kurulum: <strong>2 Müsait</strong></span>
+          <span data-i18n="hero.badge">Kasım ayı için yeni kurulum: <strong>2 Müsait</strong></span>
         </div>
 
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 tracking-tight leading-[1.05]">
-          GoHighLevel & AI subscriptions for <span class="text-dj-italics text-neutral-700">everyone</span>
+        <h1 data-i18n="hero.title" class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.05]">
+          İşletmeler için GoHighLevel & AI <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">abonelikleri</span>
         </h1>
 
-        <p class="text-neutral-500 text-lg sm:text-xl font-medium pt-2">
-          Pause or cancel anytime. <span class="text-neutral-400 font-normal">Hantal ajans süreçleri yok.</span>
+        <p data-i18n="hero.subtitle" class="text-neutral-600 dark:text-neutral-400 text-lg sm:text-xl font-medium pt-2">
+          Pause or cancel anytime. <span class="text-neutral-400 dark:text-neutral-500 font-normal">Hantal ajans süreçleri yok.</span>
         </p>
 
         <!-- Buttons -->
         <div class="pt-4 flex flex-wrap items-center gap-3">
           <a
             href="#pricing"
-            class="px-8 py-4 rounded-full bg-black text-white font-bold text-sm hover:bg-neutral-800 transition-all shadow-md"
+            class="px-8 py-4 rounded-full bg-black dark:bg-white text-white dark:text-black font-bold text-sm hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-md"
           >
-            See pricing
+            <span data-i18n="hero.seePricing">Fiyatları İncele</span>
           </a>
           <a
             href="/contact"
-            class="px-8 py-4 rounded-full bg-white border border-neutral-300 text-neutral-900 font-bold text-sm hover:bg-neutral-50 transition-colors shadow-sm"
+            class="px-8 py-4 rounded-full bg-white dark:bg-[#1c1c1c] border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-neutral-100 font-bold text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors shadow-sm"
           >
-            Book a call
+            <span data-i18n="hero.bookCall">Görüşme Planla</span>
           </a>
         </div>
       </div>
 
       <!-- Hero Right: The Designjoy Member Card Mockup -->
       <div class="lg:col-span-5">
-        <div class="rounded-3xl border border-neutral-200 bg-[#f9fafb] p-8 sm:p-10 shadow-sm relative overflow-hidden space-y-8">
+        <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-8 sm:p-10 shadow-sm relative overflow-hidden space-y-8 transition-colors">
           
           <div class="space-y-2">
-            <span class="text-[11px] font-mono uppercase tracking-widest text-neutral-400 font-bold block">
+            <span data-i18n="hero.cardTag" class="text-[11px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-bold block">
               SYSTEM ARCHITECTURE
             </span>
-            <div class="text-3xl sm:text-4xl font-extrabold text-neutral-900 leading-none">
+            <div data-i18n="hero.cardName" class="text-3xl sm:text-4xl font-extrabold text-neutral-900 dark:text-white leading-none">
               Ercan Kurtoğlu
             </div>
-            <p class="text-xs text-neutral-500 font-medium pt-1">
-              One subscription to automate them all.
+            <p data-i18n="hero.cardTagline" class="text-xs text-neutral-500 dark:text-neutral-400 font-medium pt-1">
+              Tüm operasyonu otomatize eden tek abonelik.
             </p>
           </div>
 
-          <div class="p-6 rounded-2xl bg-white border border-neutral-200 shadow-sm space-y-4">
-            <div class="flex items-center justify-between text-xs font-bold text-neutral-900 border-b border-neutral-100 pb-3">
-              <span>Kurulum & Otomasyon</span>
-              <span class="text-emerald-600 font-mono">Aktif</span>
+          <div class="p-6 rounded-2xl bg-white dark:bg-[#202020] border border-neutral-200 dark:border-neutral-700/60 shadow-sm space-y-4 transition-colors">
+            <div class="flex items-center justify-between text-xs font-bold text-neutral-900 dark:text-white border-b border-neutral-100 dark:border-neutral-700/50 pb-3">
+              <span data-i18n="hero.cardStatusTitle">Kurulum & Otomasyon</span>
+              <span data-i18n="hero.cardStatusActive" class="text-emerald-600 dark:text-emerald-400 font-mono">Aktif</span>
             </div>
-            <ul class="space-y-2 text-xs text-neutral-600">
+            <ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-300">
               <li class="flex items-center gap-2">
-                <span class="text-black font-bold">✓</span>
-                <span>Uçtan Uca GoHighLevel CRM</span>
+                <span class="text-black dark:text-white font-bold">✓</span>
+                <span data-i18n="hero.cardItem1">Uçtan Uca GoHighLevel CRM</span>
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-black font-bold">✓</span>
-                <span>7/24 AI Randevu Asistanı</span>
+                <span class="text-black dark:text-white font-bold">✓</span>
+                <span data-i18n="hero.cardItem2">7/24 AI Randevu Asistanı</span>
               </li>
               <li class="flex items-center gap-2">
-                <span class="text-black font-bold">✓</span>
-                <span>Özel Make & Zapier Köprüleri</span>
+                <span class="text-black dark:text-white font-bold">✓</span>
+                <span data-i18n="hero.cardItem3">Özel Make & Zapier Köprüleri</span>
               </li>
             </ul>
           </div>
@@ -94,18 +94,18 @@ const research = await getCollection('research');
           <!-- Bottom Schedule Bar -->
           <a
             href="/contact"
-            class="flex items-center justify-between p-4 rounded-2xl bg-white border border-neutral-200 hover:border-neutral-400 hover:shadow-md transition-all text-xs font-bold text-neutral-900"
+            class="flex items-center justify-between p-4 rounded-2xl bg-white dark:bg-[#202020] border border-neutral-200 dark:border-neutral-700/60 hover:border-neutral-400 dark:hover:border-neutral-500 hover:shadow-md transition-all text-xs font-bold text-neutral-900 dark:text-white"
           >
             <div class="flex items-center gap-3">
-              <div class="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-xs">
+              <div class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center text-xs">
                 📞
               </div>
               <div>
-                <div>15-dakikalık tanışma seansı</div>
-                <div class="text-[11px] text-neutral-400 font-normal">Schedule now</div>
+                <div data-i18n="hero.cardCallTitle">15-dakikalık tanışma seansı</div>
+                <div data-i18n="hero.cardCallSub" class="text-[11px] text-neutral-400 dark:text-neutral-500 font-normal">Hemen takvimden seçin</div>
               </div>
             </div>
-            <span class="text-neutral-400">→</span>
+            <span class="text-neutral-400 dark:text-neutral-500">→</span>
           </a>
 
         </div>
@@ -117,34 +117,34 @@ const research = await getCollection('research');
   <!-- ========================================================================= -->
   <!-- 2. "THE WAY SYSTEMS SHOULD'VE BEEN DONE" (3 Step Cards)                   -->
   <!-- ========================================================================= -->
-  <section id="how-it-works" class="border-b border-neutral-200 bg-[#fbfbfb] px-6 sm:px-12 py-20 sm:py-28">
+  <section id="how-it-works" class="border-b border-neutral-200 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#161616] px-6 sm:px-12 py-20 sm:py-28 transition-colors duration-200">
     <div class="max-w-4xl mb-16">
-      <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-[1.1]">
-        The way systems <span class="text-dj-italics text-neutral-700">should’ve</span> been done in the first place
+      <h2 data-i18n="steps.heading" class="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.1]">
+        Sistemlerin en başından beri <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">olması gerektiği</span> gibi
       </h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- Card 1 -->
-      <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 hover:shadow-md transition-all">
-        <div class="text-2xl font-extrabold text-neutral-900 mb-2">Subscribe</div>
-        <p class="text-sm text-neutral-600 leading-relaxed">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-8 sm:p-10 hover:shadow-md transition-all">
+        <div data-i18n="steps.s1Title" class="text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Abone Olun</div>
+        <p data-i18n="steps.s1Desc" class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Bir plana abone olun veya tek seferlik kurulum paketinizi seçin. Sürpriz ek maliyet olmadan hemen başlayalım.
         </p>
       </div>
 
       <!-- Card 2 -->
-      <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 hover:shadow-md transition-all">
-        <div class="text-2xl font-extrabold text-neutral-900 mb-2">Request</div>
-        <p class="text-sm text-neutral-600 leading-relaxed">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-8 sm:p-10 hover:shadow-md transition-all">
+        <div data-i18n="steps.s2Title" class="text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Talep Edin</div>
+        <p data-i18n="steps.s2Desc" class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Satış hunisi, SMS iş akışı, AI randevu botu veya ödeme entegrasyonu... İhtiyacınız olan her sistemi talep edin.
         </p>
       </div>
 
       <!-- Card 3 -->
-      <div class="rounded-3xl border border-neutral-200 bg-white p-8 sm:p-10 hover:shadow-md transition-all">
-        <div class="text-2xl font-extrabold text-neutral-900 mb-2">Receive</div>
-        <p class="text-sm text-neutral-600 leading-relaxed">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-8 sm:p-10 hover:shadow-md transition-all">
+        <div data-i18n="steps.s3Title" class="text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Teslim Alın</div>
+        <p data-i18n="steps.s3Desc" class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Sistemleriniz canlı testleriyle birlikte birkaç iş günü içinde doğrudan hesabınıza teslim edilir.
         </p>
       </div>
@@ -154,34 +154,34 @@ const research = await getCollection('research');
   <!-- ========================================================================= -->
   <!-- 3. INFINITE LOGO MARQUEE                                                  -->
   <!-- ========================================================================= -->
-  <section class="border-b border-neutral-200 bg-white py-6 overflow-hidden">
+  <section class="border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#121212] py-6 overflow-hidden transition-colors duration-200">
     <div class="flex overflow-x-hidden relative [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-      <div class="animate-marquee flex items-center gap-14 whitespace-nowrap text-neutral-600 font-extrabold text-sm font-sans">
+      <div class="animate-marquee flex items-center gap-14 whitespace-nowrap text-neutral-600 dark:text-neutral-400 font-extrabold text-sm font-sans">
         <span>GoHighLevel (GHL)</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>OpenAI API</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>Make.com</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>Stripe</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>Twilio</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>Claude 3.5</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>Python & FastAPI</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>WhatsApp Business</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <!-- Loop -->
         <span>GoHighLevel (GHL)</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>OpenAI API</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>Make.com</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>Stripe</span>
-        <span class="text-neutral-300">•</span>
+        <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span>Twilio</span>
       </div>
     </div>
@@ -190,37 +190,37 @@ const research = await getCollection('research');
   <!-- ========================================================================= -->
   <!-- 4. RECENT WORK SHOWCASE (Designjoy style)                                  -->
   <!-- ========================================================================= -->
-  <section id="work" class="border-b border-neutral-200 bg-white px-6 sm:px-12 py-20 sm:py-28">
+  <section id="work" class="border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#121212] px-6 sm:px-12 py-20 sm:py-28 transition-colors duration-200">
     <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4">
       <div>
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight">
-          Recent work
+        <h2 data-i18n="work.heading" class="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight">
+          Öne Çıkan Çalışmalar
         </h2>
-        <p class="text-neutral-500 text-sm mt-2 font-medium">Uygulanan sistemler ve somut iş çıktıları.</p>
+        <p data-i18n="work.sub" class="text-neutral-500 dark:text-neutral-400 text-sm mt-2 font-medium">Uygulanan sistemler ve somut iş çıktıları.</p>
       </div>
-      <a href="/projects" class="text-xs font-bold text-black underline underline-offset-4 hover:text-neutral-700">
+      <a href="/projects" data-i18n="work.all" class="text-xs font-bold text-black dark:text-white underline underline-offset-4 hover:text-neutral-700 dark:hover:text-neutral-300">
         Tüm projeler →
       </a>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       {featuredProjects.map((p) => (
-        <div class="rounded-3xl border border-neutral-200 bg-[#f9fafb] p-8 hover:border-neutral-400 hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-8 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-md transition-all flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between text-xs font-mono text-neutral-500 mb-3">
-              <span class="font-bold text-black">{p.data.category}</span>
+            <div class="flex items-center justify-between text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-3">
+              <span class="font-bold text-black dark:text-white">{p.data.category}</span>
               <span>{p.data.year}</span>
             </div>
-            <h3 class="text-xl font-extrabold text-neutral-900 mb-2 leading-snug">
+            <h3 class="text-xl font-extrabold text-neutral-900 dark:text-white mb-2 leading-snug">
               {p.data.title}
             </h3>
-            <p class="text-xs text-neutral-600 leading-relaxed mb-6">
+            <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
               {p.data.description}
             </p>
           </div>
-          <div class="pt-4 border-t border-neutral-200 flex items-center justify-between">
-            <span class="text-[11px] font-mono text-neutral-500">{p.data.tech.slice(0, 2).join(', ')}</span>
-            <a href="/projects" class="text-xs font-bold text-black hover:underline">İncele →</a>
+          <div class="pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-neutral-500 dark:text-neutral-400">{p.data.tech.slice(0, 2).join(', ')}</span>
+            <a href="/projects" data-i18n="work.inspect" class="text-xs font-bold text-black dark:text-white hover:underline">İncele →</a>
           </div>
         </div>
       ))}
@@ -230,61 +230,61 @@ const research = await getCollection('research');
   <!-- ========================================================================= -->
   <!-- 5. "IT'S 'YOU'LL NEVER GO BACK' BETTER" (Membership Perks 6'lı Grid)       -->
   <!-- ========================================================================= -->
-  <section id="benefits" class="border-b border-neutral-200 bg-[#fbfbfb] px-6 sm:px-12 py-20 sm:py-32">
+  <section id="benefits" class="border-b border-neutral-200 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#161616] px-6 sm:px-12 py-20 sm:py-32 transition-colors duration-200">
     <div class="max-w-4xl mb-16">
-      <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-[1.1]">
-        It's <span class="text-dj-italics text-neutral-700">"you'll never go back"</span> better
+      <h2 data-i18n="perks.heading" class="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.1]">
+        Bir kez deneyince <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">"asla geri dönmeyeceğiniz"</span> kalitede
       </h2>
-      <p class="text-neutral-600 text-base mt-4 max-w-xl">
+      <p data-i18n="perks.sub" class="text-neutral-600 dark:text-neutral-400 text-base mt-4 max-w-xl">
         Karmaşık ajans toplantılarını ve saatlik faturaları geride bırakın.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="rounded-3xl border border-neutral-200 bg-white p-8 hover:shadow-md transition-all">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-8 hover:shadow-md transition-all">
         <div class="text-2xl mb-4">⚡️</div>
-        <h3 class="text-lg font-extrabold text-neutral-900 mb-2">Işık Hızında Teslimat</h3>
-        <p class="text-xs text-neutral-600 leading-relaxed">
+        <h3 data-i18n="perks.p1Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Işık Hızında Teslimat</h3>
+        <p data-i18n="perks.p1Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Haftalarca beklemek yok. Hunileriniz ve iş akışlarınız ortalama birkaç iş günü içinde hazır.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-neutral-200 bg-white p-8 hover:shadow-md transition-all">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-8 hover:shadow-md transition-all">
         <div class="text-2xl mb-4">💳</div>
-        <h3 class="text-lg font-extrabold text-neutral-900 mb-2">Sabit Paket Ücreti</h3>
-        <p class="text-xs text-neutral-600 leading-relaxed">
+        <h3 data-i18n="perks.p2Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Sabit Paket Ücreti</h3>
+        <p data-i18n="perks.p2Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Sürpriz fatura yok. Ne alacağınızı ve ne ödeyeceğinizi baştan bilirsiniz.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-neutral-200 bg-white p-8 hover:shadow-md transition-all">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-8 hover:shadow-md transition-all">
         <div class="text-2xl mb-4">💎</div>
-        <h3 class="text-lg font-extrabold text-neutral-900 mb-2">Üst Düzey Kod & Mimari</h3>
-        <p class="text-xs text-neutral-600 leading-relaxed">
+        <h3 data-i18n="perks.p3Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Üst Düzey Kod & Mimari</h3>
+        <p data-i18n="perks.p3Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Rastgele şablonlar değil; akademik AI araştırmaları ve kurumsal yazılım disipliniyle inşa edilmiş altyapı.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-neutral-200 bg-white p-8 hover:shadow-md transition-all">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-8 hover:shadow-md transition-all">
         <div class="text-2xl mb-4">🤝</div>
-        <h3 class="text-lg font-extrabold text-neutral-900 mb-2">Birebir Kurucu İletişimi</h3>
-        <p class="text-xs text-neutral-600 leading-relaxed">
+        <h3 data-i18n="perks.p4Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Birebir Kurucu İletişimi</h3>
+        <p data-i18n="perks.p4Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Aracı hesap yöneticileri yok. Doğrudan sistemi tasarlayan ve kodu yazan kişiyle konuşursunuz.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-neutral-200 bg-white p-8 hover:shadow-md transition-all">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-8 hover:shadow-md transition-all">
         <div class="text-2xl mb-4">🔒</div>
-        <h3 class="text-lg font-extrabold text-neutral-900 mb-2">%100 Sizin Mülkiyetinizde</h3>
-        <p class="text-xs text-neutral-600 leading-relaxed">
+        <h3 data-i18n="perks.p5Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">%100 Sizin Mülkiyetinizde</h3>
+        <p data-i18n="perks.p5Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Tüm GoHighLevel hesabı, müşteri verileri ve şablonlar doğrudan sizin şirketinize aittir.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-neutral-200 bg-white p-8 hover:shadow-md transition-all">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-8 hover:shadow-md transition-all">
         <div class="text-2xl mb-4">🎓</div>
-        <h3 class="text-lg font-extrabold text-neutral-900 mb-2">Eğitim & 30 Gün Destek</h3>
-        <p class="text-xs text-neutral-600 leading-relaxed">
+        <h3 data-i18n="perks.p6Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Eğitim & 30 Gün Destek</h3>
+        <p data-i18n="perks.p6Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
           Teslimat sonrası ekibinize özel video dokümantasyonu ve 30 gün öncelikli teknik destek.
         </p>
       </div>
@@ -294,49 +294,49 @@ const research = await getCollection('research');
   <!-- ========================================================================= -->
   <!-- 6. "IT'S REALLY JUST ME" (FOUNDER BIO BÖLÜMÜ - Designjoy Brett Card)       -->
   <!-- ========================================================================= -->
-  <section id="about" class="border-b border-neutral-200 bg-white px-6 sm:px-12 py-20 sm:py-32">
+  <section id="about" class="border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#121212] px-6 sm:px-12 py-20 sm:py-32 transition-colors duration-200">
     <div class="max-w-5xl mx-auto">
       
       <div class="mb-14">
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-[1.1]">
-          It's <span class="text-dj-italics text-neutral-700">really just me</span>
+        <h2 data-i18n="about.heading" class="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.1]">
+          Gerçekten <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">sadece benim</span>
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center rounded-3xl border border-neutral-200 bg-[#f9fafb] p-8 sm:p-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-8 sm:p-12 transition-colors">
         
         <!-- Left: Founder Card -->
         <div class="lg:col-span-5 text-center flex flex-col items-center space-y-4">
-          <div class="w-32 h-32 rounded-3xl bg-black text-white flex items-center justify-center font-extrabold text-4xl shadow-xl">
+          <div class="w-32 h-32 rounded-3xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-extrabold text-4xl shadow-xl transition-colors">
             EK
           </div>
           <div>
-            <h3 class="text-2xl font-extrabold text-neutral-900">Ercan Kurtoğlu</h3>
-            <p class="text-xs text-neutral-500 font-mono font-bold mt-0.5">Founder, System & AI Architect</p>
+            <h3 class="text-2xl font-extrabold text-neutral-900 dark:text-white">Ercan Kurtoğlu</h3>
+            <p data-i18n="about.role" class="text-xs text-neutral-500 dark:text-neutral-400 font-mono font-bold mt-0.5">Founder, System & AI Architect</p>
           </div>
-          <div class="w-full pt-4 border-t border-neutral-200 text-xs text-neutral-600 space-y-1 text-left font-medium">
-            <div>• Uçtan Uca GoHighLevel Mimarisi</div>
-            <div>• Büyük Dil Modelleri & AI Ajanları</div>
-            <div>• Doğrudan 1-on-1 İletişim</div>
+          <div class="w-full pt-4 border-t border-neutral-200 dark:border-neutral-800 text-xs text-neutral-600 dark:text-neutral-300 space-y-1 text-left font-medium">
+            <div data-i18n="about.point1">• Uçtan Uca GoHighLevel Mimarisi</div>
+            <div data-i18n="about.point2">• Büyük Dil Modelleri & AI Ajanları</div>
+            <div data-i18n="about.point3">• Doğrudan 1-on-1 İletişim</div>
           </div>
         </div>
 
         <!-- Right: Story -->
         <div class="lg:col-span-7 space-y-4">
-          <p class="text-lg font-bold text-neutral-900 leading-snug">
+          <p data-i18n="about.story1" class="text-lg font-bold text-neutral-900 dark:text-white leading-snug">
             Merhaba, ben Ercan. Aracı ajanslar, karmaşık toplantılar veya stajyerler yok. Doğrudan benimle birebir çalışıyorsunuz.
           </p>
-          <p class="text-sm text-neutral-600 leading-relaxed">
+          <p data-i18n="about.story2" class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             Bir yanda GoHighLevel sistemlerini gelir üreten otomatik satış makinelerine dönüştüren bir sistem mimarı; diğer yanda büyük dil modellerinde mantıksal muhakeme ve doğrulama üzerine çalışan bir yapay zekâ araştırmacısıyım.
           </p>
-          <p class="text-sm text-neutral-600 leading-relaxed">
+          <p data-i18n="about.story3" class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             Bu hibrit bakış açısı sayesinde işletmeniz yalnızca rastgele şablonlar değil; ölçeklenebilir, hatasız ve kurumsal yazılım standartlarında bir büyüme altyapısı kazanır.
           </p>
           <div class="pt-4 flex flex-wrap items-center gap-3">
-            <a href="/research" class="px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold hover:bg-neutral-800 transition-colors">
-              Akademik Çalışmalarım ({research.length}) →
+            <a href="/research" class="px-5 py-2.5 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs font-bold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors shadow-sm">
+              <span data-i18n="about.academicBtn">Akademik Çalışmalarım</span> ({research.length}) →
             </a>
-            <a href="/writing" class="px-5 py-2.5 rounded-full border border-neutral-300 text-black text-xs font-bold hover:bg-white transition-colors">
+            <a href="/writing" data-i18n="about.writingBtn" class="px-5 py-2.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-black dark:text-white text-xs font-bold hover:bg-white dark:hover:bg-neutral-800 transition-colors">
               Teknik Yazılarım →
             </a>
           </div>
@@ -350,125 +350,125 @@ const research = await getCollection('research');
   <!-- ========================================================================= -->
   <!-- 7. SCOPE OF SYSTEMS (Apps we build)                                       -->
   <!-- ========================================================================= -->
-  <section class="border-b border-neutral-200 bg-[#fbfbfb] px-6 sm:px-12 py-20 sm:py-28">
+  <section class="border-b border-neutral-200 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#161616] px-6 sm:px-12 py-20 sm:py-28 transition-colors duration-200">
     <div class="max-w-4xl mb-14">
-      <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-[1.1]">
-        Apps & systems <span class="text-dj-italics text-neutral-700">we build</span>
+      <h2 data-i18n="scope.heading" class="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.1]">
+        Kurduğumuz <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">uygulamalar ve sistemler</span>
       </h2>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-extrabold text-neutral-900">
-      <div class="p-5 rounded-2xl bg-white border border-neutral-200">Satış Hunileri (Funnels)</div>
-      <div class="p-5 rounded-2xl bg-white border border-neutral-200">Lead Nurturing (SMS/Mail)</div>
-      <div class="p-5 rounded-2xl bg-white border border-neutral-200">7/24 AI Randevu Ajanları</div>
-      <div class="p-5 rounded-2xl bg-white border border-neutral-200">Takvim & Randevu Senkronu</div>
-      <div class="p-5 rounded-2xl bg-white border border-neutral-200">Stripe & İyzico Ödemeleri</div>
-      <div class="p-5 rounded-2xl bg-white border border-neutral-200">Özel Webhook & REST API</div>
-      <div class="p-5 rounded-2xl bg-white border border-neutral-200">WhatsApp Cloud API</div>
-      <div class="p-5 rounded-2xl bg-white border border-neutral-200">CRM Boru Hatları & Pipeline</div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-extrabold text-neutral-900 dark:text-neutral-100">
+      <div data-i18n="scope.i1" class="p-5 rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800">Satış Hunileri (Funnels)</div>
+      <div data-i18n="scope.i2" class="p-5 rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800">Lead Nurturing (SMS/Mail)</div>
+      <div data-i18n="scope.i3" class="p-5 rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800">7/24 AI Randevu Ajanları</div>
+      <div data-i18n="scope.i4" class="p-5 rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800">Takvim & Randevu Senkronu</div>
+      <div data-i18n="scope.i5" class="p-5 rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800">Stripe & İyzico Ödemeleri</div>
+      <div data-i18n="scope.i6" class="p-5 rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800">Özel Webhook & REST API</div>
+      <div data-i18n="scope.i7" class="p-5 rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800">WhatsApp Cloud API</div>
+      <div data-i18n="scope.i8" class="p-5 rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800">CRM Boru Hatları & Pipeline</div>
     </div>
   </section>
 
   <!-- ========================================================================= -->
   <!-- 8. PRICING & MEMBERSHIP (Designjoy style)                                 -->
   <!-- ========================================================================= -->
-  <section id="pricing" class="border-b border-neutral-200 bg-white px-6 sm:px-12 py-20 sm:py-32">
+  <section id="pricing" class="border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#121212] px-6 sm:px-12 py-20 sm:py-32 transition-colors duration-200">
     <div class="max-w-4xl mb-16 text-center mx-auto">
-      <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-[1.1]">
-        One subscription, <span class="text-dj-italics text-neutral-700">endless possibilities</span>
+      <h2 data-i18n="pricing.heading" class="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.1]">
+        Tek bir abonelik, <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">sonsuz olanaklar</span>
       </h2>
-      <p class="text-neutral-500 text-sm mt-3 font-semibold">Pause or cancel anytime.</p>
+      <p data-i18n="pricing.sub" class="text-neutral-500 dark:text-neutral-400 text-sm mt-3 font-semibold">Dilediğiniz an duraklatın veya iptal edin.</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch">
       
       <!-- Plan 1 -->
-      <div class="rounded-3xl border border-neutral-200 bg-[#fafafa] p-8 sm:p-10 flex flex-col justify-between">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#fafafa] dark:bg-[#181818] p-8 sm:p-10 flex flex-col justify-between transition-colors">
         <div>
-          <span class="text-xs font-mono font-bold text-neutral-500 uppercase block mb-1">GHL KURULUMU</span>
-          <h3 class="text-2xl font-extrabold text-neutral-900 mb-2">Standart Paket</h3>
-          <p class="text-xs text-neutral-600 leading-relaxed mb-6">
+          <span data-i18n="pricing.p1Tag" class="text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase block mb-1">GHL KURULUMU</span>
+          <h3 data-i18n="pricing.p1Title" class="text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Standart Paket</h3>
+          <p data-i18n="pricing.p1Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
             GoHighLevel'a geçmek ve satış hunilerini anahtar teslim otomatize etmek isteyenler için.
           </p>
 
-          <div class="mb-6 pb-6 border-b border-neutral-200">
-            <span class="text-3xl font-extrabold text-neutral-900">Özel Teklif</span>
-            <span class="text-xs text-neutral-500 font-mono"> / kurulum</span>
+          <div class="mb-6 pb-6 border-b border-neutral-200 dark:border-neutral-800">
+            <span data-i18n="pricing.p1Price" class="text-3xl font-extrabold text-neutral-900 dark:text-white">Özel Teklif</span>
+            <span data-i18n="pricing.p1Per" class="text-xs text-neutral-500 dark:text-neutral-400 font-mono"> / kurulum</span>
           </div>
 
-          <ul class="space-y-3 text-xs text-neutral-700 font-medium mb-8">
-            <li class="flex items-center gap-2"><span class="font-bold">✓</span> Sub-Account & DNS Konfigürasyonu</li>
-            <li class="flex items-center gap-2"><span class="font-bold">✓</span> 1 Adet Yüksek Dönüşümlü Huni</li>
-            <li class="flex items-center gap-2"><span class="font-bold">✓</span> Otomatik SMS & Mail Akışları</li>
-            <li class="flex items-center gap-2"><span class="font-bold">✓</span> Stripe Ödeme Kurulumu</li>
+          <ul class="space-y-3 text-xs text-neutral-700 dark:text-neutral-300 font-medium mb-8">
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white">✓</span> <span data-i18n="pricing.p1F1">Sub-Account & DNS Konfigürasyonu</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white">✓</span> <span data-i18n="pricing.p1F2">1 Adet Yüksek Dönüşümlü Huni</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white">✓</span> <span data-i18n="pricing.p1F3">Otomatik SMS & Mail Akışları</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white">✓</span> <span data-i18n="pricing.p1F4">Stripe Ödeme Kurulumu</span></li>
           </ul>
         </div>
 
         <a
           href="/contact?plan=standart"
-          class="w-full py-3.5 px-6 rounded-full border border-neutral-300 text-neutral-900 font-bold text-xs text-center hover:bg-neutral-100 transition-colors"
+          class="w-full py-3.5 px-6 rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-neutral-100 font-bold text-xs text-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
         >
-          Görüşme Başlat →
+          <span data-i18n="pricing.p1Btn">Görüşme Başlat →</span>
         </a>
       </div>
 
       <!-- Plan 2: FEATURED BLACK CARD -->
-      <div class="rounded-3xl border-2 border-black bg-black text-white p-8 sm:p-10 flex flex-col justify-between shadow-xl">
+      <div class="rounded-3xl border-2 border-black dark:border-white/60 bg-black dark:bg-[#1f1f1f] text-white p-8 sm:p-10 flex flex-col justify-between shadow-xl transition-all">
         <div>
-          <span class="text-xs font-mono font-bold text-neutral-400 uppercase block mb-1">EN ÇOK TERCİH EDİLEN</span>
-          <h3 class="text-2xl font-extrabold text-white mb-2">Büyüme & AI Ajanı</h3>
-          <p class="text-xs text-neutral-400 leading-relaxed mb-6">
+          <span data-i18n="pricing.p2Tag" class="text-xs font-mono font-bold text-neutral-400 uppercase block mb-1">EN ÇOK TERCİH EDİLEN</span>
+          <h3 data-i18n="pricing.p2Title" class="text-2xl font-extrabold text-white mb-2">Büyüme & AI Ajanı</h3>
+          <p data-i18n="pricing.p2Desc" class="text-xs text-neutral-400 leading-relaxed mb-6">
             Maksimum dönüşüm isteyen, 7/24 randevu kapatan yapay zekâ asistanıyla büyümek isteyenler için.
           </p>
 
-          <div class="mb-6 pb-6 border-b border-neutral-800">
-            <span class="text-3xl font-extrabold text-white">Özel Kapsam</span>
-            <span class="text-xs text-neutral-400 font-mono"> / tam sistem</span>
+          <div class="mb-6 pb-6 border-b border-neutral-800 dark:border-neutral-700">
+            <span data-i18n="pricing.p2Price" class="text-3xl font-extrabold text-white">Özel Kapsam</span>
+            <span data-i18n="pricing.p2Per" class="text-xs text-neutral-400 font-mono"> / tam sistem</span>
           </div>
 
           <ul class="space-y-3 text-xs text-neutral-200 font-medium mb-8">
-            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> Standart Kurulumun Tüm Özellikleri</li>
-            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> 7/24 AI Randevu & Satış Temsilcisi</li>
-            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> Çoklu Satış Hunisi & A/B Testleri</li>
-            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> Özel Make & Webhook Köprüleri</li>
-            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> 30 Gün Öncelikli Teknik Destek</li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> <span data-i18n="pricing.p2F1">Standart Kurulumun Tüm Özellikleri</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> <span data-i18n="pricing.p2F2">7/24 AI Randevu & Satış Temsilcisi</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> <span data-i18n="pricing.p2F3">Çoklu Satış Hunisi & A/B Testleri</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> <span data-i18n="pricing.p2F4">Özel Make & Webhook Köprüleri</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white">✓</span> <span data-i18n="pricing.p2F5">30 Gün Öncelikli Teknik Destek</span></li>
           </ul>
         </div>
 
         <a
           href="/contact?plan=ai-growth"
-          class="w-full py-4 px-6 rounded-full bg-white text-black font-extrabold text-xs text-center hover:bg-neutral-100 transition-colors"
+          class="w-full py-4 px-6 rounded-full bg-white text-black font-extrabold text-xs text-center hover:bg-neutral-200 transition-colors shadow-md"
         >
-          Hemen Başlayalım →
+          <span data-i18n="pricing.p2Btn">Hemen Başlayalım →</span>
         </a>
       </div>
 
       <!-- Plan 3: 15-min call / Audit -->
-      <div class="rounded-3xl border border-neutral-200 bg-[#fafafa] p-8 sm:p-10 flex flex-col justify-between">
+      <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#fafafa] dark:bg-[#181818] p-8 sm:p-10 flex flex-col justify-between transition-colors">
         <div>
-          <span class="text-xs font-mono font-bold text-neutral-500 uppercase block mb-1">DENETİM & GÖRÜŞME</span>
-          <h3 class="text-2xl font-extrabold text-neutral-900 mb-2">Sistem Denetimi</h3>
-          <p class="text-xs text-neutral-600 leading-relaxed mb-6">
+          <span data-i18n="pricing.p3Tag" class="text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase block mb-1">DENETİM & GÖRÜŞME</span>
+          <h3 data-i18n="pricing.p3Title" class="text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Sistem Denetimi</h3>
+          <p data-i18n="pricing.p3Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
             Mevcut CRM ve otomasyonlarınızdaki kaçakları ve dönüşüm darboğazlarını analiz etmek için.
           </p>
 
-          <div class="mb-6 pb-6 border-b border-neutral-200">
-            <span class="text-3xl font-extrabold text-neutral-900">1-on-1 Seans</span>
-            <span class="text-xs text-neutral-500 font-mono"> / 60 dakika</span>
+          <div class="mb-6 pb-6 border-b border-neutral-200 dark:border-neutral-800">
+            <span data-i18n="pricing.p3Price" class="text-3xl font-extrabold text-neutral-900 dark:text-white">1-on-1 Seans</span>
+            <span data-i18n="pricing.p3Per" class="text-xs text-neutral-500 dark:text-neutral-400 font-mono"> / 60 dakika</span>
           </div>
 
-          <ul class="space-y-3 text-xs text-neutral-700 font-medium mb-8">
-            <li class="flex items-center gap-2"><span class="font-bold">✓</span> Mevcut Akışların Ekran Paylaşımlı Analizi</li>
-            <li class="flex items-center gap-2"><span class="font-bold">✓</span> Kaçak & Dönüşüm Kayıpları Raporu</li>
-            <li class="flex items-center gap-2"><span class="font-bold">✓</span> AI Entegrasyon Yol Haritası</li>
+          <ul class="space-y-3 text-xs text-neutral-700 dark:text-neutral-300 font-medium mb-8">
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white">✓</span> <span data-i18n="pricing.p3F1">Mevcut Akışların Ekran Paylaşımlı Analizi</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white">✓</span> <span data-i18n="pricing.p3F2">Kaçak & Dönüşüm Kayıpları Raporu</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white">✓</span> <span data-i18n="pricing.p3F3">AI Entegrasyon Yol Haritası</span></li>
           </ul>
         </div>
 
         <a
           href="/contact?plan=audit"
-          class="w-full py-3.5 px-6 rounded-full border border-neutral-300 text-neutral-900 font-bold text-xs text-center hover:bg-neutral-100 transition-colors"
+          class="w-full py-3.5 px-6 rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-neutral-100 font-bold text-xs text-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
         >
-          Seans Planla →
+          <span data-i18n="pricing.p3Btn">Seans Planla →</span>
         </a>
       </div>
 
@@ -478,17 +478,17 @@ const research = await getCollection('research');
   <!-- ========================================================================= -->
   <!-- 9. FAQ ACCORDION (Designjoy 2-Column Layout)                               -->
   <!-- ========================================================================= -->
-  <section id="faq" class="border-b border-neutral-200 bg-[#fbfbfb] px-6 sm:px-12 py-20 sm:py-32">
+  <section id="faq" class="border-b border-neutral-200 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#161616] px-6 sm:px-12 py-20 sm:py-32 transition-colors duration-200">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
       
       <!-- Left -->
       <div class="lg:col-span-5 space-y-4">
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-900 tracking-tight leading-[1.1]">
-          <span class="text-dj-italics text-neutral-700">Frequently</span> asked questions
+        <h2 data-i18n="faq.heading" class="text-3xl sm:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.1]">
+          <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">Sıkça</span> sorulan sorular
         </h2>
-        <p class="text-sm text-neutral-600 leading-relaxed pt-2">
-          Başka bir sorunuz mu var? Doğrudan bana e-posta yazabilirsiniz: <br />
-          <a href="mailto:iletisim@ercankurtoglu.site" class="font-bold text-neutral-900 underline mt-1 inline-block">
+        <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed pt-2">
+          <span data-i18n="faq.sub">Başka bir sorunuz mu var? Doğrudan bana e-posta yazabilirsiniz:</span> <br />
+          <a href="mailto:iletisim@ercankurtoglu.site" class="font-bold text-neutral-900 dark:text-white underline mt-1 inline-block">
             iletisim@ercankurtoglu.site
           </a>
         </p>
@@ -497,42 +497,42 @@ const research = await getCollection('research');
       <!-- Right: Accordion -->
       <div class="lg:col-span-7 space-y-3">
         
-        <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm">
-          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-sm hover:text-black">
-            <span>GoHighLevel lisansını kim satın alıyor?</span>
-            <span class="faq-icon text-neutral-400 text-xl font-mono leading-none">+</span>
+        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] overflow-hidden shadow-sm transition-colors">
+          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 dark:text-white text-sm hover:text-black dark:hover:text-white cursor-pointer">
+            <span data-i18n="faq.q1">GoHighLevel lisansını kim satın alıyor?</span>
+            <span class="faq-icon text-neutral-400 dark:text-neutral-500 text-xl font-mono leading-none">+</span>
           </button>
-          <div class="faq-content hidden px-6 pb-6 text-xs text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+          <div data-i18n="faq.a1" class="faq-content hidden px-6 pb-6 text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-800 pt-4">
             GoHighLevel lisansı doğrudan sizin şirketinize aittir. Kendi GHL hesabınızı açarsınız; biz alt hesap (sub-account) davetiyle sisteme dahil olur, tüm kurulumu tamamlar ve teslim ederiz. Verilerinizin tam mülkiyeti sizde kalır.
           </div>
         </div>
 
-        <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm">
-          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-sm hover:text-black">
-            <span>Kurulum ne kadar sürede tamamlanır?</span>
-            <span class="faq-icon text-neutral-400 text-xl font-mono leading-none">+</span>
+        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] overflow-hidden shadow-sm transition-colors">
+          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 dark:text-white text-sm hover:text-black dark:hover:text-white cursor-pointer">
+            <span data-i18n="faq.q2">Kurulum ne kadar sürede tamamlanır?</span>
+            <span class="faq-icon text-neutral-400 dark:text-neutral-500 text-xl font-mono leading-none">+</span>
           </button>
-          <div class="faq-content hidden px-6 pb-6 text-xs text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+          <div data-i18n="faq.a2" class="faq-content hidden px-6 pb-6 text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-800 pt-4">
             Standart GHL kurulumları genellikle <strong>7 ila 14 iş günü</strong> içinde canlıya alınır. Özel AI asistanı ve webhook entegrasyonu içeren paketler ise 2-3 hafta içinde tüm testleriyle teslim edilir.
           </div>
         </div>
 
-        <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm">
-          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-sm hover:text-black">
-            <span>GHL içine AI Ajanı nasıl entegre ediliyor?</span>
-            <span class="faq-icon text-neutral-400 text-xl font-mono leading-none">+</span>
+        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] overflow-hidden shadow-sm transition-colors">
+          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 dark:text-white text-sm hover:text-black dark:hover:text-white cursor-pointer">
+            <span data-i18n="faq.q3">GHL içine AI Ajanı nasıl entegre ediliyor?</span>
+            <span class="faq-icon text-neutral-400 dark:text-neutral-500 text-xl font-mono leading-none">+</span>
           </button>
-          <div class="faq-content hidden px-6 pb-6 text-xs text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+          <div data-i18n="faq.a3" class="faq-content hidden px-6 pb-6 text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-800 pt-4">
             OpenAI/Claude API ve webhook köprüleri kullanarak, şirketinizin sık sorulan soruları, hizmet şartları ve fiyatlandırmasıyla eğitilmiş özel bir dil modeli ajanını GHL'e bağlıyoruz. Gelen mesajı anlayıp randevu takviminizi kontrol ederek müşteriyle doğal diyalog kurar.
           </div>
         </div>
 
-        <div class="rounded-2xl border border-neutral-200 bg-white overflow-hidden shadow-sm">
-          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 text-sm hover:text-black">
-            <span>Teslimat sonrasında eğitim veriyor musunuz?</span>
-            <span class="faq-icon text-neutral-400 text-xl font-mono leading-none">+</span>
+        <div class="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] overflow-hidden shadow-sm transition-colors">
+          <button type="button" class="faq-btn w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-bold text-neutral-900 dark:text-white text-sm hover:text-black dark:hover:text-white cursor-pointer">
+            <span data-i18n="faq.q4">Teslimat sonrasında eğitim veriyor musunuz?</span>
+            <span class="faq-icon text-neutral-400 dark:text-neutral-500 text-xl font-mono leading-none">+</span>
           </button>
-          <div class="faq-content hidden px-6 pb-6 text-xs text-neutral-600 leading-relaxed border-t border-neutral-100 pt-4">
+          <div data-i18n="faq.a4" class="faq-content hidden px-6 pb-6 text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-800 pt-4">
             Evet! Kurulum tamamlandığında ekibinizin sistemi nasıl kullanacağını anlatan adım adım Loom video dokümantasyonu hazırlarız. Ayrıca 30 gün boyunca öncelikli teknik destek sağlıyoruz.
           </div>
         </div>
@@ -545,21 +545,30 @@ const research = await getCollection('research');
 
 <script>
   // FAQ Accordion
-  document.querySelectorAll('.faq-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const content = btn.nextElementSibling;
-      const icon = btn.querySelector('.faq-icon');
-      const isExpanded = !content?.classList.contains('hidden');
+  function setupFaq() {
+    document.querySelectorAll('.faq-btn').forEach((btn) => {
+      btn.onclick = () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('.faq-icon');
+        const isExpanded = !content?.classList.contains('hidden');
 
-      document.querySelectorAll('.faq-content').forEach((el) => el.classList.add('hidden'));
-      document.querySelectorAll('.faq-icon').forEach((el) => {
-        el.textContent = '+';
-      });
+        document.querySelectorAll('.faq-content').forEach((el) => el.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach((el) => {
+          el.textContent = '+';
+        });
 
-      if (!isExpanded && content && icon) {
-        content.classList.remove('hidden');
-        icon.textContent = '✕';
-      }
+        if (!isExpanded && content && icon) {
+          content.classList.remove('hidden');
+          icon.textContent = '✕';
+        }
+      };
     });
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFaq);
+  } else {
+    setupFaq();
+  }
+  document.addEventListener('astro:page-load', setupFaq);
 </script>

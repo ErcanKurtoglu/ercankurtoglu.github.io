@@ -19,7 +19,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ercankur
 ---
 
 <!doctype html>
-<html lang="tr" class="h-full bg-[#f7f7f7] text-neutral-900 antialiased selection:bg-black selection:text-white">
+<html lang="tr" class="h-full bg-[#f7f7f7] dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 antialiased selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,6 +36,22 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ercankur
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
 
+    <!-- Prevent Dark Mode & Language Flash Before Render -->
+    <script is:inline>
+      (function() {
+        const savedTheme = localStorage.getItem('site_theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+
+        const savedLang = localStorage.getItem('site_lang') || 'tr';
+        document.documentElement.setAttribute('lang', savedLang);
+      })();
+    </script>
+
     <!-- Google Fonts: Figtree + Newsreader (The exact Designjoy pairing) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,7 +60,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ercankur
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-full bg-[#f7f7f7] text-neutral-900 font-sans antialiased">
+  <body class="min-h-full bg-[#f7f7f7] dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 font-sans antialiased transition-colors duration-200">
     <!-- Designjoy Frame: Centered with left and right vertical borders -->
     <div class="grid-frame max-w-[1240px] mx-auto min-h-screen shadow-sm flex flex-col relative">
       <Header />
@@ -53,6 +69,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ercankur
       </main>
       <Footer />
     </div>
+
+    <!-- Client-side site controls (Language & Dark Mode sync) -->
+    <script src="../scripts/site-controller.ts"></script>
   </body>
 </html>
 
