@@ -1,150 +1,241 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+// Cal.com settings (Change this to your exact username/slug once created)
+const CAL_USER = 'ercankurtoglu';
+const CAL_EVENT = '15min';
+const CAL_LINK = `${CAL_USER}/${CAL_EVENT}`;
 ---
 
 <Layout
-  title="İletişim & İş Birliği | Ercan Kurtoğlu"
-  description="GoHighLevel iş kurulumları, yapay zekâ danışmanlığı veya akademik iş birlikleri için doğrudan e-posta ile iletişime geçin."
+  title="Görüşme Planla & İletişim | Ercan Kurtoğlu"
+  description="GoHighLevel iş kurulumları, yapay zekâ danışmanlığı veya teknik iş birlikleri için doğrudan takvimden görüşme planlayın."
 >
-  <div class="max-w-4xl mx-auto px-6 sm:px-8 py-16 sm:py-24">
-    <header class="border-b border-neutral-200 dark:border-neutral-800 pb-10 mb-12 transition-colors">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24">
+    <!-- Header -->
+    <header class="border-b border-neutral-200 dark:border-neutral-800 pb-8 sm:pb-12 mb-10 sm:mb-14 transition-colors">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-800 dark:text-neutral-200 text-xs font-mono font-medium mb-4">
-        // İLETİŞİM & GÖRÜŞME
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        // RANDEVU & GÖRÜŞME
       </div>
-      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white font-sans">
-        Sisteminizi Konuşalım
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-900 dark:text-white font-sans">
+        Görüşme <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">Planlayın</span>
       </h1>
       <p class="mt-4 text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl leading-relaxed">
-        İşletmeniz için GoHighLevel kurulumu, özel AI otomasyonları veya akademik/teknik bir konu hakkında doğrudan bana yazabilirsiniz.
+        15 dakikalık tanışma seansı ile GoHighLevel iş kurulumunuzu, satış hunilerinizi veya yapay zekâ otomasyon ihtiyaçlarınızı doğrudan değerlendirelim.
       </p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
-      <!-- Direct Email Card -->
-      <div class="md:col-span-7 space-y-6">
-        <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-8 transition-colors">
-          <div class="flex items-center gap-3.5 mb-6">
-            <div class="w-10 h-10 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold text-sm">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <!-- Left Column: Interactive Cal.com Embed (Span 7 or 8) -->
+      <div class="lg:col-span-8 space-y-6">
+        <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#151515] p-4 sm:p-6 lg:p-8 transition-colors shadow-xs">
+          <!-- Calendar Card Header -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-neutral-200 dark:border-neutral-800">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-2xl bg-black dark:bg-white text-white dark:text-black flex items-center justify-center font-bold text-base shadow-xs shrink-0">
+                🗓️
+              </div>
+              <div>
+                <h2 class="text-base sm:text-lg font-extrabold text-neutral-900 dark:text-white">
+                  15 Dk Keşif & Sistem Görüşmesi
+                </h2>
+                <p class="text-xs text-neutral-500 dark:text-neutral-400 font-mono">
+                  Google Meet / Zoom · Ücretsiz Seans
+                </p>
+              </div>
+            </div>
+
+            <a
+              id="cal-direct-link"
+              href={`https://cal.com/${CAL_LINK}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 text-xs font-bold text-neutral-800 dark:text-neutral-200 hover:border-black dark:hover:border-white transition-all shadow-2xs"
+            >
+              <span>Yeni Sekmede Aç</span>
+              <span class="text-neutral-400">↗</span>
+            </a>
+          </div>
+
+          <!-- Cal.com Embedded Widget Container -->
+          <div class="w-full rounded-2xl overflow-hidden bg-white dark:bg-[#121212] border border-neutral-200/80 dark:border-neutral-800 min-h-[580px] sm:min-h-[640px] flex items-center justify-center relative">
+            <div
+              id="my-cal-inline"
+              class="w-full h-full min-h-[580px] sm:min-h-[640px]"
+              data-cal-link={CAL_LINK}
+            ></div>
+          </div>
+          
+          <div class="mt-4 flex items-center justify-between text-[11px] text-neutral-500 dark:text-neutral-400 font-mono">
+            <span>⚡ Otomatik saat dilimi tespiti</span>
+            <span>🔒 Uçtan uca şifreli takvim</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Direct Channels, Checklist & Info (Span 4) -->
+      <div class="lg:col-span-4 space-y-6">
+        <!-- Direct Email Fallback Card -->
+        <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-6 space-y-4 transition-colors">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-neutral-200 dark:bg-neutral-800 text-neutral-900 dark:text-white flex items-center justify-center font-bold text-sm shrink-0">
               ✉️
             </div>
             <div>
-              <h2 class="text-base font-bold text-neutral-900 dark:text-white">Doğrudan Kurumsal İletişim</h2>
-              <p class="text-xs text-neutral-500 dark:text-neutral-400">Aracı yönetici yok, doğrudan sistem mimarı yanıtlar</p>
+              <h3 class="text-sm font-extrabold text-neutral-900 dark:text-white">
+                Doğrudan Yazılı İletişim
+              </h3>
+              <p class="text-[11px] text-neutral-500 dark:text-neutral-400">
+                Görüşme öncesi proje detayı iletmek isterseniz
+              </p>
             </div>
           </div>
 
-          <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-            Gelen tüm mesajları şahsen okuyor ve iş günlerinde <strong>24 saat içinde</strong> dönüş yapıyorum.
-          </p>
-
-          <!-- Email Copy & Click Box -->
-          <div class="p-4 rounded-2xl bg-white dark:bg-[#202020] border border-neutral-200 dark:border-neutral-700/60 flex flex-col sm:flex-row items-center justify-between gap-4 transition-colors">
-            <div class="font-mono text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white select-all break-all text-center sm:text-left" id="email-address">
+          <div class="p-3.5 rounded-2xl bg-white dark:bg-[#202020] border border-neutral-200 dark:border-neutral-700/60 flex flex-col gap-2.5">
+            <div
+              id="email-address"
+              class="font-mono text-xs font-bold text-neutral-900 dark:text-white select-all break-all"
+            >
               iletisim@ercankurtoglu.site
             </div>
-            <div class="flex items-center gap-2 w-full sm:w-auto shrink-0">
+            <div class="flex items-center gap-2">
               <button
                 type="button"
                 id="copy-email-btn"
-                class="flex-1 sm:flex-initial px-3.5 py-2 rounded-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 text-xs font-bold text-neutral-800 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors cursor-pointer"
+                class="flex-1 px-3 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 text-[11px] font-bold text-neutral-800 dark:text-neutral-200 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors cursor-pointer text-center"
               >
                 Kopyala
               </button>
               <a
                 id="mailto-link"
                 href="mailto:iletisim@ercankurtoglu.site?subject=GHL%20ve%20AI%20Sistem%20G%C3%B6r%C3%BC%C5%9Fmesi"
-                class="flex-1 sm:flex-initial px-4 py-2 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs font-bold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors text-center shadow-xs whitespace-nowrap"
+                class="flex-1 px-3 py-1.5 rounded-full bg-black dark:bg-white text-white dark:text-black text-[11px] font-bold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors text-center shadow-xs whitespace-nowrap"
               >
-                E-posta Gönder →
+                E-posta →
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Scope Checklist -->
-        <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#181818] p-6 space-y-3 transition-colors">
+        <!-- Scope Checklist Card -->
+        <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#181818] p-6 space-y-3.5 transition-colors">
           <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white font-mono">
-            Hangi Konularda İletişime Geçebilirsiniz?
+            Görüşmede Neleri Ele Alabiliriz?
           </h3>
           <ul class="space-y-2.5 text-xs text-neutral-600 dark:text-neutral-400">
-            <li class="flex items-center gap-2">
-              <span class="text-black dark:text-white font-bold">✓</span>
-              <span>GoHighLevel (GHL) anahtar teslim iş kurulumları ve huniler</span>
+            <li class="flex items-start gap-2">
+              <span class="text-black dark:text-white font-bold shrink-0">✓</span>
+              <span>GoHighLevel sub-account, pipeline ve satış hunisi kurguları</span>
             </li>
-            <li class="flex items-center gap-2">
-              <span class="text-black dark:text-white font-bold">✓</span>
-              <span>Şirket verinizle eğitilmiş 7/24 AI satış ve randevu ajanları</span>
+            <li class="flex items-start gap-2">
+              <span class="text-black dark:text-white font-bold shrink-0">✓</span>
+              <span>Şirket verilerinizle 7/24 çalışan AI randevu ve satış ajanları</span>
             </li>
-            <li class="flex items-center gap-2">
-              <span class="text-black dark:text-white font-bold">✓</span>
-              <span>Mevcut CRM ve otomasyon kaçaklarının denetimi (Audit)</span>
+            <li class="flex items-start gap-2">
+              <span class="text-black dark:text-white font-bold shrink-0">✓</span>
+              <span>Mevcut otomasyon kaçaklarının analizi ve denetimi (Audit)</span>
             </li>
-            <li class="flex items-center gap-2">
-              <span class="text-black dark:text-white font-bold">✓</span>
-              <span>Yapay zekâ ve mantıksal çıkarım üzerine akademik iş birlikleri</span>
+            <li class="flex items-start gap-2">
+              <span class="text-black dark:text-white font-bold shrink-0">✓</span>
+              <span>Özel API, Webhook ve Zapier/Make altyapı entegrasyonları</span>
             </li>
           </ul>
         </div>
-      </div>
 
-      <!-- Right Column: Channels & Privacy -->
-      <div class="md:col-span-5 space-y-6">
-        <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-6 space-y-4 transition-colors">
+        <!-- Social Channels -->
+        <div class="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-6 space-y-3 transition-colors">
           <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-900 dark:text-white font-mono">
-            Sosyal & Profesyonel Kanallar
+            Diğer Kanallar
           </h3>
-
           <div class="space-y-2">
             <a
               href="https://github.com/ErcanKurtoglu"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-between p-3.5 rounded-2xl border border-neutral-200 dark:border-neutral-700/60 bg-white dark:bg-[#202020] hover:border-neutral-400 dark:hover:border-neutral-500 transition-all text-xs font-medium text-neutral-800 dark:text-neutral-200"
+              class="flex items-center justify-between p-3 rounded-2xl border border-neutral-200 dark:border-neutral-700/60 bg-white dark:bg-[#202020] hover:border-neutral-400 dark:hover:border-neutral-500 transition-all text-xs font-medium text-neutral-800 dark:text-neutral-200"
             >
-              <span class="flex items-center gap-2.5">
-                <span class="font-mono text-neutral-500 dark:text-neutral-400">GitHub</span>
-              </span>
+              <span class="font-mono text-neutral-500 dark:text-neutral-400">GitHub</span>
               <span class="text-neutral-900 dark:text-white font-mono text-[11px] font-bold">@ErcanKurtoglu →</span>
             </a>
-
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-between p-3.5 rounded-2xl border border-neutral-200 dark:border-neutral-700/60 bg-white dark:bg-[#202020] hover:border-neutral-400 dark:hover:border-neutral-500 transition-all text-xs font-medium text-neutral-800 dark:text-neutral-200"
+              class="flex items-center justify-between p-3 rounded-2xl border border-neutral-200 dark:border-neutral-700/60 bg-white dark:bg-[#202020] hover:border-neutral-400 dark:hover:border-neutral-500 transition-all text-xs font-medium text-neutral-800 dark:text-neutral-200"
             >
-              <span class="flex items-center gap-2.5">
-                <span class="font-mono text-neutral-500 dark:text-neutral-400">LinkedIn</span>
-              </span>
-              <span class="text-neutral-900 dark:text-white font-mono text-[11px] font-bold">Bağlantı Kur →</span>
-            </a>
-
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-between p-3.5 rounded-2xl border border-neutral-200 dark:border-neutral-700/60 bg-white dark:bg-[#202020] hover:border-neutral-400 dark:hover:border-neutral-500 transition-all text-xs font-medium text-neutral-800 dark:text-neutral-200"
-            >
-              <span class="flex items-center gap-2.5">
-                <span class="font-mono text-neutral-500 dark:text-neutral-400">X (Twitter)</span>
-              </span>
-              <span class="text-neutral-900 dark:text-white font-mono text-[11px] font-bold">Takip Et →</span>
+              <span class="font-mono text-neutral-500 dark:text-neutral-400">LinkedIn</span>
+              <span class="text-neutral-900 dark:text-white font-mono text-[11px] font-bold">Profil →</span>
             </a>
           </div>
-        </div>
-
-        <div class="p-6 rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#181818] space-y-2 transition-colors">
-          <h4 class="text-xs font-bold text-neutral-900 dark:text-white font-mono">Gizlilik & Güvenlik</h4>
-          <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            Paylaştığınız şirket süreçleri, veritabanı şemaları ve iş modeli detayları kesin gizlilik prensibiyle korunur.
-          </p>
         </div>
       </div>
     </div>
   </div>
 </Layout>
 
-<script>
+<!-- Cal.com Official Embed Script with Dynamic Theme Sync -->
+<script type="text/javascript">
+  (function (C, A, L) {
+    let p = function (a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+      let cal = C.Cal;
+      let ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {};
+        cal.q = cal.q || [];
+        d.head.appendChild(d.createElement("script")).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function () { p(api, arguments); };
+        const namespace = ar[1];
+        api.q = api.q || [];
+        if (typeof namespace === "string") {
+          cal.ns[namespace] = cal.ns[namespace] || api;
+          p(cal.ns[namespace], ar);
+          p(cal, ["initNamespace", namespace]);
+        } else p(cal, ar);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  function initCalEmbed() {
+    const calEl = document.getElementById("my-cal-inline");
+    if (!calEl) return;
+
+    const calLink = calEl.getAttribute("data-cal-link") || "ercankurtoglu/15min";
+    const isDark = document.documentElement.classList.contains("dark");
+
+    Cal("init", { origin: "https://cal.com" });
+
+    Cal("inline", {
+      elementOrSelector: "#my-cal-inline",
+      calLink: calLink,
+      layout: "month_view"
+    });
+
+    Cal("ui", {
+      styles: {
+        branding: { brandColor: isDark ? "#ffffff" : "#000000" }
+      },
+      hideEventTypeDetails: false,
+      layout: "month_view",
+      theme: isDark ? "dark" : "light"
+    });
+  }
+
+  // Run on load and on Astro page navigations
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initCalEmbed);
+  } else {
+    initCalEmbed();
+  }
+  document.addEventListener("astro:page-load", initCalEmbed);
+
   // Copy email logic
   const copyBtn = document.getElementById('copy-email-btn');
   const emailText = document.getElementById('email-address')?.textContent?.trim() || '';
@@ -168,38 +259,7 @@ import Layout from '../layouts/Layout.astro';
   const urlParams = new URLSearchParams(window.location.search);
   const plan = urlParams.get('plan');
   if (plan) {
-    const mailto = document.getElementById('mailto-link') as HTMLAnchorElement;
-    if (mailto) {
-      mailto.href = `mailto:iletisim@ercankurtoglu.site?subject=${encodeURIComponent(`GHL Proje Talebi: ${plan.toUpperCase()}`)}`;
-    }
-  }
-</script>
-
-<script>
-  // Copy email logic
-  const copyBtn = document.getElementById('copy-email-btn');
-  const emailText = document.getElementById('email-address')?.textContent?.trim() || '';
-
-  copyBtn?.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(emailText);
-      const originalText = copyBtn.textContent;
-      copyBtn.textContent = 'Kopyalandı! ✓';
-      copyBtn.classList.add('text-emerald-400');
-      setTimeout(() => {
-        copyBtn.textContent = originalText;
-        copyBtn.classList.remove('text-emerald-400');
-      }, 2000);
-    } catch (err) {
-      console.error('Kopyalama hatası:', err);
-    }
-  });
-
-  // URL query parameter check for auto-filling subject
-  const urlParams = new URLSearchParams(window.location.search);
-  const plan = urlParams.get('plan');
-  if (plan) {
-    const mailto = document.getElementById('mailto-link') as HTMLAnchorElement;
+    const mailto = document.getElementById('mailto-link');
     if (mailto) {
       mailto.href = `mailto:iletisim@ercankurtoglu.site?subject=${encodeURIComponent(`GHL Proje Talebi: ${plan.toUpperCase()}`)}`;
     }
