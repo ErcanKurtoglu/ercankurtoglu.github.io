@@ -36,19 +36,53 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://ercankur
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
 
-    <!-- Prevent Dark Mode & Language Flash Before Render -->
+    <!-- Prevent Dark Mode & Language Flash Before Render (Geo & OS Auto-Detection) -->
     <script is:inline>
       (function() {
-        const savedTheme = localStorage.getItem('site_theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-          document.documentElement.classList.add('dark');
-        } else {
+        // 1. Theme Detection: Respect manual choice, else read OS preference, fallback to light mode
+        try {
+          const savedTheme = localStorage.getItem('site_theme');
+          const hasMatchMedia = window.matchMedia && typeof window.matchMedia === 'function';
+          const systemPrefersDark = hasMatchMedia ? window.matchMedia('(prefers-color-scheme: dark)').matches : false;
+
+          if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
           document.documentElement.classList.remove('dark');
         }
 
-        const savedLang = localStorage.getItem('site_lang') || 'tr';
-        document.documentElement.setAttribute('lang', savedLang);
+        // 2. Language Detection: Turkey -> TR, Everywhere else in the world -> EN
+        try {
+          const savedLang = localStorage.getItem('site_lang');
+          let initialLang = 'tr';
+
+          if (savedLang === 'tr' || savedLang === 'en') {
+            initialLang = savedLang;
+          } else {
+            // Check browser languages
+            const navLangs = navigator.languages || [navigator.language || ''];
+            const isTrLang = navLangs.some(function(l) { return l && l.toLowerCase().startsWith('tr'); });
+
+            // Check system timezone
+            let isTrTz = false;
+            try {
+              const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+              if (tz.indexOf('Istanbul') !== -1 || tz === 'Turkey') {
+                isTrTz = true;
+              }
+            } catch(err) {}
+
+            // Turkey visitors get TR, international visitors automatically get EN
+            initialLang = (isTrLang || isTrTz) ? 'tr' : 'en';
+          }
+
+          document.documentElement.setAttribute('lang', initialLang);
+        } catch (e) {
+          document.documentElement.setAttribute('lang', 'tr');
+        }
       })();
     </script>
 

@@ -1,10 +1,30 @@
 import { translations, type Lang } from '../i18n/translations';
 
-function getStoredLang(): Lang {
+export function detectUserLanguage(): Lang {
   if (typeof window === 'undefined') return 'tr';
-  const stored = localStorage.getItem('site_lang');
-  if (stored === 'en' || stored === 'tr') return stored;
-  return 'tr';
+
+  // 1. If user previously chose manually, respect their decision 100%
+  const manualChoice = localStorage.getItem('site_lang');
+  if (manualChoice === 'tr' || manualChoice === 'en') {
+    return manualChoice;
+  }
+
+  // 2. Check browser language (navigator.language)
+  const navLangs = navigator.languages || [navigator.language || ''];
+  const isTrLang = navLangs.some((l) => l && l.toLowerCase().startsWith('tr'));
+
+  // 3. Check device timezone (Europe/Istanbul or Turkey)
+  let isTrTz = false;
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    if (tz.includes('Istanbul') || tz === 'Turkey') {
+      isTrTz = true;
+    }
+  } catch (err) {}
+
+  // Turkish browser or Turkey timezone -> Turkish ('tr')
+  // Everyone else around the globe -> English ('en')
+  return (isTrLang || isTrTz) ? 'tr' : 'en';
 }
 
 export function updateLanguageUI(lang: Lang) {
@@ -20,7 +40,7 @@ export function updateLanguageUI(lang: Lang) {
     }
   });
 
-  // Update TR / EN switcher styling
+  // Update TR / EN switcher buttons styling
   const trBtns = document.querySelectorAll<HTMLElement>('#lang-tr-btn');
   const enBtns = document.querySelectorAll<HTMLElement>('#lang-en-btn');
 
@@ -61,11 +81,37 @@ export function toggleTheme() {
   localStorage.setItem('site_theme', nextTheme);
 }
 
+// Background IP Geolocation validation (Async, non-blocking)
+function verifyGeoLocation() {
+  if (typeof window === 'undefined' || typeof fetch === 'undefined') return;
+  // If the user already made a manual choice, don't overwrite it
+  if (localStorage.getItem('site_lang')) return;
+
+  fetch('https://api.country.is')
+    .then((res) => (res.ok ? res.json() : null))
+    .then((data) => {
+      if (data && data.country && !localStorage.getItem('site_lang')) {
+        const countryLang: Lang = data.country === 'TR' ? 'tr' : 'en';
+        const currentLang = document.documentElement.getAttribute('lang');
+        if (countryLang !== currentLang) {
+          updateLanguageUI(countryLang);
+        }
+      }
+    })
+    .catch(() => {
+      // Graceful fallback: instant browser/timezone detection remains active
+    });
+}
+
 export function initSiteControls() {
   if (typeof window === 'undefined' || typeof document === 'undefined') return;
-  const currentLang = getStoredLang();
+  
+  // 1. Language Initialization
+  const currentLang = detectUserLanguage();
   updateLanguageUI(currentLang);
+  verifyGeoLocation();
 
+  // 2. Language Switch Buttons
   document.querySelectorAll<HTMLElement>('[data-lang]').forEach((btn) => {
     btn.onclick = () => {
       const targetLang = btn.getAttribute('data-lang') as Lang;
@@ -73,9 +119,24 @@ export function initSiteControls() {
     };
   });
 
+  // 3. Theme Toggle Button
   const themeToggle = document.getElementById('theme-toggle-btn');
   if (themeToggle) {
     themeToggle.onclick = toggleTheme;
+  }
+
+  // 4. Live System Theme Listener (Reacts if user changes device theme while browsing, unless manual choice is saved)
+  if (window.matchMedia) {
+    const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    colorSchemeQuery.addEventListener('change', (e) => {
+      if (!localStorage.getItem('site_theme')) {
+        if (e.matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }
+    });
   }
 }
 
@@ -85,6 +146,5 @@ if (typeof window !== 'undefined') {
   } else {
     initSiteControls();
   }
-  // Support Astro view transitions or soft reloads if enabled
   document.addEventListener('astro:page-load', initSiteControls);
 }
