@@ -22,93 +22,132 @@ const research = await getCollection('research');
   <section class="border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#121212] px-4 sm:px-8 lg:px-12 py-12 sm:py-20 lg:py-24 transition-colors duration-200">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center max-w-full">
       
-      <!-- Hero Left: Variant 2 Anti-Agency Growth Partner -->
+      <!-- Hero Left: Value Pillars & What We Build (No intrusive CTAs) -->
       <div class="lg:col-span-7 space-y-5 sm:space-y-6">
         <h1 data-i18n="hero.title" class="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.08] break-words">
           Hantal ajanslar yok. İşletmeniz için hızlı, esnek Dijital Pazarlama ve Akıllı CRM <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">sistemleri</span>
         </h1>
 
-        <p data-i18n="hero.subtitle" class="text-neutral-600 dark:text-neutral-400 text-base sm:text-lg lg:text-xl font-medium pt-1 sm:pt-2">
-          Tüm pazarlama ve müşteri yönetimi altyapınızı tek bir sabit abonelik veya anahtar teslim kurulumla kuruyoruz. İstediğiniz an dondurun veya iptal edin.
+        <p data-i18n="hero.subtitle" class="text-neutral-600 dark:text-neutral-400 text-base sm:text-lg lg:text-xl font-medium pt-1 sm:pt-2 leading-relaxed">
+          Müşteri adaylarını kaçırmayan, randevuları otomatikleştiren ve tüm operasyonunuzu tek panelden yöneten büyüme altyapıları kuruyoruz.
         </p>
 
-        <!-- Strategic Lead Capture CTAs -->
-        <div class="pt-3 sm:pt-4 space-y-3">
-          <div class="flex flex-col xs:flex-row items-stretch xs:items-center gap-3">
-            <a
-              href="/contact"
-              class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-black dark:bg-white text-white dark:text-black font-bold text-xs sm:text-sm hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-all shadow-md text-center"
-            >
-              <span data-i18n="hero.bookCall">15 Dk Görüşme Planla</span>
-            </a>
-            <a
-              href="#pricing"
-              class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white dark:bg-[#1c1c1c] border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-neutral-100 font-bold text-xs sm:text-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors shadow-sm text-center"
-            >
-              <span data-i18n="hero.seePricing">Paketleri & Fiyatları İncele</span>
-            </a>
+        <!-- 3 Core High-Impact Value Pillars -->
+        <div class="pt-2 sm:pt-4 space-y-3 sm:space-y-3.5">
+          <!-- Pillar 1 -->
+          <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-neutral-200/90 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#181818] transition-colors">
+            <div class="w-8 h-8 rounded-lg bg-black dark:bg-white text-white dark:text-black flex items-center justify-center text-sm shrink-0 font-bold shadow-xs">
+              ⚡
+            </div>
+            <div class="space-y-0.5">
+              <div data-i18n="hero.p1Title" class="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white">
+                Otomatik Satış & Randevu Hunileri
+              </div>
+              <div data-i18n="hero.p1Desc" class="text-xs text-neutral-500 dark:text-neutral-400 font-normal leading-relaxed">
+                Reklamlardan gelen lead'ler ilk 60 saniyede SMS ve WhatsApp ile karşılanır, takviminiz otomatik dolar.
+              </div>
+            </div>
           </div>
 
-          <!-- Micro-Trust Bar -->
-          <div class="text-[11px] sm:text-xs text-neutral-500 dark:text-neutral-400 font-medium flex items-center gap-2 pt-1">
-            <span data-i18n="hero.trust">✓ Sözleşme veya taahhüt yok • İstediğin an dondur • Doğrudan kurucu iletişimi</span>
+          <!-- Pillar 2 -->
+          <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-neutral-200/90 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#181818] transition-colors">
+            <div class="w-8 h-8 rounded-lg bg-black dark:bg-white text-white dark:text-black flex items-center justify-center text-sm shrink-0 font-bold shadow-xs">
+              🤖
+            </div>
+            <div class="space-y-0.5">
+              <div data-i18n="hero.p2Title" class="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white">
+                7/24 AI Asistan & Akıllı İş Akışları
+              </div>
+              <div data-i18n="hero.p2Desc" class="text-xs text-neutral-500 dark:text-neutral-400 font-normal leading-relaxed">
+                Mesai saatleri dışında bile müşteri sorularını yanıtlayan ve randevu oluşturan otonom sistemler.
+              </div>
+            </div>
           </div>
+
+          <!-- Pillar 3 -->
+          <div class="flex items-start gap-3.5 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-neutral-200/90 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#181818] transition-colors">
+            <div class="w-8 h-8 rounded-lg bg-black dark:bg-white text-white dark:text-black flex items-center justify-center text-sm shrink-0 font-bold shadow-xs">
+              📊
+            </div>
+            <div class="space-y-0.5">
+              <div data-i18n="hero.p3Title" class="text-xs sm:text-sm font-bold text-neutral-900 dark:text-white">
+                Uçtan Uca Entegre CRM
+              </div>
+              <div data-i18n="hero.p3Desc" class="text-xs text-neutral-500 dark:text-neutral-400 font-normal leading-relaxed">
+                Dağınık Excel ve WhatsApp yerine; lead takibi, müşteri kartları ve ödemeler tek ekranda.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gentle Flow Indicator -->
+        <div class="pt-2">
+          <a
+            href="#how-it-works"
+            class="inline-flex items-center gap-2 text-xs font-semibold text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors group cursor-pointer"
+          >
+            <span data-i18n="hero.scrollCue">Sistemin nasıl çalıştığını ve vaka analizlerini aşağıda inceleyin ↓</span>
+          </a>
         </div>
       </div>
 
-      <!-- Hero Right: The Designjoy Member Card Mockup -->
+      <!-- Hero Right: Founder Portrait & Architecture Showcase -->
       <div class="lg:col-span-5 w-full">
-        <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-5 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden space-y-6 sm:space-y-8 transition-colors">
+        <div class="relative w-full max-w-md mx-auto lg:max-w-none rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#181818] p-3 sm:p-4 shadow-sm transition-colors group">
           
-          <div class="space-y-1.5 sm:space-y-2">
-            <span data-i18n="hero.cardTag" class="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-bold block">
-              REVENUE & CRM ARCHITECTURE
-            </span>
-            <div data-i18n="hero.cardName" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 dark:text-white leading-none">
-              Ercan Kurtoğlu
+          <!-- Image / Portrait Frame -->
+          <div class="relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] w-full rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-200 dark:bg-neutral-900 border border-neutral-200/80 dark:border-neutral-800/80 flex items-center justify-center">
+            
+            <!-- Live status pill (Top Right) -->
+            <div class="absolute top-3.5 right-3.5 z-20 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 dark:bg-black/90 backdrop-blur-md border border-neutral-200/80 dark:border-neutral-700/80 text-[11px] font-bold text-neutral-800 dark:text-neutral-200 shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+              <span data-i18n="hero.founderStatus">Sistemler Aktif</span>
             </div>
-            <p data-i18n="hero.cardTagline" class="text-xs text-neutral-500 dark:text-neutral-400 font-medium pt-0.5">
-              Tüm operasyonu otomatize eden tek abonelik.
-            </p>
-          </div>
 
-          <div class="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white dark:bg-[#202020] border border-neutral-200 dark:border-neutral-700/60 shadow-sm space-y-3 sm:space-y-4 transition-colors">
-            <div class="flex items-center justify-between text-xs font-bold text-neutral-900 dark:text-white border-b border-neutral-100 dark:border-neutral-700/50 pb-2.5 sm:pb-3">
-              <span data-i18n="hero.cardStatusTitle">Kurulum & Otomasyon</span>
-              <span data-i18n="hero.cardStatusActive" class="text-emerald-600 dark:text-emerald-400 font-mono">Aktif</span>
-            </div>
-            <ul class="space-y-2 text-xs text-neutral-600 dark:text-neutral-300">
-              <li class="flex items-center gap-2">
-                <span class="text-black dark:text-white font-bold shrink-0">✓</span>
-                <span data-i18n="hero.cardItem1">Uçtan Uca Akıllı CRM Altyapısı</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-black dark:text-white font-bold shrink-0">✓</span>
-                <span data-i18n="hero.cardItem2">7/24 AI Randevu Asistanı</span>
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="text-black dark:text-white font-bold shrink-0">✓</span>
-                <span data-i18n="hero.cardItem3">Özel Make & Zapier Köprüleri</span>
-              </li>
-            </ul>
-          </div>
+            <!-- Founder Photo (Active once uploaded) -->
+            <img
+              id="founder-photo"
+              src="/images/founder/ercan-kurtoglu.jpg"
+              alt="Ercan Kurtoğlu"
+              class="w-full h-full object-cover object-top filter grayscale contrast-105 hover:grayscale-0 transition-all duration-700"
+              onerror="this.style.display='none'; document.getElementById('founder-photo-placeholder').style.display='flex';"
+            />
 
-          <!-- Bottom Schedule Bar -->
-          <a
-            href="/contact"
-            class="flex items-center justify-between p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white dark:bg-[#202020] border border-neutral-200 dark:border-neutral-700/60 hover:border-neutral-400 dark:hover:border-neutral-500 hover:shadow-md transition-all text-xs font-bold text-neutral-900 dark:text-white"
-          >
-            <div class="flex items-center gap-2.5 sm:gap-3">
-              <div class="w-8 h-8 rounded-full bg-black dark:bg-white text-white dark:text-black flex items-center justify-center text-xs shrink-0">
-                📞
+            <!-- Elegant Fallback Placeholder (Active until image is added) -->
+            <div
+              id="founder-photo-placeholder"
+              class="hidden w-full h-full flex-col items-center justify-center p-6 text-center space-y-3 bg-gradient-to-b from-neutral-100 to-neutral-200 dark:from-[#181818] dark:to-[#121212]"
+            >
+              <div class="w-20 h-20 rounded-full border-2 border-neutral-300 dark:border-neutral-700 flex items-center justify-center bg-white dark:bg-neutral-800 shadow-inner">
+                <Logo variant="boxed" className="w-10 h-10" />
               </div>
-              <div class="text-left">
-                <div data-i18n="hero.cardCallTitle" class="leading-tight">15-dakikalık tanışma seansı</div>
-                <div data-i18n="hero.cardCallSub" class="text-[11px] text-neutral-400 dark:text-neutral-500 font-normal">Hemen takvimden seçin</div>
+              <div class="space-y-1">
+                <div class="text-sm font-bold text-neutral-800 dark:text-neutral-200">Fotoğraf Alanı</div>
+                <p class="text-[11px] text-neutral-500 dark:text-neutral-400 max-w-[200px] leading-tight">
+                  Ercan Kurtoğlu portre görseli buraya yerleşecek
+                </p>
               </div>
             </div>
-            <span class="text-neutral-400 dark:text-neutral-500 shrink-0">→</span>
-          </a>
+
+            <!-- Bottom Gradient & Card Bio Overlay -->
+            <div class="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 sm:p-6 text-white space-y-1">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div data-i18n="hero.founderName" class="text-base sm:text-lg font-extrabold tracking-tight">
+                    Ercan Kurtoğlu
+                  </div>
+                  <div data-i18n="hero.founderRole" class="text-[11px] sm:text-xs font-mono uppercase tracking-wider text-neutral-300">
+                    Kurucu & Sistem Mimarı
+                  </div>
+                </div>
+                <Logo variant="boxed" className="w-6 h-6 opacity-80" />
+              </div>
+              <p data-i18n="hero.founderBio" class="text-[11px] sm:text-xs text-neutral-300 font-normal pt-1 line-clamp-2 leading-relaxed">
+                Yazılım mühendisliği disipliniyle tasarlanmış, yüksek dönüşümlü büyüme altyapıları.
+              </p>
+            </div>
+
+          </div>
 
         </div>
       </div>
