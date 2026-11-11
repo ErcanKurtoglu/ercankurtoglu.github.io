@@ -14,11 +14,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     'nav.seePlans': 'Planları Gör',
 
     // Hero
-    'hero.badge': 'Kasım ayı için yeni kurulum: <strong>2 Müsait</strong>',
-    'hero.title': 'İşletmeler için Dijital Pazarlama ve Akıllı CRM <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">sistemleri</span>',
-    'hero.subtitle': 'Pause or cancel anytime. <span class="text-neutral-400 dark:text-neutral-500 font-normal">Hantal ajans süreçleri yok.</span>',
-    'hero.seePricing': 'Fiyatları İncele',
-    'hero.bookCall': 'Görüşme Planla',
+    'hero.title': 'Hantal ajanslar yok. İşletmeniz için hızlı, esnek Dijital Pazarlama ve Akıllı CRM <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">sistemleri</span>',
+    'hero.subtitle': 'Tüm pazarlama ve müşteri yönetimi altyapınızı tek bir sabit abonelik veya anahtar teslim kurulumla kuruyoruz. İstediğiniz an dondurun veya iptal edin.',
+    'hero.bookCall': '15 Dk Görüşme Planla',
+    'hero.seePricing': 'Paketleri & Fiyatları İncele',
+    'hero.trust': '✓ Sözleşme veya taahhüt yok • İstediğin an dondur • Doğrudan kurucu iletişimi',
     'hero.cardTag': 'REVENUE & CRM ARCHITECTURE',
     'hero.cardName': 'Ercan Kurtoğlu',
     'hero.cardTagline': 'Tüm operasyonu otomatize eden tek abonelik.',
@@ -155,11 +155,11 @@ export const translations: Record<Lang, Record<string, string>> = {
     'nav.seePlans': 'See pricing',
 
     // Hero
-    'hero.badge': 'Openings for November: <strong>2 Available</strong>',
-    'hero.title': 'Digital marketing & smart CRM systems for <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">everyone</span>',
-    'hero.subtitle': 'Pause or cancel anytime. <span class="text-neutral-400 dark:text-neutral-500 font-normal">No agency bloat.</span>',
-    'hero.seePricing': 'See pricing',
-    'hero.bookCall': 'Book a call',
+    'hero.title': 'No agency bloat. Fast, flexible Digital Marketing & Smart CRM <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">systems</span>',
+    'hero.subtitle': 'Build and scale your entire marketing and client management engine with one flat subscription or turnkey setup. Pause or cancel anytime.',
+    'hero.bookCall': 'Book a 15-Min Call',
+    'hero.seePricing': 'See Plans & Pricing',
+    'hero.trust': '✓ No long-term contracts • Pause anytime • Direct founder communication',
     'hero.cardTag': 'REVENUE & CRM ARCHITECTURE',
     'hero.cardName': 'Ercan Kurtoğlu',
     'hero.cardTagline': 'One subscription to automate them all.',
