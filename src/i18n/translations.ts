@@ -24,9 +24,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     'hero.p3Desc': '“Dağınık Excel ve WhatsApp yerine; lead takibi, müşteri kartları ve ödemeler tek ekranda.”',
     'hero.scrollCue': 'Sistemin nasıl çalıştığını ve vaka analizlerini aşağıda inceleyin ↓',
     'hero.founderName': 'Ercan Kurtoğlu',
-    'hero.founderRole': 'Kurucu & Sistem Mimarı',
+    'hero.founderRole': 'Kurucu · CRM Mimarı & AI Mühendisi',
     'hero.founderStatus': 'Sistemler Aktif',
-    'hero.founderBio': 'Yazılım mühendisliği disipliniyle tasarlanmış, yüksek dönüşümlü büyüme altyapıları.',
+    'hero.founderBio': 'Yapay zeka mühendisliği disipliniyle tasarlanmış, yüksek dönüşümlü büyüme altyapıları.',
 
     // Steps
     'steps.heading': 'Sistemlerin en başından beri <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">olması gerektiği</span> gibi',
@@ -163,9 +163,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     'hero.p3Desc': '“Replace chaotic spreadsheets and WhatsApp chats with a unified pipeline, client records, and payment tracking.”',
     'hero.scrollCue': 'Explore how the system works and client case studies below ↓',
     'hero.founderName': 'Ercan Kurtoğlu',
-    'hero.founderRole': 'Founder & CRM Architect',
+    'hero.founderRole': 'Founder · CRM Architect & AI Engineer',
     'hero.founderStatus': 'Systems Active',
-    'hero.founderBio': 'Engineered growth architectures designed with software engineering discipline.',
+    'hero.founderBio': 'High-converting growth infrastructure designed with AI engineering discipline.',
 
     // Steps
     'steps.heading': 'The way systems <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">should’ve</span> been done in the first place',
