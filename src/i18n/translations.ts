@@ -30,10 +30,13 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Steps
     'steps.heading': 'Sistemlerin en başından beri <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">olması gerektiği</span> gibi',
+    'steps.s1Tag': 'İhtiyaç',
     'steps.s1Title': 'İhtiyacınızı Belirleyin',
     'steps.s1Desc': 'İşletmenizin darboğazına (kaçan lead\'ler, randevu takibi veya manuel işler) uygun, ispatlanmış hazır sistem paketlerimizi inceleyin.',
+    'steps.s2Tag': 'Kapsam',
     'steps.s2Title': 'Kapsamı Netleştirelim',
     'steps.s2Desc': 'Kısa ve odaklı bir değerlendirmeyle mevcut araçlarınızı, hedeflerinizi ve entegrasyon yol haritasını birlikte netleştirelim.',
+    'steps.s3Tag': 'Entegrasyon',
     'steps.s3Title': 'Hızlı Entegrasyon',
     'steps.s3Desc': 'Denenmiş kampanya ve CRM mimariniz birkaç iş günü içinde anahtar teslim hesabınıza kurulur, test edilir ve yayına alınır.',
     'steps.flowCue': 'Sistemin sahada nasıl sonuç ürettiğini vaka çalışmalarında inceleyin',
@@ -170,10 +173,13 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Steps
     'steps.heading': 'The way systems <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">should’ve</span> been done in the first place',
+    'steps.s1Tag': 'Identify',
     'steps.s1Title': 'Identify Your Need',
     'steps.s1Desc': 'Explore proven, battle-tested system packages tailored to your bottleneck—missed leads, booking drop-offs, or manual chaos.',
+    'steps.s2Tag': 'Scope',
     'steps.s2Title': 'Align on Scope',
     'steps.s2Desc': 'A brief, focused alignment to review your current tech stack, business goals, and a seamless integration roadmap.',
+    'steps.s3Tag': 'Deploy',
     'steps.s3Title': 'Fast Deployment',
     'steps.s3Desc': 'Your battle-tested campaign and CRM architecture is configured, tested, and handed over live to your account in days.',
     'steps.flowCue': 'Explore how these systems deliver results in our case studies below',

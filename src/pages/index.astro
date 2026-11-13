@@ -144,7 +144,7 @@ const research = await getCollection('research');
   </section>
 
   <!-- ========================================================================= -->
-  <!-- 2. "THE WAY SYSTEMS SHOULD'VE BEEN DONE" (3 Step Cards - Comparison View) -->
+  <!-- 2. "THE WAY SYSTEMS SHOULD'VE BEEN DONE" (3 Step Cards)                   -->
   <!-- ========================================================================= -->
   <section id="how-it-works" class="border-b border-neutral-200 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#161616] px-4 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-28 transition-colors duration-200">
     <div class="max-w-4xl mb-12 sm:mb-16">
@@ -153,120 +153,52 @@ const research = await getCollection('research');
       </h2>
     </div>
 
-    <!-- ======================================================================= -->
-    <!-- STİL 1: Modern Fütüristik & Tech Badge (Karşılaştırma Varyantı A)        -->
-    <!-- ======================================================================= -->
-    <div class="mb-14">
-      <div class="flex items-center gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider bg-neutral-200 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-semibold border border-neutral-300 dark:border-neutral-700">
-          <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
-          Varyant A · Tech Badge & Fütüristik Monospace
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+      <!-- Card 1 -->
+      <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 lg:p-10 hover:shadow-md transition-all">
+        <span class="absolute top-3 right-5 sm:top-4 sm:right-6 font-mono text-6xl sm:text-7xl font-black text-neutral-100 dark:text-neutral-800/40 select-none pointer-events-none transition-colors">
+          01
         </span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-        <!-- Card 1 -->
-        <div class="relative rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all">
-          <div class="flex items-center justify-between mb-5">
-            <span class="font-mono text-[11px] font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/80 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-700">
-              01 // İHTİYAÇ
-            </span>
-            <span class="w-1.5 h-1.5 rounded-full bg-neutral-300 dark:bg-neutral-700"></span>
+        <div class="relative z-10">
+          <div data-i18n="steps.s1Tag" class="text-[11px] font-mono uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-bold mb-3">
+            İhtiyaç
           </div>
           <div data-i18n="steps.s1Title" class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">İhtiyacınızı Belirleyin</div>
           <p data-i18n="steps.s1Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
             İşletmenizin darboğazına (kaçan lead'ler, randevu takibi veya manuel işler) uygun, ispatlanmış hazır sistem paketlerimizi inceleyin.
           </p>
         </div>
+      </div>
 
-        <!-- Card 2 -->
-        <div class="relative rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all">
-          <div class="flex items-center justify-between mb-5">
-            <span class="font-mono text-[11px] font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/80 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-700">
-              02 // KAPSAM
-            </span>
-            <span class="w-1.5 h-1.5 rounded-full bg-neutral-300 dark:bg-neutral-700"></span>
+      <!-- Card 2 -->
+      <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 lg:p-10 hover:shadow-md transition-all">
+        <span class="absolute top-3 right-5 sm:top-4 sm:right-6 font-mono text-6xl sm:text-7xl font-black text-neutral-100 dark:text-neutral-800/40 select-none pointer-events-none transition-colors">
+          02
+        </span>
+        <div class="relative z-10">
+          <div data-i18n="steps.s2Tag" class="text-[11px] font-mono uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-bold mb-3">
+            Kapsam
           </div>
           <div data-i18n="steps.s2Title" class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Kapsamı Netleştirelim</div>
           <p data-i18n="steps.s2Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
             Kısa ve odaklı bir değerlendirmeyle mevcut araçlarınızı, hedeflerinizi ve entegrasyon yol haritasını birlikte netleştirelim.
           </p>
         </div>
+      </div>
 
-        <!-- Card 3 -->
-        <div class="relative rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all">
-          <div class="flex items-center justify-between mb-5">
-            <span class="font-mono text-[11px] font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 bg-neutral-100 dark:bg-neutral-800/80 px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-700">
-              03 // ENTEGRASYON
-            </span>
-            <span class="w-1.5 h-1.5 rounded-full bg-neutral-300 dark:bg-neutral-700"></span>
+      <!-- Card 3 -->
+      <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 lg:p-10 hover:shadow-md transition-all">
+        <span class="absolute top-3 right-5 sm:top-4 sm:right-6 font-mono text-6xl sm:text-7xl font-black text-neutral-100 dark:text-neutral-800/40 select-none pointer-events-none transition-colors">
+          03
+        </span>
+        <div class="relative z-10">
+          <div data-i18n="steps.s3Tag" class="text-[11px] font-mono uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-bold mb-3">
+            Entegrasyon
           </div>
           <div data-i18n="steps.s3Title" class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Hızlı Entegrasyon</div>
           <p data-i18n="steps.s3Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
             Denenmiş kampanya ve CRM mimariniz birkaç iş günü içinde anahtar teslim hesabınıza kurulur, test edilir ve yayına alınır.
           </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ======================================================================= -->
-    <!-- STİL 2: Ultra-Minimalist Editorial & Watermark (Karşılaştırma Varyantı B)-->
-    <!-- ======================================================================= -->
-    <div>
-      <div class="flex items-center gap-2 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider bg-neutral-200 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 font-semibold border border-neutral-300 dark:border-neutral-700">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-          Varyant B · Editorial Numara Filigranı (Designjoy Stili)
-        </span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-        <!-- Card 1 -->
-        <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 lg:p-10 hover:shadow-md transition-all">
-          <span class="absolute top-3 right-5 sm:top-4 sm:right-6 font-mono text-6xl sm:text-7xl font-black text-neutral-100 dark:text-neutral-800/40 select-none pointer-events-none transition-colors">
-            01
-          </span>
-          <div class="relative z-10">
-            <div class="text-[11px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">
-              Adım 01
-            </div>
-            <div data-i18n="steps.s1Title" class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">İhtiyacınızı Belirleyin</div>
-            <p data-i18n="steps.s1Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
-              İşletmenizin darboğazına (kaçan lead'ler, randevu takibi veya manuel işler) uygun, ispatlanmış hazır sistem paketlerimizi inceleyin.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 lg:p-10 hover:shadow-md transition-all">
-          <span class="absolute top-3 right-5 sm:top-4 sm:right-6 font-mono text-6xl sm:text-7xl font-black text-neutral-100 dark:text-neutral-800/40 select-none pointer-events-none transition-colors">
-            02
-          </span>
-          <div class="relative z-10">
-            <div class="text-[11px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">
-              Adım 02
-            </div>
-            <div data-i18n="steps.s2Title" class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Kapsamı Netleştirelim</div>
-            <p data-i18n="steps.s2Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
-              Kısa ve odaklı bir değerlendirmeyle mevcut araçlarınızı, hedeflerinizi ve entegrasyon yol haritasını birlikte netleştirelim.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 lg:p-10 hover:shadow-md transition-all">
-          <span class="absolute top-3 right-5 sm:top-4 sm:right-6 font-mono text-6xl sm:text-7xl font-black text-neutral-100 dark:text-neutral-800/40 select-none pointer-events-none transition-colors">
-            03
-          </span>
-          <div class="relative z-10">
-            <div class="text-[11px] font-mono uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-3">
-              Adım 03
-            </div>
-            <div data-i18n="steps.s3Title" class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Hızlı Entegrasyon</div>
-            <p data-i18n="steps.s3Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
-              Denenmiş kampanya ve CRM mimariniz birkaç iş günü içinde anahtar teslim hesabınıza kurulur, test edilir ve yayına alınır.
-            </p>
-          </div>
         </div>
       </div>
     </div>
