@@ -30,12 +30,13 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Steps
     'steps.heading': 'Sistemlerin en başından beri <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">olması gerektiği</span> gibi',
-    'steps.s1Title': 'Abone Olun',
-    'steps.s1Desc': 'Bir plana abone olun veya tek seferlik kurulum paketinizi seçin. Sürpriz ek maliyet olmadan hemen başlayalım.',
-    'steps.s2Title': 'Talep Edin',
-    'steps.s2Desc': 'Satış hunisi, SMS iş akışı, AI randevu botu veya ödeme entegrasyonu... İhtiyacınız olan her sistemi talep edin.',
-    'steps.s3Title': 'Teslim Alın',
-    'steps.s3Desc': 'Sistemleriniz canlı testleriyle birlikte birkaç iş günü içinde doğrudan hesabınıza teslim edilir.',
+    'steps.s1Title': 'İhtiyacınızı Belirleyin',
+    'steps.s1Desc': 'İşletmenizin darboğazına (kaçan lead\'ler, randevu takibi veya manuel işler) uygun, ispatlanmış hazır sistem paketlerimizi inceleyin.',
+    'steps.s2Title': 'Kapsamı Netleştirelim',
+    'steps.s2Desc': 'Kısa ve odaklı bir değerlendirmeyle mevcut araçlarınızı, hedeflerinizi ve entegrasyon yol haritasını birlikte netleştirelim.',
+    'steps.s3Title': 'Hızlı Entegrasyon',
+    'steps.s3Desc': 'Denenmiş kampanya ve CRM mimariniz birkaç iş günü içinde anahtar teslim hesabınıza kurulur, test edilir ve yayına alınır.',
+    'steps.flowCue': 'Sistemin sahada nasıl sonuç ürettiğini vaka çalışmalarında inceleyin',
 
     // Recent Work
     'work.heading': 'Öne Çıkan Çalışmalar',
@@ -169,12 +170,13 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Steps
     'steps.heading': 'The way systems <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">should’ve</span> been done in the first place',
-    'steps.s1Title': 'Subscribe',
-    'steps.s1Desc': 'Subscribe to a plan or select a one-time setup package. We get started immediately with zero hidden fees.',
-    'steps.s2Title': 'Request',
-    'steps.s2Desc': 'Sales funnels, SMS workflows, AI booking bots, or payment integrations... Request any system you need.',
-    'steps.s3Title': 'Receive',
-    'steps.s3Desc': 'Your systems are delivered directly into your account with live testing in just a few business days.',
+    'steps.s1Title': 'Identify Your Need',
+    'steps.s1Desc': 'Explore proven, battle-tested system packages tailored to your bottleneck—missed leads, booking drop-offs, or manual chaos.',
+    'steps.s2Title': 'Align on Scope',
+    'steps.s2Desc': 'A brief, focused alignment to review your current tech stack, business goals, and a seamless integration roadmap.',
+    'steps.s3Title': 'Fast Deployment',
+    'steps.s3Desc': 'Your battle-tested campaign and CRM architecture is configured, tested, and handed over live to your account in days.',
+    'steps.flowCue': 'Explore how these systems deliver results in our case studies below',
 
     // Recent Work
     'work.heading': 'Recent work',
