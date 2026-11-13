@@ -41,6 +41,16 @@ export const translations: Record<Lang, Record<string, string>> = {
     'steps.s3Desc': 'Denenmiş kampanya ve CRM mimariniz birkaç iş günü içinde anahtar teslim hesabınıza kurulur, test edilir ve yayına alınır.',
     'steps.flowCue': 'Sistemin sahada nasıl sonuç ürettiğini vaka çalışmalarında inceleyin',
 
+    // Marquee (Hizmet & Çözüm Odaklı)
+    'marquee.item1': 'Otomatik Satış & Randevu Hunileri',
+    'marquee.item2': '7/24 AI Müşteri Asistanı',
+    'marquee.item3': 'Uçtan Uca Akıllı CRM',
+    'marquee.item4': 'WhatsApp & SMS İş Akışları',
+    'marquee.item5': 'Stripe & Ödeme Entegrasyonları',
+    'marquee.item6': 'Anında Lead Yanıtlama (< 60sn)',
+    'marquee.item7': 'Özel Webhook & API Entegrasyonu',
+    'marquee.item8': 'Takvim & Randevu Senkronizasyonu',
+
     // Recent Work
     'work.heading': 'Öne Çıkan Çalışmalar',
     'work.sub': 'Uygulanan sistemler ve somut iş çıktıları.',
@@ -183,6 +193,16 @@ export const translations: Record<Lang, Record<string, string>> = {
     'steps.s3Title': 'Fast Deployment',
     'steps.s3Desc': 'Your battle-tested campaign and CRM architecture is configured, tested, and handed over live to your account in days.',
     'steps.flowCue': 'Explore how these systems deliver results in our case studies below',
+
+    // Marquee (Service & Solution Focused)
+    'marquee.item1': 'Automated Sales & Booking Funnels',
+    'marquee.item2': '24/7 AI Customer Assistant',
+    'marquee.item3': 'End-to-End Smart CRM',
+    'marquee.item4': 'WhatsApp & SMS Workflows',
+    'marquee.item5': 'Stripe & Payment Integrations',
+    'marquee.item6': 'Instant Lead Response (< 60s)',
+    'marquee.item7': 'Custom Webhooks & API Integration',
+    'marquee.item8': 'Calendar & Appointment Sync',
 
     // Recent Work
     'work.heading': 'Recent work',
