@@ -342,64 +342,94 @@ const research = await getCollection('research');
   </section>
 
   <!-- ========================================================================= -->
-  <!-- 5. "IT'S 'YOU'LL NEVER GO BACK' BETTER" (Membership Perks 6'lı Grid)       -->
+  <!-- 5. MEMBERSHIP PERKS (6'lı Monokrom Avantajlar Grid)                       -->
   <!-- ========================================================================= -->
   <section id="benefits" class="border-b border-neutral-200 dark:border-neutral-800 bg-[#fbfbfb] dark:bg-[#161616] px-4 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 transition-colors duration-200">
     <div class="max-w-4xl mb-12 sm:mb-16">
       <h2 data-i18n="perks.heading" class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.15]">
-        Bir kez deneyince <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">"asla geri dönmeyeceğiniz"</span> kalitede
+        Klasik ajanslarla <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">vedalaşmanız</span> için 6 neden
       </h2>
       <p data-i18n="perks.sub" class="text-neutral-600 dark:text-neutral-400 text-sm sm:text-base mt-3 sm:mt-4 max-w-xl">
-        Karmaşık ajans toplantılarını ve saatlik faturaları geride bırakın.
+        Karmaşık toplantıları, belirsiz süreçleri ve saatlik faturaları geride bırakın.
       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:shadow-md transition-all">
-        <div class="text-2xl mb-3 sm:mb-4">⚡️</div>
+      <!-- Perk 1 -->
+      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-md transition-all">
+        <div class="w-10 h-10 rounded-xl bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center mb-4 text-neutral-900 dark:text-white">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
         <h3 data-i18n="perks.p1Title" class="text-base sm:text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Işık Hızında Teslimat</h3>
-        <p data-i18n="perks.p1Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          Haftalarca beklemek yok. Hunileriniz ve iş akışlarınız ortalama birkaç iş günü içinde hazır.
+        <p data-i18n="perks.p1Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+          Haftalarca beklemek yok. İspatlanmış CRM ve otomasyon altyapınız ortalama birkaç iş günü içinde canlıda.
         </p>
       </div>
 
-      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:shadow-md transition-all">
-        <div class="text-2xl mb-3 sm:mb-4">💳</div>
-        <h3 data-i18n="perks.p2Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Sabit Paket Ücreti</h3>
-        <p data-i18n="perks.p2Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          Sürpriz fatura yok. Ne alacağınızı ve ne ödeyeceğinizi baştan bilirsiniz.
+      <!-- Perk 2 -->
+      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-md transition-all">
+        <div class="w-10 h-10 rounded-xl bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center mb-4 text-neutral-900 dark:text-white">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 data-i18n="perks.p2Title" class="text-base sm:text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Sabit & Şeffaf Ücretlendirme</h3>
+        <p data-i18n="perks.p2Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+          Saatlik fatura veya sürpriz ek maliyet yok. Ne alacağınızı ve bütçenizi ilk günden net bilirsiniz.
         </p>
       </div>
 
-      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:shadow-md transition-all">
-        <div class="text-2xl mb-3 sm:mb-4">💎</div>
-        <h3 data-i18n="perks.p3Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Üst Düzey Kod & Mimari</h3>
-        <p data-i18n="perks.p3Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          Rastgele şablonlar değil; akademik AI araştırmaları ve kurumsal yazılım disipliniyle inşa edilmiş altyapı.
+      <!-- Perk 3 -->
+      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-md transition-all">
+        <div class="w-10 h-10 rounded-xl bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center mb-4 text-neutral-900 dark:text-white">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </div>
+        <h3 data-i18n="perks.p3Title" class="text-base sm:text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Mühendislik & AI Disiplini</h3>
+        <p data-i18n="perks.p3Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+          Rastgele şablonlar değil; yapay zekâ ve yazılım mühendisliği disipliniyle kurgulanmış hatasız altyapı.
         </p>
       </div>
 
-      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:shadow-md transition-all">
-        <div class="text-2xl mb-3 sm:mb-4">🤝</div>
-        <h3 data-i18n="perks.p4Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Birebir Kurucu İletişimi</h3>
-        <p data-i18n="perks.p4Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          Aracı hesap yöneticileri yok. Doğrudan sistemi tasarlayan ve kodu yazan kişiyle konuşursunuz.
+      <!-- Perk 4 -->
+      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-md transition-all">
+        <div class="w-10 h-10 rounded-xl bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center mb-4 text-neutral-900 dark:text-white">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </div>
+        <h3 data-i18n="perks.p4Title" class="text-base sm:text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Birebir Kurucu İletişimi</h3>
+        <p data-i18n="perks.p4Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+          Aracı hesap yöneticileri veya stajyerler yok. Doğrudan sistemi tasarlayan mimarla birebir çalışırsınız.
         </p>
       </div>
 
-      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:shadow-md transition-all">
-        <div class="text-2xl mb-3 sm:mb-4">🔒</div>
-        <h3 data-i18n="perks.p5Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">%100 Sizin Mülkiyetinizde</h3>
-        <p data-i18n="perks.p5Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          Tüm CRM hesapları, müşteri verileri ve otomasyon şablonları doğrudan sizin şirketinize aittir.
+      <!-- Perk 5 -->
+      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-md transition-all">
+        <div class="w-10 h-10 rounded-xl bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center mb-4 text-neutral-900 dark:text-white">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <h3 data-i18n="perks.p5Title" class="text-base sm:text-lg font-extrabold text-neutral-900 dark:text-white mb-2">%100 Sizin Mülkiyetinizde</h3>
+        <p data-i18n="perks.p5Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+          Tüm CRM hesapları, müşteri verileri ve kurulan iş akışları doğrudan sizin işletmenize aittir.
         </p>
       </div>
 
-      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:shadow-md transition-all">
-        <div class="text-2xl mb-3 sm:mb-4">🎓</div>
-        <h3 data-i18n="perks.p6Title" class="text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Eğitim & 30 Gün Destek</h3>
-        <p data-i18n="perks.p6Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          Teslimat sonrası ekibinize özel video dokümantasyonu ve 30 gün öncelikli teknik destek.
+      <!-- Perk 6 -->
+      <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#1a1a1a] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-md transition-all">
+        <div class="w-10 h-10 rounded-xl bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center mb-4 text-neutral-900 dark:text-white">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.75">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <h3 data-i18n="perks.p6Title" class="text-base sm:text-lg font-extrabold text-neutral-900 dark:text-white mb-2">Ekip Eğitimi & Öncelikli Destek</h3>
+        <p data-i18n="perks.p6Desc" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+          Teslimat sonrası ekibinize özel kullanım rehberi ve sistemin sorunsuz işlemesi için 30 gün öncelikli teknik destek.
         </p>
       </div>
     </div>
