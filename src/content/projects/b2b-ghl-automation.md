@@ -1,13 +1,13 @@
 ---
-title: "B2B Danışmanlık Firması İçin Tam Otomatik GHL Mimarisi"
-description: "Manuel müşteri takibini tamamen ortadan kaldıran, potansiyel müşteri yakalama oranını %45 artıran uçtan uca GHL CRM ve çok kanallı iletişim altyapısı."
+title: "B2B Danışmanlık Firması İçin Uçtan Uca Akıllı CRM Mimarisi"
+description: "Manuel müşteri takibini tamamen ortadan kaldıran, randevuya katılım oranını %88'e çıkaran uçtan uca akıllı CRM ve çok kanallı iletişim altyapısı."
 category: "İş Otomasyonu & CRM"
 year: 2026
 featured: true
 tech:
-  - "GoHighLevel"
+  - "Akıllı CRM"
   - "Make.com"
-  - "Stripe"
+  - "WhatsApp API"
   - "Twilio"
 link: "#"
 ---

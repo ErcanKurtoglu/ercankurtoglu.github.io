@@ -3,8 +3,44 @@ import Layout from '../layouts/Layout.astro';
 import Logo from '../components/Logo.astro';
 import { getCollection } from 'astro:content';
 
-const projects = await getCollection('projects');
-const featuredProjects = projects.slice(0, 3);
+const caseStudies = [
+  {
+    metricKey: 'work.c1Metric',
+    metricDefault: '+ %42 RANDEVU ARTIŞI',
+    catKey: 'work.c1Cat',
+    catDefault: 'Klinik & Sağlık',
+    titleKey: 'work.c1Title',
+    titleDefault: 'Medikal Estetik Kliniği İçin Otomatik Randevu Hunisi',
+    descKey: 'work.c1Desc',
+    descDefault: 'Reklamlardan gelen talepleri 60 saniye içinde WhatsApp AI asistanıyla karşılayıp takvimi otomatik dolduran randevu sistemi.',
+    techKey: 'work.c1Tech',
+    techDefault: 'Akıllı CRM • WhatsApp API',
+  },
+  {
+    metricKey: 'work.c2Metric',
+    metricDefault: '%88 KATILIM BAŞARISI',
+    catKey: 'work.c2Cat',
+    catDefault: 'B2B Danışmanlık',
+    titleKey: 'work.c2Title',
+    titleDefault: 'B2B Danışmanlık Firması İçin Uçtan Uca Akıllı CRM Mimarisi',
+    descKey: 'work.c2Desc',
+    descDefault: 'Dağınık Excel ve manuel e-posta takibini tek panelde birleştirerek haftalık 18 saatlik operasyonel yükü ortadan kaldıran sistem.',
+    techKey: 'work.c2Tech',
+    techDefault: 'Akıllı CRM • Çok Kanallı SMS',
+  },
+  {
+    metricKey: 'work.c3Metric',
+    metricDefault: '7/24 ANINDA YANIT',
+    catKey: 'work.c3Cat',
+    catDefault: 'AI Asistan & İletişim',
+    titleKey: 'work.c3Title',
+    titleDefault: 'Hizmet İşletmeleri İçin 7/24 AI Karşılama & Geri Kazanım Sistemi',
+    descKey: 'work.c3Desc',
+    descDefault: 'Mesai dışı gelen soruları anında yanıtlayan ve unutulmuş eski müşteri adaylarını otomatik canlandırıp satış fırsatına dönüştüren akış.',
+    techKey: 'work.c3Tech',
+    techDefault: 'AI Ajan • Akıllı İş Akışı',
+  },
+];
 
 const writings = await getCollection('writing');
 const latestWritings = writings.slice(0, 2);
@@ -274,22 +310,30 @@ const research = await getCollection('research');
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-      {featuredProjects.map((p) => (
+      {caseStudies.map((c) => (
         <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-6 sm:p-8 hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-md transition-all flex flex-col justify-between">
           <div>
-            <div class="flex items-center justify-between text-xs font-mono text-neutral-500 dark:text-neutral-400 mb-3">
-              <span class="font-bold text-black dark:text-white">{p.data.category}</span>
-              <span>{p.data.year}</span>
+            <!-- Monochrome Metric Pill -->
+            <div class="inline-flex items-center px-2.5 py-1 rounded-md bg-neutral-900 dark:bg-white text-white dark:text-black font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mb-5">
+              <span data-i18n={c.metricKey}>{c.metricDefault}</span>
             </div>
-            <h3 class="text-lg sm:text-xl font-extrabold text-neutral-900 dark:text-white mb-2 leading-snug">
-              {p.data.title}
+
+            <div class="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-neutral-500 dark:text-neutral-400 mb-2.5">
+              <span data-i18n={c.catKey}>{c.catDefault}</span>
+              <span>2026</span>
+            </div>
+
+            <h3 data-i18n={c.titleKey} class="text-lg sm:text-xl font-extrabold text-neutral-900 dark:text-white mb-2.5 leading-snug tracking-tight">
+              {c.titleDefault}
             </h3>
-            <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-              {p.data.description}
+
+            <p data-i18n={c.descKey} class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6 font-sans">
+              {c.descDefault}
             </p>
           </div>
+
           <div class="pt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
-            <span class="text-[11px] font-mono text-neutral-500 dark:text-neutral-400">{p.data.tech.slice(0, 2).join(', ')}</span>
+            <span data-i18n={c.techKey} class="text-[11px] font-mono text-neutral-500 dark:text-neutral-400">{c.techDefault}</span>
             <a href="/projects" data-i18n="work.inspect" class="text-xs font-bold text-black dark:text-white hover:underline">İncele →</a>
           </div>
         </div>
