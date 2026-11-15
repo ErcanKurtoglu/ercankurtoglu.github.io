@@ -263,7 +263,7 @@ const research = await getCollection('research');
         <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span data-i18n="marquee.item4">WhatsApp & SMS İş Akışları</span>
         <span class="text-neutral-300 dark:text-neutral-700">•</span>
-        <span data-i18n="marquee.item5">Stripe & Ödeme Entegrasyonları</span>
+        <span data-i18n="marquee.item5">Google Yorum & İtibar Otomasyonu</span>
         <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span data-i18n="marquee.item6">Anında Lead Yanıtlama (< 60sn)</span>
         <span class="text-neutral-300 dark:text-neutral-700">•</span>
@@ -281,7 +281,7 @@ const research = await getCollection('research');
         <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span data-i18n="marquee.item4">WhatsApp & SMS İş Akışları</span>
         <span class="text-neutral-300 dark:text-neutral-700">•</span>
-        <span data-i18n="marquee.item5">Stripe & Ödeme Entegrasyonları</span>
+        <span data-i18n="marquee.item5">Google Yorum & İtibar Otomasyonu</span>
         <span class="text-neutral-300 dark:text-neutral-700">•</span>
         <span data-i18n="marquee.item6">Anında Lead Yanıtlama (< 60sn)</span>
         <span class="text-neutral-300 dark:text-neutral-700">•</span>
@@ -501,15 +501,39 @@ const research = await getCollection('research');
       </h2>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 text-xs font-extrabold text-neutral-900 dark:text-neutral-100">
-      <div data-i18n="scope.i1" class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800 flex items-center justify-start">Satış Hunileri (Funnels)</div>
-      <div data-i18n="scope.i2" class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800 flex items-center justify-start">Lead Nurturing (SMS/Mail)</div>
-      <div data-i18n="scope.i3" class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800 flex items-center justify-start">7/24 AI Randevu Ajanları</div>
-      <div data-i18n="scope.i4" class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800 flex items-center justify-start">Takvim & Randevu Senkronu</div>
-      <div data-i18n="scope.i5" class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800 flex items-center justify-start">Stripe & İyzico Ödemeleri</div>
-      <div data-i18n="scope.i6" class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800 flex items-center justify-start">Özel Webhook & REST API</div>
-      <div data-i18n="scope.i7" class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800 flex items-center justify-start">WhatsApp Cloud API</div>
-      <div data-i18n="scope.i8" class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1e1e1e] border border-neutral-200 dark:border-neutral-800 flex items-center justify-start">CRM Boru Hatları & Pipeline</div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 text-xs sm:text-[13px] font-bold text-neutral-900 dark:text-neutral-100">
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex items-center gap-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-white shrink-0"></span>
+        <span data-i18n="scope.i1">Yüksek Dönüşümlü Satış Hunileri</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex items-center gap-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-white shrink-0"></span>
+        <span data-i18n="scope.i2">Otomatik Müşteri Takibi (SMS & E-posta)</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex items-center gap-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-white shrink-0"></span>
+        <span data-i18n="scope.i3">7/24 AI Randevu Asistanları</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex items-center gap-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-white shrink-0"></span>
+        <span data-i18n="scope.i4">Takvim & Randevu Senkronizasyonu</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex items-center gap-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-white shrink-0"></span>
+        <span data-i18n="scope.i5">Cevapsız Çağrı Anında SMS Dönüşü</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex items-center gap-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-white shrink-0"></span>
+        <span data-i18n="scope.i6">Google Yorum & İtibar Otomasyonu</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex items-center gap-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-white shrink-0"></span>
+        <span data-i18n="scope.i7">WhatsApp Business Otomasyonu</span>
+      </div>
+      <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white dark:bg-[#1a1a1a] border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors flex items-center gap-3">
+        <span class="w-1.5 h-1.5 rounded-full bg-neutral-900 dark:bg-white shrink-0"></span>
+        <span data-i18n="scope.i8">Akıllı CRM & Satış Pipeline Yönetimi</span>
+      </div>
     </div>
   </section>
 

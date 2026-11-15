@@ -46,7 +46,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'marquee.item2': '7/24 AI Müşteri Asistanı',
     'marquee.item3': 'Uçtan Uca Akıllı CRM',
     'marquee.item4': 'WhatsApp & SMS İş Akışları',
-    'marquee.item5': 'Stripe & Ödeme Entegrasyonları',
+    'marquee.item5': 'Google Yorum & İtibar Otomasyonu',
     'marquee.item6': 'Anında Lead Yanıtlama (< 60sn)',
     'marquee.item7': 'Özel Webhook & API Entegrasyonu',
     'marquee.item8': 'Takvim & Randevu Senkronizasyonu',
@@ -103,14 +103,14 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Scope
     'scope.heading': 'Kurduğumuz <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">uygulamalar ve sistemler</span>',
-    'scope.i1': 'Satış Hunileri (Funnels)',
-    'scope.i2': 'Lead Nurturing (SMS/Mail)',
-    'scope.i3': '7/24 AI Randevu Ajanları',
-    'scope.i4': 'Takvim & Randevu Senkronu',
-    'scope.i5': 'Stripe & İyzico Ödemeleri',
-    'scope.i6': 'Özel Webhook & REST API',
-    'scope.i7': 'WhatsApp Cloud API',
-    'scope.i8': 'CRM Satış Hatları & Pipeline',
+    'scope.i1': 'Yüksek Dönüşümlü Satış Hunileri',
+    'scope.i2': 'Otomatik Müşteri Takibi (SMS & E-posta)',
+    'scope.i3': '7/24 AI Randevu Asistanları',
+    'scope.i4': 'Takvim & Randevu Senkronizasyonu',
+    'scope.i5': 'Cevapsız Çağrı Anında SMS Dönüşü',
+    'scope.i6': 'Google Yorum & İtibar Otomasyonu',
+    'scope.i7': 'WhatsApp Business Otomasyonu',
+    'scope.i8': 'Akıllı CRM & Satış Pipeline Yönetimi',
 
     // Pricing
     'pricing.heading': 'Tek bir abonelik, <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">sonsuz olanaklar</span>',
@@ -215,7 +215,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     'marquee.item2': '24/7 AI Customer Assistant',
     'marquee.item3': 'End-to-End Smart CRM',
     'marquee.item4': 'WhatsApp & SMS Workflows',
-    'marquee.item5': 'Stripe & Payment Integrations',
+    'marquee.item5': 'Google Review & Reputation Automation',
     'marquee.item6': 'Instant Lead Response (< 60s)',
     'marquee.item7': 'Custom Webhooks & API Integration',
     'marquee.item8': 'Calendar & Appointment Sync',
@@ -272,14 +272,14 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Scope
     'scope.heading': 'Apps & systems <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">we build</span>',
-    'scope.i1': 'Sales Funnels',
-    'scope.i2': 'Lead Nurturing (SMS/Email)',
-    'scope.i3': '24/7 AI Booking Agents',
+    'scope.i1': 'High-Converting Sales Funnels',
+    'scope.i2': 'Automated Lead Nurturing (SMS/Email)',
+    'scope.i3': '24/7 AI Booking Assistants',
     'scope.i4': 'Calendar & Appointment Sync',
-    'scope.i5': 'Stripe & Global Payments',
-    'scope.i6': 'Custom Webhooks & REST APIs',
-    'scope.i7': 'WhatsApp Cloud API',
-    'scope.i8': 'CRM Pipelines & Deal Stages',
+    'scope.i5': 'Missed-Call Instant Text-Back',
+    'scope.i6': 'Google Review & Reputation System',
+    'scope.i7': 'WhatsApp Business Automation',
+    'scope.i8': 'Smart CRM & Sales Pipelines',
 
     // Pricing
     'pricing.heading': 'One subscription, <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">endless possibilities</span>',
