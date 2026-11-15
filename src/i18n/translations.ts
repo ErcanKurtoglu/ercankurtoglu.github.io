@@ -90,15 +90,16 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // About
     'about.heading': 'Gerçekten <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">sadece benim</span>',
-    'about.role': 'Founder, Revenue & AI Systems Architect',
-    'about.point1': '• Uçtan Uca CRM & Dönüşüm Mimarisi',
-    'about.point2': '• Büyük Dil Modelleri & AI Ajanları',
-    'about.point3': '• Doğrudan 1-on-1 İletişim',
+    'about.role': 'Kurucu · CRM Mimarı & AI Mühendisi',
+    'about.k1Label': 'Odak',
+    'about.k1Val': 'Dijital Pazarlama & Akıllı CRM',
+    'about.k2Label': 'Araştırma',
+    'about.k2Val': 'LLM & Otonom AI Sistemleri',
+    'about.k3Label': 'İletişim',
+    'about.k3Val': 'Doğrudan 1-on-1 Kurucu',
     'about.story1': 'Merhaba, ben Ercan. Aracı ajanslar, karmaşık toplantılar veya stajyerler yok. Doğrudan benimle birebir çalışıyorsunuz.',
-    'about.story2': 'Bir yanda dijital pazarlama ve CRM altyapılarını gelir üreten otomatik satış makinelerine dönüştüren bir sistem mimarı; diğer yanda büyük dil modellerinde mantıksal muhakeme ve doğrulama üzerine çalışan bir yapay zekâ araştırmacısıyım.',
-    'about.story3': 'Bu hibrit bakış açısı sayesinde işletmeniz yalnızca rastgele şablonlar değil; ölçeklenebilir, hatasız ve kurumsal yazılım standartlarında bir büyüme altyapısı kazanır.',
-    'about.academicBtn': 'Akademik Çalışmalarım',
-    'about.writingBtn': 'Teknik Yazılarım →',
+    'about.story2': 'Bir yanda dijital pazarlama ve CRM altyapılarını gelir üreten otomatik sistemlere dönüştüren bir büyüme mimarı; diğer yanda büyük dil modellerinde mantıksal muhakeme ve doğrulama üzerine yüksek lisans (Master) seviyesinde çalışan bir yapay zekâ araştırmacısıyım.',
+    'about.story3': 'Bu hibrit ve analitik bakış açısı sayesinde işletmeniz yalnızca rastgele şablonlar değil; tutarlı, hatasız ve uzun ömürlü bir büyüme altyapısı kazanır.',
 
     // Scope
     'scope.heading': 'Kurduğumuz <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">uygulamalar ve sistemler</span>',
@@ -258,15 +259,16 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // About
     'about.heading': 'It\'s <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">really just me</span>',
-    'about.role': 'Founder, Revenue & AI Systems Architect',
-    'about.point1': '• End-to-End CRM & Funnel Architecture',
-    'about.point2': '• Large Language Models & AI Agents',
-    'about.point3': '• Direct 1-on-1 Communication',
+    'about.role': 'Founder · CRM Architect & AI Engineer',
+    'about.k1Label': 'Focus',
+    'about.k1Val': 'Digital Marketing & Smart CRM',
+    'about.k2Label': 'Research',
+    'about.k2Val': 'LLMs & Autonomous AI Systems',
+    'about.k3Label': 'Access',
+    'about.k3Val': 'Direct 1-on-1 Founder',
     'about.story1': 'Hi, I\'m Ercan. No middlemen, no endless agency meetings, no junior staff. You work directly with me.',
-    'about.story2': 'I\'m a systems architect turning digital marketing and CRM infrastructure into revenue-generating automation machines, and an AI researcher working on logical reasoning and validation in large language models.',
-    'about.story3': 'This hybrid perspective ensures your business gets scalable, robust infrastructure built to enterprise software standards—not just cookie-cutter templates.',
-    'about.academicBtn': 'Academic Research',
-    'about.writingBtn': 'Technical Writing →',
+    'about.story2': 'I\'m a systems architect turning digital marketing and CRM infrastructure into revenue-generating automation machines, and a Master\'s-level AI researcher focusing on logical reasoning and validation in large language models.',
+    'about.story3': 'This analytical perspective ensures your business gets reliable, high-precision, and scalable growth infrastructure—not just cookie-cutter templates.',
 
     // Scope
     'scope.heading': 'Apps & systems <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">we build</span>',

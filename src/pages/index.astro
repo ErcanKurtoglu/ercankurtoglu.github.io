@@ -447,41 +447,43 @@ const research = await getCollection('research');
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-6 sm:p-8 lg:p-12 transition-colors">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#f9fafb] dark:bg-[#181818] p-6 sm:p-8 lg:p-12 transition-colors">
         
-        <!-- Left: Founder Card -->
-        <div class="lg:col-span-5 text-center flex flex-col items-center space-y-4 max-w-sm mx-auto lg:max-w-none w-full">
-          <Logo variant="boxed" className="w-24 h-24 sm:w-32 sm:h-32 !rounded-2xl sm:!rounded-3xl shadow-xl p-3" size={110} />
+        <!-- Left: Founder Seal & Quick Facts Card -->
+        <div class="lg:col-span-5 flex flex-col items-center text-center space-y-4 w-full max-w-sm mx-auto lg:max-w-none bg-white dark:bg-[#141414] rounded-2xl border border-neutral-200 dark:border-neutral-800 p-6 sm:p-7 shadow-xs">
+          <Logo variant="boxed" className="w-16 h-16 !rounded-2xl shadow-sm p-2.5" size={64} />
           <div>
-            <h3 class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white">Ercan Kurtoğlu</h3>
-            <p data-i18n="about.role" class="text-xs text-neutral-500 dark:text-neutral-400 font-mono font-bold mt-0.5">Founder, Revenue & AI Systems Architect</p>
+            <h3 class="text-lg sm:text-xl font-extrabold text-neutral-900 dark:text-white tracking-tight">Ercan Kurtoğlu</h3>
+            <p data-i18n="about.role" class="text-[11px] text-neutral-500 dark:text-neutral-400 font-mono uppercase tracking-wider mt-1">Kurucu · CRM Mimarı & AI Mühendisi</p>
           </div>
-          <div class="w-full pt-3 sm:pt-4 border-t border-neutral-200 dark:border-neutral-800 text-xs text-neutral-600 dark:text-neutral-300 space-y-1 text-left font-medium">
-            <div data-i18n="about.point1">• Uçtan Uca CRM & Dönüşüm Mimarisi</div>
-            <div data-i18n="about.point2">• Büyük Dil Modelleri & AI Ajanları</div>
-            <div data-i18n="about.point3">• Doğrudan 1-on-1 İletişim</div>
+          
+          <div class="w-full pt-4 border-t border-neutral-200 dark:border-neutral-800 space-y-2.5 text-left">
+            <div class="flex items-center justify-between gap-2 text-xs">
+              <span data-i18n="about.k1Label" class="font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500 text-[10px]">Odak</span>
+              <span data-i18n="about.k1Val" class="font-semibold text-neutral-800 dark:text-neutral-200 text-right">Dijital Pazarlama & Akıllı CRM</span>
+            </div>
+            <div class="flex items-center justify-between gap-2 text-xs">
+              <span data-i18n="about.k2Label" class="font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500 text-[10px]">Araştırma</span>
+              <span data-i18n="about.k2Val" class="font-semibold text-neutral-800 dark:text-neutral-200 text-right">LLM & Otonom AI Sistemleri</span>
+            </div>
+            <div class="flex items-center justify-between gap-2 text-xs">
+              <span data-i18n="about.k3Label" class="font-mono uppercase tracking-wider text-neutral-400 dark:text-neutral-500 text-[10px]">İletişim</span>
+              <span data-i18n="about.k3Val" class="font-semibold text-neutral-800 dark:text-neutral-200 text-right">Doğrudan 1-on-1 Kurucu</span>
+            </div>
           </div>
         </div>
 
-        <!-- Right: Story -->
-        <div class="lg:col-span-7 space-y-3.5 sm:space-y-4">
+        <!-- Right: Story (No Software Engineer claim, Master's AI Researcher & CRM Architect focus, No empty links) -->
+        <div class="lg:col-span-7 space-y-4">
           <p data-i18n="about.story1" class="text-base sm:text-lg font-bold text-neutral-900 dark:text-white leading-snug">
             Merhaba, ben Ercan. Aracı ajanslar, karmaşık toplantılar veya stajyerler yok. Doğrudan benimle birebir çalışıyorsunuz.
           </p>
-          <p data-i18n="about.story2" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            Bir yanda dijital pazarlama ve CRM altyapılarını gelir üreten otomatik satış makinelerine dönüştüren bir sistem mimarı; diğer yanda büyük dil modellerinde mantıksal muhakeme ve doğrulama üzerine çalışan bir yapay zekâ araştırmacısıyım.
+          <p data-i18n="about.story2" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+            Bir yanda dijital pazarlama ve CRM altyapılarını gelir üreten otomatik sistemlere dönüştüren bir büyüme mimarı; diğer yanda büyük dil modellerinde mantıksal muhakeme ve doğrulama üzerine yüksek lisans (Master) seviyesinde çalışan bir yapay zekâ araştırmacısıyım.
           </p>
-          <p data-i18n="about.story3" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            Bu hibrit bakış açısı sayesinde işletmeniz yalnızca rastgele şablonlar değil; ölçeklenebilir, hatasız ve kurumsal yazılım standartlarında bir büyüme altyapısı kazanır.
+          <p data-i18n="about.story3" class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed font-sans">
+            Bu hibrit ve analitik bakış açısı sayesinde işletmeniz yalnızca rastgele şablonlar değil; tutarlı, hatasız ve uzun ömürlü bir büyüme altyapısı kazanır.
           </p>
-          <div class="pt-3 sm:pt-4 flex flex-col xs:flex-row items-stretch xs:items-center gap-2.5 sm:gap-3">
-            <a href="/research" class="px-5 py-2.5 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs font-bold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors shadow-sm text-center">
-              <span data-i18n="about.academicBtn">Akademik Çalışmalarım</span> ({research.length}) →
-            </a>
-            <a href="/writing" data-i18n="about.writingBtn" class="px-5 py-2.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-black dark:text-white text-xs font-bold hover:bg-white dark:hover:bg-neutral-800 transition-colors text-center">
-              Teknik Yazılarım →
-            </a>
-          </div>
         </div>
 
       </div>
