@@ -543,9 +543,9 @@ const research = await getCollection('research');
   <section id="pricing" class="border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#121212] px-4 sm:px-8 lg:px-12 py-16 sm:py-24 lg:py-32 transition-colors duration-200">
     <div class="max-w-4xl mb-12 sm:mb-16 text-center mx-auto">
       <h2 data-i18n="pricing.heading" class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-neutral-900 dark:text-white tracking-tight leading-[1.15]">
-        Tek bir abonelik, <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">sonsuz olanaklar</span>
+        İşletmeniz için <span class="text-dj-italics text-neutral-700 dark:text-neutral-300">şeffaf</span> büyüme paketleri
       </h2>
-      <p data-i18n="pricing.sub" class="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm mt-2 sm:mt-3 font-semibold">Dilediğiniz an duraklatın veya iptal edin.</p>
+      <p data-i18n="pricing.sub" class="text-neutral-500 dark:text-neutral-400 text-xs sm:text-sm mt-2 sm:mt-3 font-semibold">Gizli maliyet yok, uzun dönem sözleşme baskısı yok. İhtiyacınıza uygun sistemi seçin.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch">
@@ -553,27 +553,27 @@ const research = await getCollection('research');
       <!-- Plan 1 -->
       <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#fafafa] dark:bg-[#181818] p-6 sm:p-8 lg:p-10 flex flex-col justify-between transition-colors w-full">
         <div>
-          <span data-i18n="pricing.p1Tag" class="text-[11px] sm:text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase block mb-1">CRM & DİJİTAL PAZARLAMA</span>
-          <h3 data-i18n="pricing.p1Title" class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Standart Paket</h3>
+          <span data-i18n="pricing.p1Tag" class="text-[11px] sm:text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase block mb-1">CRM & HIZLI KURULUM</span>
+          <h3 data-i18n="pricing.p1Title" class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Çekirdek Otomasyon</h3>
           <p data-i18n="pricing.p1Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-            Satış hunilerini ve müşteri yönetimini hepsi-bir-arada akıllı CRM ile otomatize etmek isteyenler için.
+            Lead yakalama, randevu takibi ve müşteri iletişimini tek panelde otomatikleştirmek isteyen işletmeler için.
           </p>
 
           <div class="mb-6 pb-6 border-b border-neutral-200 dark:border-neutral-800">
-            <span data-i18n="pricing.p1Price" class="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white">Özel Teklif</span>
-            <span data-i18n="pricing.p1Per" class="text-xs text-neutral-500 dark:text-neutral-400 font-mono"> / kurulum</span>
+            <span data-i18n="pricing.p1Price" class="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white">Kurulum</span>
+            <span data-i18n="pricing.p1Per" class="text-xs text-neutral-500 dark:text-neutral-400 font-mono"> / anahtar teslim</span>
           </div>
 
           <ul class="space-y-3 text-xs text-neutral-700 dark:text-neutral-300 font-medium mb-8">
             <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p1F1">Merkezi CRM & Alan Adı (DNS) Kurulumu</span></li>
-            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p1F2">1 Adet Yüksek Dönüşümlü Huni</span></li>
-            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p1F3">Otomatik SMS & E-posta Takip Akışları</span></li>
-            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p1F4">Stripe Ödeme Kurulumu</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p1F2">Yüksek Dönüşümlü Satış & Randevu Hunisi</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p1F3">Cevapsız Çağrı Anında SMS & WhatsApp Dönüşü</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p1F4">Google Yorum & İtibar Otomasyonu</span></li>
           </ul>
         </div>
 
         <a
-          href="/contact?plan=standart"
+          href="/contact?plan=core"
           class="w-full py-3 sm:py-3.5 px-6 rounded-full border border-neutral-300 dark:border-neutral-700 text-neutral-900 dark:text-neutral-100 font-bold text-xs text-center hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
         >
           <span data-i18n="pricing.p1Btn">Görüşme Başlat →</span>
@@ -584,22 +584,22 @@ const research = await getCollection('research');
       <div class="rounded-2xl sm:rounded-3xl border-2 border-black dark:border-white/60 bg-black dark:bg-[#1f1f1f] text-white p-6 sm:p-8 lg:p-10 flex flex-col justify-between shadow-xl transition-all w-full">
         <div>
           <span data-i18n="pricing.p2Tag" class="text-[11px] sm:text-xs font-mono font-bold text-neutral-400 uppercase block mb-1">EN ÇOK TERCİH EDİLEN</span>
-          <h3 data-i18n="pricing.p2Title" class="text-xl sm:text-2xl font-extrabold text-white mb-2">Büyüme & AI Ajanı</h3>
+          <h3 data-i18n="pricing.p2Title" class="text-xl sm:text-2xl font-extrabold text-white mb-2">Tam Büyüme & AI</h3>
           <p data-i18n="pricing.p2Desc" class="text-xs text-neutral-400 leading-relaxed mb-6">
-            Maksimum dönüşüm isteyen, 7/24 randevu kapatan yapay zekâ asistanıyla büyümek isteyenler için.
+            Maksimum dönüşüm isteyen, 7/24 randevu kapatan yapay zekâ asistanıyla ölçeklenmek isteyen işletmeler için.
           </p>
 
           <div class="mb-6 pb-6 border-b border-neutral-800 dark:border-neutral-700">
-            <span data-i18n="pricing.p2Price" class="text-2xl sm:text-3xl font-extrabold text-white">Özel Kapsam</span>
-            <span data-i18n="pricing.p2Per" class="text-xs text-neutral-400 font-mono"> / tam sistem</span>
+            <span data-i18n="pricing.p2Price" class="text-2xl sm:text-3xl font-extrabold text-white">Tam Sistem</span>
+            <span data-i18n="pricing.p2Per" class="text-xs text-neutral-400 font-mono"> / uçtan uca</span>
           </div>
 
           <ul class="space-y-3 text-xs text-neutral-200 font-medium mb-8">
-            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F1">Standart Kurulumun Tüm Özellikleri</span></li>
-            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F2">7/24 AI Randevu & Satış Temsilcisi</span></li>
-            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F3">Çoklu Satış Hunisi & A/B Testleri</span></li>
-            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F4">Özel Make & Webhook Köprüleri</span></li>
-            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F5">30 Gün Öncelikli Teknik Destek</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F1">Çekirdek Otomasyonun Tüm Özellikleri</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F2">7/24 AI Randevu & Müşteri Asistanı</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F3">Çoklu Kampanya Hunileri & Geri Kazanım Akışları</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F4">Özel Webhook & Reklam Platformu Entegrasyonu</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-white shrink-0">✓</span> <span data-i18n="pricing.p2F5">30 Gün Öncelikli Teknik Destek & Eğitim</span></li>
           </ul>
         </div>
 
@@ -611,13 +611,13 @@ const research = await getCollection('research');
         </a>
       </div>
 
-      <!-- Plan 3: 15-min call / Audit -->
+      <!-- Plan 3: 1-on-1 Audit Session -->
       <div class="rounded-2xl sm:rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-[#fafafa] dark:bg-[#181818] p-6 sm:p-8 lg:p-10 flex flex-col justify-between transition-colors w-full md:col-span-2 lg:col-span-1">
         <div>
-          <span data-i18n="pricing.p3Tag" class="text-[11px] sm:text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase block mb-1">DENETİM & GÖRÜŞME</span>
+          <span data-i18n="pricing.p3Tag" class="text-[11px] sm:text-xs font-mono font-bold text-neutral-500 dark:text-neutral-400 uppercase block mb-1">DENETİM & YOL HARİTASI</span>
           <h3 data-i18n="pricing.p3Title" class="text-xl sm:text-2xl font-extrabold text-neutral-900 dark:text-white mb-2">Sistem Denetimi</h3>
           <p data-i18n="pricing.p3Desc" class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-            Mevcut CRM ve otomasyonlarınızdaki kaçakları ve dönüşüm darboğazlarını analiz etmek için.
+            Mevcut CRM ve pazarlama akışlarınızdaki kaçakları ve dönüşüm darboğazlarını tespit etmek için.
           </p>
 
           <div class="mb-6 pb-6 border-b border-neutral-200 dark:border-neutral-800">
@@ -628,7 +628,7 @@ const research = await getCollection('research');
           <ul class="space-y-3 text-xs text-neutral-700 dark:text-neutral-300 font-medium mb-8">
             <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p3F1">Mevcut Akışların Ekran Paylaşımlı Analizi</span></li>
             <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p3F2">Kaçak & Dönüşüm Kayıpları Raporu</span></li>
-            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p3F3">AI Entegrasyon Yol Haritası</span></li>
+            <li class="flex items-center gap-2"><span class="font-bold text-black dark:text-white shrink-0">✓</span> <span data-i18n="pricing.p3F3">Adım Adım AI & Otomasyon Yol Haritası</span></li>
           </ul>
         </div>
 
